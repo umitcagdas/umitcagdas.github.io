@@ -6,7 +6,7 @@
     <title>Gizlilik Politikası | Pişti: Online</title>
     <meta
       name="description"
-      content="Pişti Online gizlilik politikası: hesaplar, oyun verileri, arkadaşlıklar, reklamlar ve veri silme hakları."
+      content="Pişti Online gizlilik politikası: hesaplar, oyun verileri, satın almalar, Firebase, AdMob ve veri silme hakları."
     />
     <link rel="icon" href="./assets/app-icon.png" />
     <link rel="stylesheet" href="./assets/site.css" />
@@ -34,7 +34,7 @@
             Bu politika mobil oyunda oluşturulan hesapları, çevrim içi oyun verilerini,
             sosyal özellikleri ve üçüncü taraf hizmetlerini açıklar.
           </p>
-          <p class="hero-note">Son güncelleme: 12 Temmuz 2026</p>
+          <p class="hero-note">Son güncelleme: 20 Temmuz 2026</p>
         </div>
       </section>
 
@@ -46,8 +46,10 @@
               <li>Misafir, Apple veya Google hesabıyla Pişti profili oluşturabilirsiniz.</li>
               <li>Profil, oyun, lig, coin, arkadaşlık ve eşleşme verileri çevrim içi hizmette saklanır.</li>
               <li>Hazır emoji tepkileri aktif maç sırasında iletilir; serbest metin sohbeti yoktur.</li>
-              <li>Uygulama reklam göstermek için Google Mobile Ads kullanabilir.</li>
-              <li>Profil ekranındaki <strong>Hesabı sil</strong> işlemi Pişti hesabını ve ilişkili oyun verilerini kalıcı olarak siler.</li>
+              <li>Uygulama; analiz, hata tanılama ve özellik yapılandırması için Firebase hizmetlerini kullanır.</li>
+              <li>Google Mobile Ads/AdMob reklam gösterebilir; UMP, bölgesel reklam izin ve gizlilik tercihlerini toplar.</li>
+              <li>Tek seferlik uygulama içi satın alma Apple App Store veya Google Play tarafından işlenir; kart ve banka hesabı bilgilerinizi almayız.</li>
+              <li>Profil ekranındaki <strong>Hesabı sil</strong> işlemi Pişti hesabını ve ilişkili aktif oyun verilerini kalıcı olarak siler. Dolandırıcılığı ve mükerrer hak tanımayı önlemek, iadeleri işlemek veya yasal yükümlülükleri yerine getirmek için gerekli işlem kayıtları hesap bağlantısı kaldırılarak sınırlı süre saklanabilir.</li>
             </ul>
           </article>
 
@@ -77,11 +79,17 @@
               <dt>Çevrim içi maç</dt>
               <dd>Eşleştirme bileti, oda kimliği, oyun durumu, kart hamleleri ve bağlantı durumu. Hazır emoji tepkileri aktif maç sırasında gerçek zamanlı iletilir.</dd>
 
-              <dt>Teknik veriler</dt>
-              <dd>Uygulama sürümü, dil/bölge bilgisi, istek ve hata kayıtları ile sunucu güvenliği için gerekli bağlantı metadatası.</dd>
+              <dt>Satın alma geçmişi</dt>
+              <dd>Satın alınan ürün, mağaza ve ortam, işlem veya satın alma belirteci, doğrulama zamanı, hak sahipliği, iade ve iptal durumu. Ödeme kartı veya banka hesabı bilgilerini almayız.</dd>
 
-              <dt>Reklam verileri</dt>
-              <dd>Google Mobile Ads; reklam sunumu, ölçüm ve sahtekarlık önleme için cihaz bilgileri, reklam kimliği, yaklaşık konum, performans ve reklam etkileşimi sinyalleri işleyebilir.</dd>
+              <dt>Analiz, tanılama ve yapılandırma</dt>
+              <dd>Uygulama etkileşimleri ve olayları, oturum ve ekran bilgileri, yaklaşık konum, cihaz ve işletim sistemi bilgileri, uygulama sürümü, Firebase kurulum kimliği, çökme kayıtları, tanılama verileri ve cihazınıza gönderilen uzaktan yapılandırma değerleri.</dd>
+
+              <dt>Teknik ve güvenlik verileri</dt>
+              <dd>Dil/bölge bilgisi, istek ve hata kayıtları, IP adresi ve sunucu güvenliği için gerekli bağlantı metadatası.</dd>
+
+              <dt>Reklam ve izin verileri</dt>
+              <dd>Google Mobile Ads/AdMob; reklam sunumu, ölçüm ve sahtekârlık önleme için cihaz ve uygulama bilgileri, reklam kimliği, IP adresinden türetilebilen yaklaşık konum, reklam isteği, gösterim, tıklama ve ödüllü reklam işlemlerini işleyebilir. UMP, reklam kişiselleştirme ve gizlilik tercihlerinizi işler. İşlenen alanlar cihaz ayarlarınıza, bölgenize ve verdiğiniz izinlere göre değişebilir.</dd>
             </dl>
           </article>
 
@@ -91,7 +99,9 @@
               <li>Hesap oluşturmak, oturumu güvenli biçimde sürdürmek ve profilinizi göstermek.</li>
               <li>Canlı eşleştirme, oyun odası, arkadaşlık ve liderlik özelliklerini sağlamak.</li>
               <li>Skor, coin, istatistik ve lig ilerlemesini saklamak.</li>
-              <li>Hata ayıklama, güvenlik, kötüye kullanım önleme ve hizmet sürekliliği sağlamak.</li>
+              <li>Satın alma ve iadeleri doğrulamak, reklam kaldırma hakkını yönetmek ve mükerrer hak tanımayı önlemek.</li>
+              <li>Kullanımı ve güvenilirliği ölçmek, hataları tanılamak, özellik ve denge ayarlarını güvenli biçimde dağıtmak.</li>
+              <li>Güvenlik, kötüye kullanım önleme ve hizmet sürekliliği sağlamak.</li>
               <li>Onay ve cihaz tercihleri doğrultusunda reklam göstermek ve reklam performansını ölçmek.</li>
             </ul>
           </article>
@@ -99,12 +109,17 @@
           <article class="legal-card">
             <h2>Üçüncü taraf hizmetleri</h2>
             <ul>
-              <li><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple ve Sign in with Apple</a></li>
-              <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Sign-In ve Google Gizlilik Politikası</a></li>
+              <li><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple, Sign in with Apple ve App Store satın almaları</a></li>
+              <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Sign-In, Google Play Billing ve Firebase hizmetleri</a></li>
               <li><a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">Google Reklam Teknolojileri</a></li>
             </ul>
             <p>
-              Bu sağlayıcılar verileri kendi koşulları ve gizlilik politikaları kapsamında işleyebilir.
+              Firebase Analytics uygulama kullanımını takma adlı olarak ölçer; Crashlytics çökme ve tanılama kayıtlarını işler.
+              Pişti oyuncu kimliğiniz bu iki hizmette kullanıcı kimliği olarak ayarlanmaz. Firebase Remote Config özellik ve
+              denge ayarlarını dağıtır; Firebase Installations uygulama kurulumunu ayırt eden bir kimlik sağlar. AdMob reklam
+              sunar ve reklam etkileşimlerini ölçer; UMP bölgesel reklam izin ve gizlilik tercihlerinizi toplar. Apple ve Google
+              mağazaları ödemeyi işler ve satın alma durumunu doğrulamamız için ürün ve işlem bilgilerini iletir. Bu sağlayıcılar
+              verileri kendi koşulları ve gizlilik politikaları kapsamında, farklı ülkelerde işleyebilir. Kişisel verilerinizi satmayız.
             </p>
           </article>
 
@@ -113,7 +128,21 @@
             <p>
               Hesap ve oyun verileri Pişti hesabınız aktif olduğu sürece saklanır. Profil ekranındaki
               <strong>Hesabı sil</strong> işlemi Pişti oyuncu profilini, API oturumlarını, oyun ilerlemesini,
-              coinleri, istatistikleri, arkadaşlıkları, engelleri ve şikâyet ilişkilerini kalıcı olarak kaldırır.
+              coinleri, istatistikleri, lig ve eşleştirme durumunu, arkadaşlıkları, engelleri, şikâyet ilişkilerini
+              ve hesaba bağlı aktif reklam kaldırma hakkını kalıcı olarak kaldırır.
+            </p>
+            <p>
+              Firebase Analytics ve Crashlytics verileri Pişti oyuncu kimliğinizle ilişkilendirilmez. Hesap silme sırasında
+              bu SDK'lardaki olası kullanıcı alanları temizlenir ve mevcut Firebase kurulum kimliği için silme çağrısı yapılır.
+              Firebase hizmetlerini daha sonra yeniden kullanırsanız önceki kimlikle ilişkisiz yeni bir kurulum kimliği oluşturulabilir.
+              Önceden toplulaştırılmış ve Pişti hesabınızla ilişkilendirilemeyen analiz ve tanılama verileri sağlayıcının saklama
+              sürelerine tabi olabilir.
+            </p>
+            <p>
+              Çifte hak tanınmasını ve dolandırıcılığı önlemek, iadeleri/iptalleri işlemek ve yasal veya muhasebesel
+              yükümlülükleri yerine getirmek için mağaza işlem kimliği, ürün ve işlem durumu kayıtları Pişti hesabı bağlantısı
+              kaldırılarak gerekli süre boyunca tutulabilir. Güvenlik kayıtları, zorunlu mağaza bildirimleri ve teknik yedekler de
+              yalnız gerekli süre boyunca tutulur, ardından silinir veya anonimleştirilir.
             </p>
             <p>
               İşlem Apple veya Google hesabınızın kendisini silmez. Ayrıntılı adımlar için
@@ -157,10 +186,13 @@
           <article class="legal-card english-summary" lang="en">
             <h2>English summary</h2>
             <p>
-              Pişti: Online supports guest, Apple, and Google sign-in. The service stores player profile,
-              game progress, coins, statistics, league, matchmaking, and friendship data to provide online gameplay.
-              The app may use Google Mobile Ads. Players can permanently delete their Pişti account and associated
-              game data from Profile &gt; Delete Account. Contact: umitcagdas@gmail.com.
+              Pişti: Online supports guest, Apple, and Google sign-in. The service stores player profile, gameplay,
+              social, and purchase-status data to provide online play and verify the non-consumable remove-ads purchase.
+              Firebase services support pseudonymous analytics, crash diagnostics, remote configuration, and installation
+              management. Google Mobile Ads/AdMob may serve and measure ads, while UMP records regional privacy choices.
+              Players can permanently delete their Pişti account and associated active game data from Profile &gt; Delete
+              Account. Store transaction records required for refunds, fraud prevention, or legal obligations may be retained
+              for a limited period after the Pişti account link is removed. Contact: umitcagdas@gmail.com.
             </p>
           </article>
         </div>

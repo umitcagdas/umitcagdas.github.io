@@ -33,6 +33,7 @@
           <p class="hero-copy">
             Silme işlemi Pişti oyuncu profilini ve ilişkili oyun verilerini kalıcı olarak kaldırır.
           </p>
+          <p class="hero-note">Son güncelleme: 20 Temmuz 2026</p>
         </div>
       </section>
 
@@ -54,10 +55,32 @@
               <li>Pişti oyuncu profili ve görünen ad</li>
               <li>Oturum ve yenileme tokenları</li>
               <li>Coin bakiyesi, skorlar, istatistikler ve lig ilerlemesi</li>
-              <li>Arkadaşlık ilişkileri ve oyuncuya bağlı oyun durumu</li>
+              <li>Eşleştirme kayıtları, arkadaşlık ilişkileri ve oyuncuya bağlı aktif oyun durumu</li>
               <li>Oyuncu engelleri ve şikâyet ilişkileri</li>
+              <li>Hesaba bağlı aktif reklam kaldırma hakkı</li>
             </ul>
             <p>İşlem kalıcıdır ve silinen Pişti verileri geri getirilemez.</p>
+          </article>
+
+          <article class="legal-card">
+            <h2>Firebase ve cihaz kurulumu</h2>
+            <p>
+              Firebase Analytics ve Crashlytics verileri Pişti oyuncu kimliğiyle ilişkilendirilmez. Hesap silme sırasında
+              bu SDK'lardaki olası kullanıcı alanları temizlenir ve mevcut Firebase kurulum kimliği için silme çağrısı yapılır.
+              Uygulamayı kullanmaya devam ederseniz önceki kimlikle ilişkisiz yeni bir kurulum kimliği oluşturulabilir.
+              Önceden toplulaştırılmış ve Pişti hesabınızla ilişkilendirilemeyen analiz ve tanılama verileri Firebase'in
+              saklama sürelerine tabi olabilir.
+            </p>
+          </article>
+
+          <article class="legal-card">
+            <h2>Sınırlı süre saklanabilen kayıtlar</h2>
+            <p>
+              Çifte hak tanınmasını ve dolandırıcılığı önlemek, iadeleri veya iptalleri işlemek ve yasal ya da muhasebesel
+              yükümlülükleri yerine getirmek için mağaza işlem kimliği, ürün ve işlem durumu kayıtları Pişti hesabı bağlantısı
+              kaldırılarak gerekli süre boyunca tutulabilir. Güvenlik kayıtları, zorunlu mağaza bildirimleri ve teknik yedekler
+              de yalnız gerekli süre boyunca tutulur, ardından silinir veya anonimleştirilir.
+            </p>
           </article>
 
           <article class="legal-card">
@@ -90,7 +113,10 @@
             <p>
               Open Pişti: Online, tap your player name or avatar, and choose Profile &gt; Delete Account.
               Confirming the action permanently removes the Pişti player profile, sessions, game progress,
-              coins, statistics, league progress, and friendships. It does not delete your Apple ID or Google account.
+              coins, statistics, league progress, friendships, and the active remove-ads entitlement. The app also
+              requests deletion of the current Firebase installation identifier. Store transaction records required for refunds,
+              fraud prevention, or legal obligations may be retained for a limited period after the Pişti account
+              link is removed. The action does not delete your Apple ID or Google account.
             </p>
           </article>
         </div>
