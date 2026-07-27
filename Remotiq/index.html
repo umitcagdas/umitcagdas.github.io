@@ -1,19 +1,23 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="tr">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Remotiq | Telefonunuzu PC/Mac kumandasına çevirin</title>
     <meta
       name="description"
       content="Remotiq, telefonunuzu aynı Wi-Fi ağındaki Windows veya macOS bilgisayar için sade bir uzaktan kumandaya dönüştürür."
-    />
-    <link rel="stylesheet" href="./assets/site.css" />
+    >
+    <meta name="theme-color" content="#0d0928">
+    <link rel="icon" href="./assets/remotiq-icon.png">
+    <link rel="stylesheet" href="./assets/site.css">
   </head>
   <body>
     <header class="site-header">
       <a class="brand" href="#top" aria-label="Remotiq ana sayfa">
-        <span class="brand-mark">R</span>
+        <span class="brand-mark">
+          <img src="./assets/remotiq-icon.png" alt="">
+        </span>
         <span>Remotiq</span>
       </a>
       <nav class="nav" aria-label="Sayfa bölümleri">
@@ -28,46 +32,77 @@
     <main id="top">
       <section class="hero">
         <div class="hero-grid">
-          <div>
-            <p class="eyebrow">PC/Mac kumandası cebinizde</p>
-            <h1>Remotiq</h1>
+          <div class="hero-content">
+            <p class="eyebrow"><span></span> PC/Mac kumandası cebinizde</p>
+            <h1>Bilgisayarınızın kontrolü <em>cebinizde.</em></h1>
             <p class="hero-copy">
               Telefonunuzu bilgisayarınız için sade bir uzaktan kumandaya
               çevirin. Mouse, klavye, medya, tarayıcı ve uygulama kontrollerini
               aynı Wi-Fi ağı üzerinden kullanın.
             </p>
-            <div class="download-actions" aria-label="Hızlı bağlantılar">
+            <div class="download-actions" role="group" aria-label="Hızlı bağlantılar">
               <a class="button primary" href="./get/">Bilgisayar uygulamasını indir</a>
               <a class="button" href="#setup">Nasıl kurulur?</a>
             </div>
             <p class="hero-note">
-              Hesap, bulut aktarımı ve internet relay yok. Telefonunuz doğrudan
-              kendi bilgisayarınıza bağlanır.
+              <span class="status-dot"></span>
+              Hesap ve bulut aktarımı yok. Telefonunuz bilgisayarınıza doğrudan
+              yerel ağ üzerinden bağlanır.
             </p>
           </div>
 
-          <div class="product-shot" aria-label="Remotiq masaüstü ve mobil ekran önizlemesi">
+          <div
+            class="product-shot"
+            role="img"
+            aria-label="Remotiq masaüstü ve mobil ekran önizlemesi"
+          >
             <div class="desktop-window">
               <div class="window-title">
-                <span class="dot red"></span>
-                <span class="dot yellow"></span>
-                <span class="dot green"></span>
+                <div class="window-dots" aria-hidden="true">
+                  <span class="dot red"></span>
+                  <span class="dot yellow"></span>
+                  <span class="dot green"></span>
+                </div>
+                <span class="window-brand">
+                  <img src="./assets/remotiq-icon.png" alt="">
+                  Remotiq
+                </span>
+                <span class="window-status"><i></i> Çalışıyor</span>
               </div>
-              <div class="qr-panel">
-                <ol class="steps">
-                  <li>Telefonunuzda Remotiq'i açın.</li>
-                  <li>QR kodu tarayın.</li>
-                </ol>
-                <div class="fake-qr" aria-hidden="true"></div>
+              <div class="desktop-content">
+                <div class="desktop-instructions">
+                  <p class="micro-label">HIZLI BAĞLANTI</p>
+                  <h2>Telefonunuzu bağlayın</h2>
+                  <ol class="steps">
+                    <li><span>1</span> Telefonda Remotiq'i açın.</li>
+                    <li><span>2</span> Bilgisayara Bağlan'a dokunun.</li>
+                    <li><span>3</span> QR kodu tarayın.</li>
+                  </ol>
+                  <p class="ready-note"><i></i> Bu bilgisayar bağlantıya hazır</p>
+                </div>
+                <div class="qr-panel">
+                  <div class="fake-qr" aria-hidden="true"></div>
+                  <span>QR kodu tarayın</span>
+                </div>
               </div>
             </div>
             <div class="phone-window">
               <div class="phone-screen">
-                <div class="touchpad"></div>
+                <div class="phone-header">
+                  <img src="./assets/remotiq-icon.png" alt="">
+                  <div>
+                    <strong>Kontroller</strong>
+                    <span><i></i> Bağlandı</span>
+                  </div>
+                </div>
+                <div class="touchpad">
+                  <span class="touch-symbol">✣</span>
+                  <span>İmleci hareket ettirin</span>
+                </div>
                 <div class="click-row" aria-hidden="true">
-                  <span></span>
-                  <span></span>
-                  <span></span>
+                  <span>◁</span>
+                  <span>●</span>
+                  <span>▷</span>
                 </div>
               </div>
             </div>
@@ -84,14 +119,17 @@
           </p>
           <div class="cards">
             <article class="card">
+              <span class="card-icon">⌁</span>
               <h3>Mouse ve klavye</h3>
               <p>İmleci hareket ettirin, tıklayın, kaydırın ve telefon klavyesiyle bilgisayarınıza yazın.</p>
             </article>
             <article class="card">
+              <span class="card-icon">▶</span>
               <h3>Medya ve tarayıcı</h3>
               <p>Aktif oynatıcıyı, ses seviyesini, tarayıcı sekmelerini ve temel gezinme kontrollerini yönetin.</p>
             </article>
             <article class="card">
+              <span class="card-icon">✓</span>
               <h3>LAN-first güven</h3>
               <p>Komutlar aynı yerel ağda, eşleşmiş güvenilir cihaz üzerinden çalışır.</p>
             </article>
@@ -163,7 +201,7 @@
               <h3>Remotiq for Android</h3>
               <p>Google Play yayını tamamlandığında Android indirme bağlantısı burada yer alacak.</p>
               <div class="store-row">
-                <span class="button disabled" role="link" aria-disabled="true">Google Play yakında</span>
+                <button class="button disabled" type="button" disabled>Google Play yakında</button>
               </div>
             </article>
           </div>
