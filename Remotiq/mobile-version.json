@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "ios": {
+    "latest": "1.0.1",
+    "latestBuild": 9,
+    "minimum": "1.0.1",
+    "minimumBuild": 9
+  },
+  "android": {
+    "latest": "1.0.1",
+    "latestBuild": 9,
+    "minimum": "1.0.1",
+    "minimumBuild": 9
+  }
+}

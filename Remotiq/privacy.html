@@ -31,10 +31,10 @@
           <h1>Remotiq verilerinizi sunucularımıza göndermez.</h1>
           <p class="hero-copy">
             Remotiq, telefonunuz ile bilgisayarınız arasında yerel ağ üzerinde çalışan
-            bir uzaktan kumanda uygulamasıdır. Hesap, bulut aktarımı, analytics veya
-            telemetry kullanmaz.
+            bir uzaktan kumanda uygulamasıdır. Hesap, bulut aktarımı veya Remotiq
+            tarafından işletilen analytics/telemetry altyapısı kullanmaz.
           </p>
-          <p class="hero-note">Son güncelleme: 29 Mayıs 2026</p>
+          <p class="hero-note">Son güncelleme: 9 Haziran 2026</p>
         </div>
       </section>
 
@@ -43,8 +43,9 @@
           <article class="legal-card">
             <h2>Kısa Özet</h2>
             <ul>
-              <li>Remotiq bu sürümde kişisel veri toplamaz.</li>
-              <li>Remotiq hesabı, bulut sunucusu, analytics veya reklam takibi yoktur.</li>
+              <li>Remotiq kendi sunucularına kişisel veri göndermez.</li>
+              <li>Remotiq hesabı, bulut sunucusu veya Remotiq analytics/telemetry altyapısı yoktur.</li>
+              <li>Mobil uygulamanın reklam destekli sürümlerinde Google Mobile Ads kullanılabilir.</li>
               <li>Telefon ve bilgisayar aynı yerel ağda doğrudan haberleşir.</li>
               <li>Eşleşmiş bilgisayar bilgileri ve güvenli bağlantı anahtarı cihazınızda saklanır.</li>
               <li>Kamera yalnızca QR kod eşleşmesi için kullanılır.</li>
@@ -54,14 +55,15 @@
           <article class="legal-card">
             <h2>Toplanan Veriler</h2>
             <p>
-              Remotiq 1.0.0 sürümü, Remotiq tarafından işletilen bir sunucuya kişisel veri
-              göndermez. Uygulamada kullanıcı hesabı, cloud sync, reklam, analytics veya telemetry
-              altyapısı yoktur.
+              Remotiq 1.0.1 sürümü, Remotiq tarafından işletilen bir sunucuya kişisel veri
+              göndermez. Uygulamada kullanıcı hesabı, cloud sync veya Remotiq analytics/telemetry
+              altyapısı yoktur. Reklam destekli mobil sürümlerde Google Mobile Ads üçüncü taraf
+              reklam sağlayıcısı olarak banner, geçiş ve ödüllü reklamlar için kullanılabilir.
             </p>
             <p>
-              Mobil uygulama, eşleşme ve yeniden bağlanma için bazı bilgileri yalnızca cihazınızda
+              Mobil uygulama, eşleşme, yeniden bağlanma ve reklamsız deneme süresi için bazı bilgileri yalnızca cihazınızda
               saklar: bilgisayar adı, host/port, platform, son bağlantı zamanı, cihaz kimliği,
-              güvenli auth token ve kullanıcı tercihleri. Auth token güvenli depolamada saklanır.
+              güvenli auth token, kullanıcı tercihleri ve reklamsız süre bitiş zamanı. Auth token güvenli depolamada saklanır.
             </p>
           </article>
 
@@ -75,16 +77,18 @@
               <dd>Aynı Wi-Fi ağındaki Remotiq Masaüstü uygulamasını bulmak ve bağlanmak için kullanılır.</dd>
 
               <dt>İnternet / Ağ</dt>
-              <dd>Android tarafında ağ bağlantısı için gereklidir. Remotiq bunu yerel ağdaki bilgisayara bağlanmak için kullanır.</dd>
+              <dd>Android tarafında ağ bağlantısı için gereklidir. Remotiq bunu yerel ağdaki bilgisayara bağlanmak için kullanır; reklam destekli mobil sürümlerde Google Mobile Ads de reklam isteği için kullanır.</dd>
             </dl>
           </article>
 
           <article class="legal-card">
             <h2>Paylaşım</h2>
             <p>
-              Remotiq, bu sürümde kullanıcı verisini üçüncü taraflarla paylaşmaz. Remotiq tarafından
-              işletilen bir bulut servisi olmadığı için uygulama komutları veya eşleşme bilgileri
-              Remotiq sunucularına iletilmez.
+              Remotiq tarafından işletilen bir bulut servisi olmadığı için uygulama komutları veya
+              eşleşme bilgileri Remotiq sunucularına iletilmez. Reklam destekli mobil sürümlerde
+              Google Mobile Ads, reklam göstermek ve reklam performansını ölçmek için cihaz, uygulama
+              ve reklam etkileşimiyle ilgili verileri Google politikalarına ve platform izinlerine
+              göre işleyebilir.
             </p>
           </article>
 
@@ -125,11 +129,13 @@
           <article class="legal-card english-summary" lang="en">
             <h2>English Summary</h2>
             <p>
-              Remotiq is a LAN-first remote control app. Version 1.0.0 does not collect personal
-              data, does not use accounts, does not use analytics or telemetry, and does not relay
-              commands through a Remotiq cloud server. Camera access is used for QR pairing. Local
+              Remotiq is a LAN-first remote control app. Version 1.0.1 does not send personal data
+              to Remotiq servers, does not use accounts, does not use Remotiq-operated analytics or
+              telemetry, and does not relay commands through a Remotiq cloud server. Ad-supported
+              mobile builds may use Google Mobile Ads. Camera access is used for QR pairing. Local
               network access is used to discover and connect to your own desktop agent. Pairing
-              metadata and the trusted-device auth token are stored locally on the user's device.
+              metadata, the trusted-device auth token, and ad-free trial expiration are stored
+              locally on the user's device.
             </p>
           </article>
         </div>
@@ -138,7 +144,7 @@
 
     <footer class="site-footer">
       <div class="footer-inner">
-        <span>Remotiq 1.0.0</span>
+        <span>Remotiq 1.0.1</span>
         <span><a href="./support.html">Destek</a></span>
         <span><a href="./privacy.html">Gizlilik Politikası</a></span>
       </div>
