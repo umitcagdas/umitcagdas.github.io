@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Remotiq Desktop uygulamasını Windows veya macOS bilgisayarınıza indirin."
+    />
+    <base href="../" />
+    <title>Remotiq Desktop'ı indir</title>
+    <link rel="stylesheet" href="./assets/site.css" />
+    <script src="./assets/get.js" defer></script>
+  </head>
+  <body class="get-page">
+    <header class="site-header">
+      <a class="brand" href="./index.html" aria-label="Remotiq ana sayfa">
+        <span class="brand-mark">R</span>
+        <span>Remotiq</span>
+      </a>
+      <a class="button compact-button" href="./support.html">Yardım</a>
+    </header>
+
+    <main class="get-main">
+      <section class="get-card" aria-labelledby="get-title">
+        <div class="get-icon" aria-hidden="true">↓</div>
+        <p class="eyebrow">Bilgisayar kurulumu</p>
+        <h1 id="get-title">Remotiq Desktop'ı bilgisayarınıza kurun</h1>
+        <p id="platform-message" class="get-lead">
+          Windows veya Mac sürümünü seçin. Kurulum tamamlandığında Remotiq'i
+          bilgisayarınızda açın.
+        </p>
+
+        <div id="detected-download" class="detected-download" hidden>
+          <span id="detected-platform" class="platform-badge"></span>
+          <a id="primary-download" class="button primary" href="#downloads"></a>
+        </div>
+
+        <div id="mobile-handoff" class="mobile-handoff" hidden>
+          <h2>Bu bağlantıyı bilgisayarınıza gönderin</h2>
+          <p>
+            AirDrop, Mesajlar veya e-posta ile bu sayfayı bilgisayarınızda
+            açabilirsiniz.
+          </p>
+          <div class="store-row">
+            <button id="share-link" class="button primary" type="button">
+              Paylaş
+            </button>
+            <button id="copy-link" class="button" type="button">
+              Bağlantıyı kopyala
+            </button>
+          </div>
+          <p id="copy-status" class="copy-status" role="status" aria-live="polite"></p>
+        </div>
+
+        <div id="downloads" class="get-downloads">
+          <article class="get-download-option">
+            <span class="platform-badge">macOS · Apple Silicon</span>
+            <h2>Mac için Remotiq</h2>
+            <p>Apple Silicon işlemcili Mac'ler için DMG kurulum dosyası.</p>
+            <a
+              class="button primary"
+              href="./downloads/Remotiq_0.1.0_aarch64.dmg"
+              data-download="mac"
+            >
+              Mac için indir
+            </a>
+          </article>
+
+          <article class="get-download-option">
+            <span class="platform-badge">Windows · 64-bit</span>
+            <h2>Windows için Remotiq</h2>
+            <p>Çoğu kullanıcı için önerilen Windows kurulum dosyası.</p>
+            <div class="store-row">
+              <a
+                class="button primary"
+                href="./downloads/Remotiq_0.1.0_x64-setup.exe"
+                data-download="windows"
+              >
+                Windows için indir
+              </a>
+              <a
+                class="button"
+                href="./downloads/Remotiq_0.1.0_x64_en-US.msi"
+              >
+                MSI seçeneği
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <ol class="get-steps">
+          <li><strong>Kurun:</strong> İndirdiğiniz dosyayı bilgisayarınızda açın.</li>
+          <li><strong>Çalıştırın:</strong> Remotiq Desktop'ı açık bırakın.</li>
+          <li><strong>Bağlanın:</strong> Telefonda Remotiq ile QR kodu tarayın.</li>
+        </ol>
+
+        <p class="get-safety">
+          Telefon ve bilgisayar aynı Wi‑Fi ağında olmalıdır. Remotiq bağlantıyı
+          bulut üzerinden değil, doğrudan yerel ağınızda kurar.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
