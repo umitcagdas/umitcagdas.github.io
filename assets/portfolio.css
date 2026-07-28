@@ -680,7 +680,8 @@ img {
 
 .case-visual {
   position: relative;
-  height: 590px;
+  height: auto;
+  aspect-ratio: 16 / 10;
   overflow: hidden;
   border-radius: var(--radius);
   isolation: isolate;
@@ -1783,10 +1784,6 @@ img {
     width: 34%;
   }
 
-  .case-visual {
-    height: 540px;
-  }
-
   .project-browser {
     inset: 38px 30px -38px;
   }
@@ -1901,10 +1898,6 @@ img {
   .case-description,
   .case-copy h3 {
     max-width: 570px;
-  }
-
-  .case-visual {
-    height: 570px;
   }
 
   .product-grid {
@@ -2088,7 +2081,6 @@ img {
   }
 
   .case-visual {
-    height: 410px;
     border-radius: 20px;
   }
 
