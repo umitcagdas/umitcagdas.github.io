@@ -3,156 +3,582 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Ümit Çağdaş Uygulamaları</title>
+    <title>Ümit Çağdaş — Web ve Ürün Geliştirici</title>
     <meta
       name="description"
-      content="Ümit Çağdaş tarafından geliştirilen mobil ve masaüstü uygulamalar için yayın, destek ve gizlilik sayfaları."
+      content="B2B platformlar, kurumsal web siteleri ve bağımsız dijital ürünler geliştiren Ümit Çağdaş'ın portföyü."
     />
-    <style>
-      :root {
-        color-scheme: dark;
-        --bg: #09120f;
-        --surface: #101b18;
-        --line: #284137;
-        --text: #f7fbf7;
-        --muted: #aebdb6;
-        --gold: #d6b76a;
-        --green: #65d39b;
-        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      }
+    <meta name="theme-color" content="#0d0e0d" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <link rel="canonical" href="https://umitcagdas.github.io/" />
+    <link rel="icon" type="image/jpeg" href="./assets/umit-cagdas.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/portfolio.css" />
 
-      * {
-        box-sizing: border-box;
-      }
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="tr_TR" />
+    <meta property="og:site_name" content="Ümit Çağdaş" />
+    <meta property="og:title" content="Ümit Çağdaş — Web ve Ürün Geliştirici" />
+    <meta
+      property="og:description"
+      content="B2B platformlardan bağımsız uygulamalara; fikirleri çalışan dijital ürünlere dönüştürüyorum."
+    />
+    <meta property="og:url" content="https://umitcagdas.github.io/" />
+    <meta property="og:image" content="https://umitcagdas.github.io/assets/og-portfolio-v4.jpg" />
+    <meta property="og:image:width" content="1731" />
+    <meta property="og:image:height" content="909" />
+    <meta property="og:image:alt" content="Ümit Çağdaş web ve dijital ürün portföyü" />
 
-      body {
-        margin: 0;
-        min-height: 100vh;
-        background: radial-gradient(circle at top left, rgba(214, 183, 106, 0.14), transparent 34%),
-          linear-gradient(145deg, #09120f 0%, #13221b 56%, #080d0c 100%);
-        color: var(--text);
-      }
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ümit Çağdaş — Web ve Ürün Geliştirici" />
+    <meta
+      name="twitter:description"
+      content="B2B platformlar, kurumsal web siteleri ve bağımsız dijital ürünler."
+    />
+    <meta name="twitter:image" content="https://umitcagdas.github.io/assets/og-portfolio-v4.jpg" />
 
-      main {
-        width: min(1080px, 100%);
-        margin: 0 auto;
-        padding: clamp(32px, 7vw, 84px) clamp(18px, 5vw, 52px);
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ümit Çağdaş",
+        "url": "https://umitcagdas.github.io/",
+        "jobTitle": "Web ve Ürün Geliştirici",
+        "sameAs": [
+          "https://github.com/umitcagdas",
+          "https://apps.apple.com/tr/developer/umit-cagdas/id1896664519"
+        ]
       }
-
-      h1 {
-        max-width: 780px;
-        margin: 0;
-        font-size: clamp(2.5rem, 7vw, 5.4rem);
-        line-height: 0.95;
-        letter-spacing: 0;
-      }
-
-      .lead {
-        max-width: 660px;
-        margin: 22px 0 0;
-        color: var(--muted);
-        font-size: 1.08rem;
-        line-height: 1.65;
-      }
-
-      .apps {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 18px;
-        margin-top: 42px;
-      }
-
-      .app-card {
-        min-height: 260px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding: 24px;
-        border: 1px solid var(--line);
-        border-radius: 8px;
-        background: rgba(16, 27, 24, 0.86);
-        text-decoration: none;
-      }
-
-      .app-card h2 {
-        margin: 0;
-        font-size: 1.8rem;
-      }
-
-      .app-card p {
-        margin: 14px 0 0;
-        color: var(--muted);
-        line-height: 1.6;
-      }
-
-      .badge {
-        width: fit-content;
-        padding: 6px 10px;
-        border: 1px solid var(--line);
-        border-radius: 999px;
-        color: var(--gold);
-        font-size: 0.84rem;
-        font-weight: 750;
-      }
-
-      .link-label {
-        margin-top: 24px;
-        color: var(--green);
-        font-weight: 800;
-      }
-
-      footer {
-        margin-top: 44px;
-        color: var(--muted);
-        font-size: 0.92rem;
-      }
-
-      @media (max-width: 720px) {
-        .apps {
-          grid-template-columns: 1fr;
-        }
-      }
-    </style>
+    </script>
   </head>
   <body>
-    <main>
-      <h1>Ümit Çağdaş Uygulamaları</h1>
-      <p class="lead">
-        Mobil ve masaüstü uygulamalar için resmi tanıtım, destek ve gizlilik sayfaları.
-      </p>
+    <a class="skip-link" href="#main">İçeriğe geç</a>
 
-      <section class="apps" aria-label="Uygulamalar">
-        <a class="app-card" href="./pistionline/">
-          <div>
-            <span class="badge">Canlı kart oyunu</span>
-            <h2>Pişti: Online</h2>
-            <p>Gerçek rakiplerle çevrim içi Pişti, hızlı eşleşme, ligler, arkadaşlar ve liderlik tablosu.</p>
-          </div>
-          <span class="link-label">Pişti: Online sayfasına git</span>
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a class="brand" href="#top" aria-label="Ümit Çağdaş ana sayfa">
+          <span class="brand-dot" aria-hidden="true"></span>
+          <span>ÜÇ.</span>
         </a>
 
-        <a class="app-card" href="./Remotiq/">
-          <div>
-            <span class="badge">PC/Mac kumandası</span>
-            <h2>Remotiq</h2>
-            <p>Telefonunuzu aynı Wi-Fi ağındaki Windows veya macOS bilgisayar için sade bir uzaktan kumandaya dönüştürün.</p>
-          </div>
-          <span class="link-label">Remotiq sayfasına git</span>
-        </a>
+        <nav class="site-nav" aria-label="Ana menü">
+          <a href="#web-projeleri">Web projeleri</a>
+          <a href="#urunler">Ürünler</a>
+          <a href="#hakkimda">Hakkımda</a>
+        </nav>
 
-        <a class="app-card" href="./batakoyunu/">
-          <div>
-            <span class="badge">Kart oyunu</span>
-            <h2>Batak Oyunu</h2>
-            <p>iPhone ve Android için klasik Batak deneyimi, bot rakipler, istatistikler ve yerel ilerleme takibi.</p>
-          </div>
-          <span class="link-label">Batak Oyunu sayfasına git</span>
+        <a class="header-contact" href="#iletisim">
+          Birlikte çalışalım
+          <span aria-hidden="true">↓</span>
         </a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="hero-orbit hero-orbit-one" aria-hidden="true"></div>
+        <div class="hero-orbit hero-orbit-two" aria-hidden="true"></div>
+
+        <div class="shell hero-layout">
+          <div class="hero-copy">
+            <p class="hero-kicker">
+              <span>Ümit Çağdaş</span>
+              Web &amp; Product Developer
+            </p>
+            <h1>
+              <span>Fikirleri</span>
+              <span class="outline-word">dijital ürünlere</span>
+              <span>dönüştürüyorum.</span>
+            </h1>
+          </div>
+
+          <div class="hero-portrait" aria-hidden="true">
+            <img src="./assets/umit-cagdas-clean-v2.jpg" alt="" />
+          </div>
+
+          <div class="hero-note">
+            <p>
+              B2B altyapıları, kurumsal web siteleri ve insanların gerçekten
+              kullanmak isteyeceği dijital ürünler geliştiriyorum.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-accent" href="#web-projeleri">
+                Seçili projeler
+                <span aria-hidden="true">↓</span>
+              </a>
+              <a
+                class="text-link"
+                href="https://github.com/umitcagdas"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+
+          <dl class="hero-facts">
+            <div>
+              <dt>03</dt>
+              <dd>Web projesi</dd>
+            </div>
+            <div>
+              <dt>04</dt>
+              <dd>Bağımsız ürün</dd>
+            </div>
+            <div>
+              <dt>B2B</dt>
+              <dd>Kurumsal deneyim</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="hero-marquee" aria-hidden="true">
+          <span>WEB DEVELOPMENT</span>
+          <i></i>
+          <span>B2B PLATFORMS</span>
+          <i></i>
+          <span>DIGITAL PRODUCTS</span>
+          <i></i>
+          <span>MOBILE &amp; DESKTOP</span>
+        </div>
       </section>
 
-      <footer>
-        <span>© 2026 Ümit Çağdaş</span>
-      </footer>
+      <section class="work section" id="web-projeleri">
+        <div class="shell">
+          <div class="section-heading work-heading">
+            <p class="section-label"><span>01</span> Seçili web projeleri</p>
+            <h2>İş süreçlerini çalışan dijital sistemlere dönüştüren projeler.</h2>
+          </div>
+
+          <div class="case-list">
+            <article
+              class="case-study"
+              data-stack-label="01 — BizSizeYeteriz · B2B e-ticaret"
+            >
+              <div class="case-copy">
+                <p class="case-number">01 / 03</p>
+                <div>
+                  <p class="case-type">B2B e-ticaret altyapısı</p>
+                  <h3>BizSizeYeteriz</h3>
+                  <p class="case-description">
+                    Kurumsal müşteriler için ürün kataloğu, özel fiyatlandırma,
+                    kampanya, sepet ve sipariş süreçlerini tek platformda
+                    buluşturan B2B ticaret deneyimi.
+                  </p>
+                </div>
+                <div class="case-footer">
+                  <ul class="tag-list" aria-label="Proje özellikleri">
+                    <li>B2B</li>
+                    <li>E-ticaret</li>
+                    <li>Sipariş akışı</li>
+                  </ul>
+                  <a
+                    class="case-link"
+                    href="https://bizsizeyeteriz.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Siteyi ziyaret et <span aria-hidden="true">↗</span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="case-visual visual-commerce">
+                <img
+                  class="project-screenshot"
+                  src="./assets/projects/bizsizeyeteriz-home.png"
+                  alt="BizSizeYeteriz B2B e-ticaret sitesinin ana sayfası"
+                  loading="lazy"
+                />
+              </div>
+            </article>
+
+            <article
+              class="case-study"
+              data-stack-label="02 — Kazanç Plastik · Bayi portalı"
+            >
+              <div class="case-copy">
+                <p class="case-number">02 / 03</p>
+                <div>
+                  <p class="case-type">Kurumsal bayi altyapısı</p>
+                  <h3>Kazanç Plastik Bayi Portalı</h3>
+                  <p class="case-description">
+                    Bayi ağına özel ürün erişimi, kurumsal sipariş ve operasyon
+                    süreçleri için geliştirilen kapalı B2B yönetim altyapısı.
+                  </p>
+                </div>
+                <div class="case-footer">
+                  <ul class="tag-list" aria-label="Proje özellikleri">
+                    <li>Bayi paneli</li>
+                    <li>B2B</li>
+                    <li>Operasyon</li>
+                  </ul>
+                  <span class="case-domain">bayi.kazancplastik.com.tr</span>
+                </div>
+              </div>
+
+              <div class="case-visual visual-dealer">
+                <img
+                  class="project-screenshot"
+                  src="./assets/projects/kazanc-bayi-panel.png"
+                  alt="Kazanç Plastik bayi portalının yönetim paneli"
+                  loading="lazy"
+                />
+              </div>
+            </article>
+
+            <article
+              class="case-study"
+              data-stack-label="03 — Kazanç Plastik · Kurumsal web"
+            >
+              <div class="case-copy">
+                <p class="case-number">03 / 03</p>
+                <div>
+                  <p class="case-type">Kurumsal web sitesi</p>
+                  <h3>Kazanç Plastik</h3>
+                  <p class="case-description">
+                    Markanın kurumsal kimliğini, üretim gücünü ve ürün yapısını
+                    dijital ortamda anlaşılır ve güven veren bir deneyimle
+                    temsil eden web sitesi.
+                  </p>
+                </div>
+                <div class="case-footer">
+                  <ul class="tag-list" aria-label="Proje özellikleri">
+                    <li>Kurumsal</li>
+                    <li>Ürün kataloğu</li>
+                    <li>Marka</li>
+                  </ul>
+                  <a
+                    class="case-link"
+                    href="https://kazancplastik.com.tr/tr"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Siteyi ziyaret et <span aria-hidden="true">↗</span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="case-visual visual-corporate">
+                <img
+                  class="project-screenshot"
+                  src="./assets/projects/kazancplastik-home.png"
+                  alt="Kazanç Plastik kurumsal web sitesinin ana sayfası"
+                  loading="lazy"
+                />
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="products section" id="urunler">
+        <div class="shell">
+          <div class="section-heading products-heading">
+            <p class="section-label section-label-light"><span>02</span> Bağımsız ürünler</p>
+            <div>
+              <h2>Kendi ürünlerimi de geliştirip yayınlıyorum.</h2>
+              <p>
+                Mobil oyunlardan kişisel finansa ve cihazlar arası kontrole
+                uzanan dört farklı ürün.
+              </p>
+            </div>
+          </div>
+
+          <div class="product-grid">
+            <a class="product-card product-pisti" href="./pistionline/">
+              <div class="product-art">
+                <p aria-hidden="true">PİŞTİ<br />ONLINE</p>
+                <img
+                  class="product-screen product-screen-phone"
+                  src="./pistionline/assets/gameplay.jpg"
+                  alt="Pişti Online canlı oyun masası"
+                  loading="lazy"
+                />
+              </div>
+              <div class="product-info">
+                <div>
+                  <p>iPhone · Çok oyunculu</p>
+                  <h3>Pişti: Online</h3>
+                </div>
+                <span aria-hidden="true">↗</span>
+              </div>
+            </a>
+
+            <a class="product-card product-remotiq" href="./Remotiq/">
+              <div class="product-art">
+                <div class="product-rings" aria-hidden="true"></div>
+                <img
+                  class="product-app-icon"
+                  src="./Remotiq/assets/remotiq-icon.png"
+                  alt="Remotiq uygulama ikonu"
+                  loading="lazy"
+                />
+                <p class="product-statement" aria-hidden="true">Kontrol artık cebinizde.</p>
+              </div>
+              <div class="product-info">
+                <div>
+                  <p>iPhone · Windows · macOS</p>
+                  <h3>Remotiq</h3>
+                </div>
+                <span aria-hidden="true">↗</span>
+              </div>
+            </a>
+
+            <a class="product-card product-batak" href="./batakoyunu/">
+              <div class="product-art">
+                <p aria-hidden="true">KLASİK<br />BATAK</p>
+                <img
+                  class="product-screen product-screen-phone"
+                  src="./batakoyunu/assets/main-menu.png"
+                  alt="Batak Oyunu ana menü ekranı"
+                  loading="lazy"
+                />
+              </div>
+              <div class="product-info">
+                <div>
+                  <p>iPhone · Tek oyunculu</p>
+                  <h3>Batak Oyunu</h3>
+                </div>
+                <span aria-hidden="true">↗</span>
+              </div>
+            </a>
+
+            <a
+              class="product-card product-budget"
+              href="https://www.butcemcepte.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div class="product-art">
+                <div class="budget-bars" aria-hidden="true">
+                  <span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <img
+                  class="product-app-icon"
+                  src="./assets/butcem-cepte-icon.png"
+                  alt="Bütçem Cepte uygulama ikonu"
+                  loading="lazy"
+                />
+                <p class="product-statement product-statement-dark" aria-hidden="true">
+                  Bütçeniz netleşsin.
+                </p>
+              </div>
+              <div class="product-info">
+                <div>
+                  <p>iPhone · Kişisel finans</p>
+                  <h3>Bütçem Cepte</h3>
+                </div>
+                <span aria-hidden="true">↗</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="about section" id="hakkimda">
+        <div class="shell">
+          <div class="section-heading about-heading">
+            <p class="section-label section-label-light"><span>03</span> Yaklaşımım</p>
+            <h2>Yalnızca kodu değil, çalışan sistemin tamamını düşünüyorum.</h2>
+          </div>
+
+          <div class="about-layout">
+            <div class="about-copy">
+              <p>
+                Ürünün ilk fikrinden arayüzüne, geliştirmeden yayına ve sonraki
+                iyileştirmelere kadar bütün deneyimin tutarlı kalmasına önem
+                veriyorum.
+              </p>
+              <p>
+                Karmaşık iş süreçlerini kullanıcıya yansıtmayan; sade, güvenilir
+                ve gerçek hayatta karşılığı bulunan ürünler geliştirmeyi
+                hedefliyorum.
+              </p>
+              <div class="profile-links">
+                <a href="https://github.com/umitcagdas" target="_blank" rel="noopener noreferrer">
+                  GitHub <span aria-hidden="true">↗</span>
+                </a>
+                <a
+                  href="https://apps.apple.com/tr/developer/umit-cagdas/id1896664519"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  App Store <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+
+            <ol class="capability-list">
+              <li>
+                <span>01</span>
+                <div>
+                  <h3>B2B platformlar</h3>
+                  <p>Kurumsal satış, bayi ve operasyon süreçleri.</p>
+                </div>
+              </li>
+              <li>
+                <span>02</span>
+                <div>
+                  <h3>Kurumsal web</h3>
+                  <p>Markayı ve ürünleri güvenle temsil eden deneyimler.</p>
+                </div>
+              </li>
+              <li>
+                <span>03</span>
+                <div>
+                  <h3>Mobil &amp; masaüstü</h3>
+                  <p>Yayınlanmış oyunlar ve günlük hayatı kolaylaştıran araçlar.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="iletisim">
+        <div class="shell contact-inner">
+          <p class="contact-kicker">Bir proje mi düşünüyorsunuz?</p>
+          <h2>İyi bir proje, iyi bir sohbetle başlar.</h2>
+
+          <div class="contact-layout">
+            <div class="contact-intro">
+              <p>
+                B2B platformlar, kurumsal web projeleri ve yeni dijital ürünler
+                için fikrinizi anlatın. İhtiyacı birlikte netleştirelim.
+              </p>
+
+              <div class="contact-details">
+                <span>Doğrudan e-posta</span>
+                <a href="mailto:umitcagdas@gmail.com">umitcagdas@gmail.com ↗</a>
+              </div>
+
+              <p class="contact-privacy">
+                Form bilgileri yalnızca talebinize yanıt vermek ve kötüye
+                kullanımı önlemek için işlenir. Mesaj içeriği veritabanında
+                saklanmaz.
+              </p>
+            </div>
+
+            <form class="contact-form" id="contact-form" novalidate>
+              <div class="contact-form-heading">
+                <span>Yeni proje talebi</span>
+                <strong>01—05</strong>
+              </div>
+
+              <div class="form-honeypot" aria-hidden="true">
+                <label for="contact-website">Web sitesi</label>
+                <input
+                  id="contact-website"
+                  name="website"
+                  type="text"
+                  tabindex="-1"
+                  autocomplete="off"
+                />
+              </div>
+
+              <div class="form-grid">
+                <label class="form-field">
+                  <span>Ad soyad</span>
+                  <input
+                    name="name"
+                    type="text"
+                    autocomplete="name"
+                    maxlength="80"
+                    placeholder="Adınız ve soyadınız"
+                    required
+                  />
+                </label>
+
+                <label class="form-field">
+                  <span>E-posta</span>
+                  <input
+                    name="email"
+                    type="email"
+                    autocomplete="email"
+                    maxlength="254"
+                    placeholder="ornek@sirket.com"
+                    required
+                  />
+                </label>
+
+                <label class="form-field">
+                  <span>Şirket <small>— isteğe bağlı</small></span>
+                  <input
+                    name="company"
+                    type="text"
+                    autocomplete="organization"
+                    maxlength="100"
+                    placeholder="Şirket veya marka"
+                  />
+                </label>
+
+                <label class="form-field">
+                  <span>Proje türü</span>
+                  <select name="projectType" required>
+                    <option value="" selected disabled>Bir alan seçin</option>
+                    <option value="b2b">B2B platform</option>
+                    <option value="corporate_web">Kurumsal web</option>
+                    <option value="digital_product">Dijital ürün</option>
+                    <option value="other">Diğer</option>
+                  </select>
+                </label>
+
+                <label class="form-field form-field-full">
+                  <span>Projenizi anlatın</span>
+                  <textarea
+                    name="message"
+                    rows="6"
+                    minlength="20"
+                    maxlength="3000"
+                    placeholder="Hedefinizi, ihtiyacınızı ve varsa zaman planınızı kısaca paylaşın."
+                    required
+                  ></textarea>
+                </label>
+              </div>
+
+              <label class="form-consent">
+                <input name="privacyAccepted" type="checkbox" required />
+                <span>
+                  Bilgilerimin yalnızca talebime yanıt vermek için
+                  kullanılacağını okudum.
+                </span>
+              </label>
+
+              <div class="contact-form-actions">
+                <button type="submit">
+                  <span>Mesajı güvenle gönder</span>
+                  <span aria-hidden="true">↗</span>
+                </button>
+                <p class="form-status" id="contact-form-status" role="status" aria-live="polite"></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-inner">
+        <a class="brand brand-footer" href="#top">
+          <span class="brand-dot" aria-hidden="true"></span>
+          <span>ÜÇ.</span>
+        </a>
+        <p>Web · B2B · Mobil · Masaüstü</p>
+        <div class="footer-links">
+          <a href="#top">Yukarı ↑</a>
+          <a href="https://github.com/umitcagdas" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          <a href="mailto:umitcagdas@gmail.com">E-posta ↗</a>
+        </div>
+        <p class="copyright">© 2026 Ümit Çağdaş</p>
+      </div>
+    </footer>
+    <script type="module" src="./assets/contact.js"></script>
   </body>
 </html>

@@ -1,0 +1,28 @@
+{
+  "name": "umitcagdas-portfolio-functions",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Secure contact form delivery for umitcagdas.github.io",
+  "main": "index.js",
+  "engines": {
+    "node": "22"
+  },
+  "scripts": {
+    "check": "node --check index.js && node --check contact.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "firebase-admin": "14.2.0",
+    "firebase-functions": "7.3.2"
+  },
+  "overrides": {
+    "@google-cloud/storage": {
+      "gaxios": "7.3.0",
+      "retry-request": "8.0.4",
+      "teeny-request": "10.1.4"
+    },
+    "google-gax": {
+      "rimraf": "6.1.3"
+    }
+  }
+}
