@@ -9,6 +9,7 @@
       content="B2B platformlar, kurumsal web siteleri ve bağımsız dijital ürünler geliştiren Ümit Çağdaş'ın portföyü."
     />
     <meta name="theme-color" content="#0d0e0d" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
     <link rel="canonical" href="https://umitcagdas.github.io/" />
     <link rel="icon" type="image/jpeg" href="./assets/umit-cagdas.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -71,9 +72,9 @@
           <a href="#hakkimda">Hakkımda</a>
         </nav>
 
-        <a class="header-contact" href="mailto:umitcagdas@gmail.com?subject=Birlikte%20çalışalım">
+        <a class="header-contact" href="#iletisim">
           Birlikte çalışalım
-          <span aria-hidden="true">↗</span>
+          <span aria-hidden="true">↓</span>
         </a>
       </div>
     </header>
@@ -444,16 +445,120 @@
       <section class="contact" id="iletisim">
         <div class="shell contact-inner">
           <p class="contact-kicker">Bir proje mi düşünüyorsunuz?</p>
-          <h2>Bir fikri birlikte çalışan ürüne dönüştürelim.</h2>
-          <div class="contact-bottom">
-            <p>
-              B2B platformlar, kurumsal web projeleri ve yeni dijital ürünler
-              için konuşabiliriz.
-            </p>
-            <a href="mailto:umitcagdas@gmail.com?subject=Yeni%20proje">
-              Mesaj gönder
-              <span aria-hidden="true">↗</span>
-            </a>
+          <h2>İyi bir proje, iyi bir sohbetle başlar.</h2>
+
+          <div class="contact-layout">
+            <div class="contact-intro">
+              <p>
+                B2B platformlar, kurumsal web projeleri ve yeni dijital ürünler
+                için fikrinizi anlatın. İhtiyacı birlikte netleştirelim.
+              </p>
+
+              <div class="contact-details">
+                <span>Doğrudan e-posta</span>
+                <a href="mailto:umitcagdas@gmail.com">umitcagdas@gmail.com ↗</a>
+              </div>
+
+              <p class="contact-privacy">
+                Form bilgileri yalnızca talebinize yanıt vermek ve kötüye
+                kullanımı önlemek için işlenir. Mesaj içeriği veritabanında
+                saklanmaz.
+              </p>
+            </div>
+
+            <form class="contact-form" id="contact-form" novalidate>
+              <div class="contact-form-heading">
+                <span>Yeni proje talebi</span>
+                <strong>01—05</strong>
+              </div>
+
+              <div class="form-honeypot" aria-hidden="true">
+                <label for="contact-website">Web sitesi</label>
+                <input
+                  id="contact-website"
+                  name="website"
+                  type="text"
+                  tabindex="-1"
+                  autocomplete="off"
+                />
+              </div>
+
+              <div class="form-grid">
+                <label class="form-field">
+                  <span>Ad soyad</span>
+                  <input
+                    name="name"
+                    type="text"
+                    autocomplete="name"
+                    maxlength="80"
+                    placeholder="Adınız ve soyadınız"
+                    required
+                  />
+                </label>
+
+                <label class="form-field">
+                  <span>E-posta</span>
+                  <input
+                    name="email"
+                    type="email"
+                    autocomplete="email"
+                    maxlength="254"
+                    placeholder="ornek@sirket.com"
+                    required
+                  />
+                </label>
+
+                <label class="form-field">
+                  <span>Şirket <small>— isteğe bağlı</small></span>
+                  <input
+                    name="company"
+                    type="text"
+                    autocomplete="organization"
+                    maxlength="100"
+                    placeholder="Şirket veya marka"
+                  />
+                </label>
+
+                <label class="form-field">
+                  <span>Proje türü</span>
+                  <select name="projectType" required>
+                    <option value="" selected disabled>Bir alan seçin</option>
+                    <option value="b2b">B2B platform</option>
+                    <option value="corporate_web">Kurumsal web</option>
+                    <option value="digital_product">Dijital ürün</option>
+                    <option value="other">Diğer</option>
+                  </select>
+                </label>
+
+                <label class="form-field form-field-full">
+                  <span>Projenizi anlatın</span>
+                  <textarea
+                    name="message"
+                    rows="6"
+                    minlength="20"
+                    maxlength="3000"
+                    placeholder="Hedefinizi, ihtiyacınızı ve varsa zaman planınızı kısaca paylaşın."
+                    required
+                  ></textarea>
+                </label>
+              </div>
+
+              <label class="form-consent">
+                <input name="privacyAccepted" type="checkbox" required />
+                <span>
+                  Bilgilerimin yalnızca talebime yanıt vermek için
+                  kullanılacağını okudum.
+                </span>
+              </label>
+
+              <div class="contact-form-actions">
+                <button type="submit">
+                  <span>Mesajı güvenle gönder</span>
+                  <span aria-hidden="true">↗</span>
+                </button>
+                <p class="form-status" id="contact-form-status" role="status" aria-live="polite"></p>
+              </div>
+            </form>
           </div>
         </div>
       </section>
@@ -474,5 +579,6 @@
         <p class="copyright">© 2026 Ümit Çağdaş</p>
       </div>
     </footer>
+    <script type="module" src="./assets/contact.js"></script>
   </body>
 </html>
