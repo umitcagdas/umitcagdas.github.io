@@ -200,7 +200,6 @@ img {
   position: relative;
   z-index: 4;
   max-width: 1050px;
-  animation: reveal-up 720ms cubic-bezier(0.2, 0.75, 0.2, 1) both;
 }
 
 .hero-kicker {
@@ -274,7 +273,6 @@ img {
   width: min(42vw, 550px);
   height: 720px;
   overflow: visible;
-  animation: portrait-in 850ms 120ms cubic-bezier(0.2, 0.75, 0.2, 1) both;
 }
 
 .hero-portrait {
