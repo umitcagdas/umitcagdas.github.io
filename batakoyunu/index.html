@@ -6,14 +6,68 @@
     <title>Batak Oyunu | Klasik Batak</title>
     <meta
       name="description"
-      content="Batak Oyunu, iPhone ve Android için klasik Batak deneyimi sunan mobil kart oyunudur."
+      content="Batak Oyunu, iPhone için bot rakipler ve yerel ilerleme takibiyle klasik Batak deneyimi sunan mobil kart oyunudur."
     />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta name="theme-color" content="#17133a" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <link rel="canonical" href="https://umitcagdas.github.io/batakoyunu/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="tr_TR" />
+    <meta property="og:site_name" content="Ümit Çağdaş" />
+    <meta property="og:title" content="Batak Oyunu | iPhone için Klasik Batak" />
+    <meta
+      property="og:description"
+      content="Bot rakiplerle klasik Batak oynayın; elleri, kozları ve yerel istatistiklerinizi takip edin."
+    />
+    <meta property="og:url" content="https://umitcagdas.github.io/batakoyunu/" />
+    <meta property="og:image" content="https://umitcagdas.github.io/batakoyunu/assets/app-icon.png" />
+    <meta property="og:image:width" content="256" />
+    <meta property="og:image:height" content="256" />
+    <meta property="og:image:alt" content="Batak Oyunu uygulama ikonu" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Batak Oyunu | iPhone için Klasik Batak" />
+    <meta name="twitter:description" content="Bot rakiplerle klasik Batak oynayın ve yerel istatistiklerinizi takip edin." />
+    <meta name="twitter:image" content="https://umitcagdas.github.io/batakoyunu/assets/app-icon.png" />
+    <meta name="twitter:image:alt" content="Batak Oyunu uygulama ikonu" />
+    <link rel="icon" href="./assets/app-icon.png" />
     <link rel="stylesheet" href="./assets/site.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://umitcagdas.github.io/batakoyunu/#software",
+            "name": "Batak Oyunu",
+            "url": "https://umitcagdas.github.io/batakoyunu/",
+            "image": "https://umitcagdas.github.io/batakoyunu/assets/app-icon.png",
+            "description": "Bot rakipler ve yerel ilerleme takibiyle klasik Batak deneyimi sunan mobil kart oyunu.",
+            "creator": {
+              "@id": "https://umitcagdas.github.io/#person"
+            },
+            "author": {
+              "@id": "https://umitcagdas.github.io/#person"
+            },
+            "sameAs": [
+              "https://apps.apple.com/app/batak-oyunu/id6773098179"
+            ]
+          },
+          {
+            "@type": "Person",
+            "@id": "https://umitcagdas.github.io/#person",
+            "name": "Ümit Çağdaş",
+            "url": "https://umitcagdas.github.io/"
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <header class="site-header">
       <a class="brand" href="./index.html" aria-label="Batak Oyunu ana sayfa">
-        <img src="./assets/app-icon.png" alt="" />
+        <img src="./assets/app-icon.png" width="256" height="256" alt="" />
         <span>Batak Oyunu</span>
       </a>
       <nav class="nav" aria-label="Sayfa bölümleri">
@@ -43,7 +97,12 @@
           </div>
 
           <div class="phone-preview" aria-label="Batak Oyunu ana menü önizlemesi">
-            <img src="./assets/main-menu.png" alt="Batak Oyunu ana menü ekranı" />
+            <img
+              src="./assets/main-menu.webp"
+              width="427"
+              height="760"
+              alt="Batak Oyunu ana menü ekranı"
+            />
           </div>
         </div>
       </section>
@@ -112,6 +171,26 @@
           </article>
         </div>
       </section>
+
+      <section class="developer-profile" aria-labelledby="developer-title">
+        <div class="section-inner developer-profile-inner">
+          <p class="developer-label">Geliştirici</p>
+          <div>
+            <h2 id="developer-title">
+              <a href="../hakkimda/">Ümit Çağdaş</a>
+            </h2>
+            <p>
+              Batak Oyunu, Senior Full-Stack Developer Ümit Çağdaş tarafından
+              sade ve mobil odaklı bir kart oyunu deneyimi olarak geliştirildi.
+            </p>
+          </div>
+          <nav class="developer-links" aria-label="Geliştirici bağlantıları">
+            <a href="../hakkimda/">Geliştirici profili</a>
+            <a href="../projeler/">Diğer projeler</a>
+            <a href="../">Kişisel site</a>
+          </nav>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer">
@@ -120,6 +199,8 @@
         <span><a href="./support.html">Destek</a></span>
         <span><a href="./privacy.html">Gizlilik Politikası</a></span>
         <span><a href="../app-ads.txt">app-ads.txt</a></span>
+        <span><a href="../hakkimda/">Geliştirici: Ümit Çağdaş</a></span>
+        <span><a href="../">Kişisel site</a></span>
       </div>
     </footer>
   </body>
