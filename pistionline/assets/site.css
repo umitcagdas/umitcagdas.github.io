@@ -39,6 +39,11 @@ a {
   color: var(--gold-soft);
 }
 
+:focus-visible {
+  outline: 3px solid var(--gold-soft);
+  outline-offset: 4px;
+}
+
 .site-header {
   position: sticky;
   top: 0;
@@ -572,5 +577,82 @@ h3 {
 
   .legal-list dd + dt {
     margin-top: 12px;
+  }
+}
+
+.developer-profile {
+  padding: 90px 22px;
+  border-top: 1px solid var(--line);
+  background:
+    radial-gradient(circle at 82% 20%, rgba(83, 220, 143, 0.12), transparent 24rem),
+    var(--surface);
+}
+
+.developer-profile-inner {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr) auto;
+  gap: clamp(28px, 5vw, 70px);
+  align-items: start;
+}
+
+.developer-label {
+  margin: 9px 0 0;
+  color: var(--green);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.developer-profile h2 {
+  margin: 0;
+  font-size: clamp(2.4rem, 5vw, 4.8rem);
+  letter-spacing: -0.06em;
+  line-height: 0.95;
+}
+
+.developer-profile h2 a {
+  color: var(--cream);
+  text-decoration: none;
+}
+
+.developer-profile div > p {
+  max-width: 620px;
+  margin: 20px 0 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.developer-links {
+  display: grid;
+  min-width: 180px;
+  border-top: 1px solid var(--line);
+}
+
+.developer-links a {
+  padding: 13px 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--cream);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.developer-links a::after {
+  float: right;
+  content: "↗";
+}
+
+@media (max-width: 760px) {
+  .developer-profile {
+    padding: 70px 20px;
+  }
+
+  .developer-profile-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .developer-links {
+    width: 100%;
   }
 }
