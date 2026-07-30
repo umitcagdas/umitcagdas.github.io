@@ -102,7 +102,7 @@ a {
   display: grid;
   place-items: center;
   overflow: hidden;
-  background-image: url("./hero-bg.jpg");
+  background-image: url("./hero-bg.webp");
   background-position: center 42%;
   background-size: cover;
 }
@@ -351,7 +351,7 @@ h3 {
 
 .legal-hero {
   border-bottom: 1px solid rgba(242, 193, 91, 0.34);
-  background-image: linear-gradient(rgba(5, 22, 21, 0.68), rgba(5, 22, 21, 0.94)), url("./hero-bg.jpg");
+  background-image: linear-gradient(rgba(5, 22, 21, 0.68), rgba(5, 22, 21, 0.94)), url("./hero-bg.webp");
   background-position: center 40%;
   background-size: cover;
 }
