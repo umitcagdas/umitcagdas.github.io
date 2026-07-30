@@ -16,9 +16,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
     <link rel="stylesheet" href="../assets/portfolio.css" />
 
     <meta property="og:type" content="profile" />
@@ -191,6 +204,12 @@
             <span class="profile-window" aria-hidden="true"></span>
             <img
               src="../assets/umit-cagdas-yazilim-gelistirici.webp"
+              srcset="
+                ../assets/umit-cagdas-yazilim-gelistirici-520.webp 520w,
+                ../assets/umit-cagdas-yazilim-gelistirici-760.webp 760w,
+                ../assets/umit-cagdas-yazilim-gelistirici.webp 1003w
+              "
+              sizes="(max-width: 620px) calc(100vw - 32px), (max-width: 860px) 520px, min(42vw, 520px)"
               width="1003"
               height="1568"
               alt="Ümit Çağdaş, Senior Full-Stack .NET ve Flutter geliştiricisi"

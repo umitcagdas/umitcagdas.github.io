@@ -758,7 +758,7 @@ img {
 }
 
 .section-label-light {
-  color: rgba(255, 255, 255, 0.43);
+  color: rgba(255, 255, 255, 0.64);
 }
 
 .section-heading h2 {
@@ -2021,7 +2021,7 @@ img {
   padding: 18px 0 0 25px;
   border-top: 1px solid rgba(17, 18, 17, 0.2);
   border-left: 3px solid var(--violet);
-  color: rgba(17, 18, 17, 0.58);
+  color: rgba(17, 18, 17, 0.78);
   font-size: 0.72rem;
   line-height: 1.65;
 }
@@ -2256,7 +2256,7 @@ img {
 .footer-inner > p:not(.copyright) {
   justify-self: end;
   margin: 0;
-  color: rgba(255, 255, 255, 0.35);
+  color: rgba(255, 255, 255, 0.62);
   font-size: 0.62rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -2283,7 +2283,7 @@ img {
 .copyright {
   justify-self: end;
   margin: 0;
-  color: rgba(255, 255, 255, 0.28);
+  color: rgba(255, 255, 255, 0.56);
   font-size: 0.66rem;
 }
 
@@ -2916,6 +2916,7 @@ img {
 
 .enterprise-grid img {
   width: 100%;
+  height: auto;
   aspect-ratio: 16 / 10;
   object-fit: cover;
   object-position: top left;

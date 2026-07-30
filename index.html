@@ -16,9 +16,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
     <link rel="stylesheet" href="./assets/portfolio.css" />
 
     <meta property="og:type" content="website" />
@@ -202,6 +215,12 @@
             <div class="hero-portrait">
               <img
                 src="./assets/umit-cagdas-yazilim-gelistirici.webp"
+                srcset="
+                  ./assets/umit-cagdas-yazilim-gelistirici-520.webp 520w,
+                  ./assets/umit-cagdas-yazilim-gelistirici-760.webp 760w,
+                  ./assets/umit-cagdas-yazilim-gelistirici.webp 1003w
+                "
+                sizes="(max-width: 620px) calc(100vw - 32px), (max-width: 860px) 520px, min(42vw, 550px)"
                 width="1003"
                 height="1568"
                 alt="Ümit Çağdaş, Senior Full-Stack .NET ve Flutter geliştiricisi"
@@ -320,6 +339,11 @@
                 <img
                   class="project-screenshot"
                   src="./assets/projects/bizsizeyeteriz-home.webp"
+                  srcset="
+                    ./assets/projects/bizsizeyeteriz-home-640.webp 640w,
+                    ./assets/projects/bizsizeyeteriz-home.webp 1280w
+                  "
+                  sizes="(max-width: 860px) calc(100vw - 80px), 600px"
                   width="1280"
                   height="720"
                   alt="BizSizeYeteriz B2B e-ticaret sitesinin ana sayfası"
@@ -347,6 +371,7 @@
                     <li>Bayi paneli</li>
                     <li>B2B</li>
                     <li>Operasyon</li>
+                  </ul>
                   <span class="case-domain">bayi.kazancplastik.com.tr</span>
                 </div>
               </div>
@@ -355,6 +380,11 @@
                 <img
                   class="project-screenshot"
                   src="./assets/projects/kazanc-bayi-panel.webp"
+                  srcset="
+                    ./assets/projects/kazanc-bayi-panel-640.webp 640w,
+                    ./assets/projects/kazanc-bayi-panel-1280.webp 1280w
+                  "
+                  sizes="(max-width: 860px) calc(100vw - 80px), 600px"
                   width="3416"
                   height="1844"
                   alt="Kazanç Plastik bayi portalının yönetim paneli"
@@ -399,6 +429,11 @@
                 <img
                   class="project-screenshot"
                   src="./assets/projects/kazancplastik-home.webp"
+                  srcset="
+                    ./assets/projects/kazancplastik-home-640.webp 640w,
+                    ./assets/projects/kazancplastik-home.webp 1280w
+                  "
+                  sizes="(max-width: 860px) calc(100vw - 80px), 600px"
                   width="1280"
                   height="720"
                   alt="Kazanç Plastik kurumsal web sitesinin ana sayfası"
