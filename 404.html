@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="noindex">
+    <title>Sayfa bulunamadı</title>
+    <script>
+      if (location.pathname.toLowerCase().startsWith("/remotiq")) {
+        const suffix = location.pathname.slice("/remotiq".length);
+        location.replace("/Remotiq" + (suffix || "/") + location.search + location.hash);
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Sayfa bulunamadı</h1>
+    <p><a href="/">Ana sayfaya dön</a></p>
+  </body>
+</html>

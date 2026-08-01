@@ -162,6 +162,10 @@ img {
   transform: scaleX(1);
 }
 
+.header-actions { display: flex; align-items: center; gap: 10px; }
+.language-picker { display: flex; align-items: center; gap: 8px; color: var(--lavender); font-size: .76rem; font-weight: 750; }
+.language-picker select { max-width: 172px; padding: 9px 30px 9px 11px; border: 1px solid var(--outline-soft); border-radius: 12px; background: var(--surface); color: var(--cream); font: inherit; cursor: pointer; }
+
 .hero {
   position: relative;
   display: grid;
@@ -1188,6 +1192,8 @@ span.button.disabled {
 }
 
 @media (max-width: 520px) {
+  .language-picker > span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .language-picker select { max-width: 132px; }
   .hero {
     padding-top: 52px;
   }

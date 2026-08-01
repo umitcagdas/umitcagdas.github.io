@@ -13,16 +13,17 @@ const mobileHandoff = document.querySelector("#mobile-handoff");
 const shareButton = document.querySelector("#share-link");
 const copyButton = document.querySelector("#copy-link");
 const copyStatus = document.querySelector("#copy-status");
+const translations = JSON.parse(document.querySelector("#get-i18n")?.dataset.json || "{}");
 
 const downloads = {
   mac: {
-    label: "macOS algılandı",
-    button: "Mac için indir",
+    label: translations.detectedMac,
+    button: translations.macButton,
     href: "./downloads/Remotiq_0.1.0_aarch64.dmg",
   },
   windows: {
-    label: "Windows algılandı",
-    button: "Windows için indir",
+    label: translations.detectedWindows,
+    button: translations.winButton,
     href: "./downloads/Remotiq_0.1.0_x64-setup.exe",
   },
 };
@@ -50,14 +51,13 @@ async function copyPageLink() {
     document.execCommand("copy");
     input.remove();
   }
-  copyStatus.textContent = "Bağlantı kopyalandı.";
+  copyStatus.textContent = translations.copied;
 }
 
 if (isMobile) {
   document.body.classList.add("is-mobile");
   mobileHandoff.hidden = false;
-  platformMessage.textContent =
-    "Telefonunuzdasınız. Bu sayfayı bilgisayarınıza gönderin; açıldığında doğru indirme seçeneğini öne çıkaracağız.";
+  platformMessage.textContent = translations.mobileLead;
 } else if (isMac) {
   showDetectedDownload("mac");
 } else if (isWindows) {
@@ -70,7 +70,7 @@ shareButton?.addEventListener("click", async () => {
     try {
       await navigator.share({
         title: "Remotiq Desktop",
-        text: "Remotiq bilgisayar uygulamasını indirin.",
+        text: translations.shareText,
         url: pageUrl,
       });
       return;
