@@ -6,7 +6,7 @@
     <title>Gizlilik Politikası | Remotiq</title>
     <meta
       name="description"
-      content="Remotiq gizlilik politikası: LAN-first çalışma, veri toplamama, yerel eşleşme ve izin kullanımı."
+      content="Remotiq gizlilik politikası: LAN-first kontrol, Firebase kullanım ve tanılama raporları, reklamlar ve kullanıcı tercihleri."
     >
     <meta name="theme-color" content="#0d0928">
     <link rel="icon" href="./assets/remotiq-icon.png">
@@ -32,13 +32,14 @@
       <section class="legal-hero">
         <div class="legal-inner">
           <p class="eyebrow"><span></span> Gizlilik Politikası</p>
-          <h1>Remotiq verilerinizi sunucularımıza göndermez.</h1>
+          <h1>Yerel kontrol sizde kalır; ölçüm tercihi sizindir.</h1>
           <p class="hero-copy">
             Remotiq, telefonunuz ile bilgisayarınız arasında yerel ağ üzerinde çalışan
-            bir uzaktan kumanda uygulamasıdır. Hesap, bulut aktarımı veya Remotiq
-            tarafından işletilen analytics/telemetry altyapısı kullanmaz.
+            bir uzaktan kumanda uygulamasıdır. Hesap veya internet üzerinden komut
+            aktarımı kullanmaz. Mobil uygulama, kullanıcı tarafından kapatılabilen
+            Firebase kullanım, çökme ve performans raporlarından yararlanır.
           </p>
-          <p class="hero-note">Son güncelleme: 9 Haziran 2026</p>
+          <p class="hero-note">Son güncelleme: 1 Ağustos 2026</p>
         </div>
       </section>
 
@@ -47,10 +48,11 @@
           <article class="legal-card">
             <h2>Kısa Özet</h2>
             <ul>
-              <li>Remotiq kendi sunucularına kişisel veri göndermez.</li>
-              <li>Remotiq hesabı, bulut sunucusu veya Remotiq analytics/telemetry altyapısı yoktur.</li>
+              <li>Uzaktan kontrol komutları telefon ile eşleşmiş bilgisayar arasında yerel ağda kalır.</li>
+              <li>Remotiq hesabı veya internet üzerinden komut aktaran bir relay sunucusu yoktur.</li>
+              <li>Firebase; takma adlı kullanım, ülke, oturum, çökme ve performans raporları için kullanılır.</li>
+              <li>Firebase raporlaması Ayarlar &gt; Gizlilik ve tanılama bölümünden kapatılabilir.</li>
               <li>Mobil uygulamanın reklam destekli sürümlerinde Google Mobile Ads kullanılabilir.</li>
-              <li>Telefon ve bilgisayar aynı yerel ağda doğrudan haberleşir.</li>
               <li>Eşleşmiş bilgisayar bilgileri ve güvenli bağlantı anahtarı cihazınızda saklanır.</li>
               <li>Kamera yalnızca QR kod eşleşmesi için kullanılır.</li>
             </ul>
@@ -59,15 +61,25 @@
           <article class="legal-card">
             <h2>Toplanan Veriler</h2>
             <p>
-              Remotiq 1.0.2 sürümü, Remotiq tarafından işletilen bir sunucuya kişisel veri
-              göndermez. Uygulamada kullanıcı hesabı, cloud sync veya Remotiq analytics/telemetry
-              altyapısı yoktur. Reklam destekli mobil sürümlerde Google Mobile Ads üçüncü taraf
-              reklam sağlayıcısı olarak banner, geçiş ve ödüllü reklamlar için kullanılabilir.
+              Remotiq 1.0.3 build 20 ve sonraki mobil sürümlerinde Firebase Analytics,
+              Crashlytics ve Performance Monitoring kullanılır. Bu hizmetler takma adlı uygulama
+              örneği kimliği; ilk açılış, oturum ve etkileşim süresi; görüntülenen ekranlar;
+              bağlantı yönteminin türü ve başarı durumu; uygulama sürümü, dil, cihaz ve işletim
+              sistemi; Google tarafından ağ bağlantısından türetilen ülke/bölge; çökme kayıtları
+              ve performans ölçümleri gibi verileri işleyebilir. Remotiq Firebase'e kullanıcı adı,
+              e-posta, telefon veya hesap kimliği atamaz.
             </p>
             <p>
               Mobil uygulama, eşleşme, yeniden bağlanma ve reklamsız deneme süresi için bazı bilgileri yalnızca cihazınızda
               saklar: bilgisayar adı, host/port, platform, son bağlantı zamanı, cihaz kimliği,
               güvenli auth token, kullanıcı tercihleri ve reklamsız süre bitiş zamanı. Auth token güvenli depolamada saklanır.
+            </p>
+            <p>
+              Eşleşmiş bilgisayarın adı, host'u, yerel IP adresi ve portu; eşleştirme kodu,
+              cihaz kimliği ve auth token; uzaktan yazılan metin; tarayıcı URL'leri; uygulama
+              adları; belgeler ve ekran görüntüleri Firebase olaylarına veya özel çökme
+              alanlarına eklenmez. Firebase Performance, Google hizmetlerine bağlanırken
+              kullanılan IP adresini coğrafi segmentasyon için işleyebilir.
             </p>
           </article>
 
@@ -81,15 +93,16 @@
               <dd>Aynı Wi-Fi ağındaki Remotiq Masaüstü uygulamasını bulmak ve bağlanmak için kullanılır.</dd>
 
               <dt>İnternet / Ağ</dt>
-              <dd>Android tarafında ağ bağlantısı için gereklidir. Remotiq bunu yerel ağdaki bilgisayara bağlanmak için kullanır; reklam destekli mobil sürümlerde Google Mobile Ads de reklam isteği için kullanır.</dd>
+              <dd>Yerel bilgisayar bağlantısı, mağaza güncelleme kontrolü, kullanıcı etkin bıraktığında Firebase raporlaması ve reklam destekli sürümlerde Google Mobile Ads için kullanılır.</dd>
             </dl>
           </article>
 
           <article class="legal-card">
             <h2>Paylaşım</h2>
             <p>
-              Remotiq tarafından işletilen bir bulut servisi olmadığı için uygulama komutları veya
-              eşleşme bilgileri Remotiq sunucularına iletilmez. Reklam destekli mobil sürümlerde
+              Uygulama komutları ve eşleşme sırları Remotiq sunucularına iletilmez. Google Firebase,
+              kullanım analizi, çökme tanılama ve performans sağlayıcısı olarak yukarıda belirtilen
+              sınırlı verileri işleyebilir. Reklam destekli mobil sürümlerde
               Google Mobile Ads, reklam göstermek ve reklam performansını ölçmek için cihaz, uygulama
               ve reklam etkileşimiyle ilgili verileri Google politikalarına ve platform izinlerine
               göre işleyebilir.
@@ -101,6 +114,11 @@
               İznin reddedilmesi Remotiq'in temel özelliklerini engellemez. Gerekli olduğunda reklam
               gizlilik tercihleri Ayarlar ekranından yeniden açılabilir.
             </p>
+            <p>
+              Reklam gizliliği tercihi ile Firebase kullanım analizi tercihi ayrıdır. Firebase
+              raporlaması Ayarlar bölümündeki “Kullanım analizlerini paylaş” seçeneğinden kapatılır;
+              bu işlem Analytics, Crashlytics ve Performance Monitoring toplamayı durdurur.
+            </p>
           </article>
 
           <article class="legal-card">
@@ -111,6 +129,11 @@
               içerebilir. Auth token, eşleşme tokenı ve token hash değerleri tanılama çıktısına
               eklenmez.
             </p>
+            <p>
+              Firebase Crashlytics, kullanıcı ölçümü etkin tuttuğunda çökme stack trace'leri,
+              sansürlenmiş hata türleri, ilgili uygulama durumu, cihaz ve işletim sistemi bilgilerini
+              işleyebilir. Remotiq özel çökme alanlarına kullanıcı kimliği veya bağlantı sırları eklemez.
+            </p>
           </article>
 
           <article class="legal-card">
@@ -118,14 +141,18 @@
             <p>
               Mobil uygulamada eşleşmiş bilgisayarı unut seçeneği, kayıtlı bilgisayar bilgisini ve
               güvenli auth tokenı cihazınızdan kaldırır. Masaüstü uygulamasında güvenilir cihazlar
-              kaldırılabilir veya iptal edilebilir.
+              kaldırılabilir veya iptal edilebilir. Firebase raporlamasını kapatmak cihazdaki Analytics
+              verisini sıfırlar ve sonraki toplamayı durdurur. Uygulamayı silmek yerel verileri kaldırır.
+              Remotiq Firebase'e kullanıcı hesabı kimliği göndermediği için raporlar bir kişinin adı
+              veya hesabı üzerinden aranamaz.
             </p>
           </article>
 
           <article class="legal-card">
             <h2>Çocukların Gizliliği</h2>
             <p>
-              Remotiq çocuklara yönelik bir servis değildir ve bu sürümde kişisel veri toplamaz.
+              Remotiq çocuklara yönelik bir servis değildir. Doğrudan tanımlayıcı kullanıcı hesabı
+              verisi istemez; ölçüm verileri yukarıda açıklanan şekilde takma adla işlenir.
             </p>
           </article>
 
@@ -140,15 +167,14 @@
           <article class="legal-card english-summary" lang="en">
             <h2>English Summary</h2>
             <p>
-              Remotiq is a LAN-first remote control app. Version 1.0.2 does not send personal data
-              to Remotiq servers, does not use accounts, does not use Remotiq-operated analytics or
-              telemetry, and does not relay commands through a Remotiq cloud server. Ad-supported
-              mobile builds may use Google Mobile Ads. Camera access is used for QR pairing. Local
-              network access is used to discover and connect to your own desktop agent. Pairing
-              metadata, the trusted-device auth token, and ad-free trial expiration are stored
-              locally on the user's device. Google UMP is checked before ads are requested. Where
-              required, users can review ad privacy choices; iOS tracking for personalized ads is
-              available only after the applicable App Tracking Transparency permission.
+              Remotiq is a LAN-first remote control app. Version 1.0.3 does not send personal data
+              or remote-control commands to a Remotiq relay and does not use accounts. Build 20 and
+              later use Firebase Analytics, Crashlytics, and Performance Monitoring for pseudonymous
+              sessions, screens, coarse country/region, device/app information, redacted crash reports,
+              and performance metrics. Users can disable all three in Settings. Remotiq does not add
+              computer addresses, pairing secrets, typed text, URLs, app names, or a user ID to Firebase.
+              Ad-supported builds may use Google Mobile Ads; Google UMP is checked before ads are requested,
+              and applicable iOS tracking requires App Tracking Transparency permission.
             </p>
           </article>
         </div>
@@ -157,7 +183,7 @@
 
     <footer class="site-footer">
       <div class="footer-inner">
-        <span>Remotiq 1.0.1</span>
+        <span>Remotiq 1.0.3</span>
         <span><a href="./support.html">Destek</a></span>
         <span><a href="./privacy.html">Gizlilik Politikası</a></span>
       </div>
