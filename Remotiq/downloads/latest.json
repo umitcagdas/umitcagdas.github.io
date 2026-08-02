@@ -1,0 +1,15 @@
+{
+  "version": "0.1.1",
+  "notes": "Remotiq 0.1.1",
+  "pub_date": "2026-07-27T23:41:58.248Z",
+  "platforms": {
+    "darwin-aarch64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSL29yWnhlajlmUEZXRmo2VlFyU0RJU0locE94ZFJuZnhjemwrQ2JlWlJzb1NwL0FuTmZ0NXNBMlN3WDdrdWpQNWtLMzJESjVheUgraHFyVDFUdzhnWnh6QWtKQzlXSXdvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg1MTk0NzQ5CWZpbGU6UmVtb3RpcS5hcHAudGFyLmd6ClA2K3FNVFFxdVMxOHNIZ3paV3ZyYVd0NEhLc1lxUWR3ckJtdnpRSi9FcDUyVlFLSmtnNmVnUElMRHpoZjNpUTVJMERmNWFiRDY3b3dta1lPTDQvUENnPT0K",
+      "url": "https://umitcagdas.github.io/Remotiq/downloads/Remotiq.app.tar.gz"
+    },
+    "windows-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSL29yWnhlajlmUERWK081V0VBcFRyTkRSRlgybFgxRWV6RnJuVlFSZFEwc05jUUJyc2t3c1UyRFZTWUZkUkhIcWhNckw0MU5qWHc5Kys2NHpHUWRldmF4TXZCOEM4QndFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg1MTk1NDIzCWZpbGU6UmVtb3RpcV8wLjEuMV94NjQtc2V0dXAuZXhlCi8yZUhTK3AvNDNINzBWZzRaYmJKdmRNZVFabWEyUXh2NlF1ZENIV0krSUEySUNId0VESnNOeXdQQU1QOXJmNUtIVlNFM0lkc09RV3h3SW81cEUyTEFBPT0K",
+      "url": "https://umitcagdas.github.io/Remotiq/downloads/Remotiq_0.1.1_x64-setup.exe"
+    }
+  }
+}
