@@ -19,12 +19,12 @@ const downloads = {
   mac: {
     label: translations.detectedMac,
     button: translations.macButton,
-    href: "./downloads/Remotiq_0.1.0_aarch64.dmg",
+    href: "/Remotiq/downloads/Remotiq_0.1.1_aarch64.dmg",
   },
   windows: {
     label: translations.detectedWindows,
     button: translations.winButton,
-    href: "./downloads/Remotiq_0.1.0_x64-setup.exe",
+    href: "/Remotiq/downloads/Remotiq_0.1.1_x64-setup.exe",
   },
 };
 
