@@ -32,6 +32,12 @@ a {
   color: inherit;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 :focus-visible {
   outline: 3px solid var(--gold-strong);
   outline-offset: 4px;
