@@ -46,6 +46,7 @@ a {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 ::selection {
@@ -1657,12 +1658,10 @@ img {
   top: 62px;
   right: 9%;
   width: 39%;
-  height: 94%;
+  height: auto;
   border: 5px solid #070908;
   border-radius: 32px 32px 0 0;
   box-shadow: 0 35px 70px rgba(0, 0, 0, 0.42);
-  object-fit: cover;
-  object-position: top;
 }
 
 .product-card:hover .product-screen {
@@ -1687,6 +1686,9 @@ img {
   top: 50%;
   left: 50%;
   width: min(31%, 185px);
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
   border: 3px solid rgba(255, 255, 255, 0.55);
   border-radius: 25%;
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
