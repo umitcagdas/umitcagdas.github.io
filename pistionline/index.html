@@ -29,6 +29,8 @@
     <meta name="twitter:image:alt" content="Pişti Online uygulama ikonu" />
     <link rel="icon" href="./assets/app-icon.png" />
     <link rel="stylesheet" href="./assets/site.css" />
+    <script src="./assets/i18n-home.js" defer></script>
+    <script src="./assets/site-i18n.js" defer></script>
 
     <script type="application/ld+json">
       {
@@ -61,24 +63,24 @@
       }
     </script>
   </head>
-  <body>
+  <body data-page="home">
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="Pişti Online ana sayfa">
+      <a class="brand" href="#top" aria-label="Pişti Online ana sayfa" data-i18n-aria="aria.home">
         <img src="./assets/app-icon.png" width="256" height="256" alt="" />
         <span>Pişti: Online</span>
       </a>
-      <nav class="nav" aria-label="Sayfa bölümleri">
-        <a href="#features">Özellikler</a>
-        <a href="#screens">Ekranlar</a>
-        <a href="./updates/">Yenilikler</a>
-        <a href="./support.html">Destek</a>
-        <a href="./privacy.html">Gizlilik</a>
+      <nav class="nav" aria-label="Sayfa bölümleri" data-i18n-aria="aria.sections">
+        <a href="#features" data-i18n="nav.features">Özellikler</a>
+        <a href="#screens" data-i18n="nav.screens">Ekranlar</a>
+        <a href="./updates/" data-i18n="nav.updates">Yenilikler</a>
+        <a href="./support.html" data-i18n="nav.support">Destek</a>
+        <a href="./privacy.html" data-i18n="nav.privacy">Gizlilik</a>
       </nav>
     </header>
 
     <main id="top">
       <section class="hero">
-        <div class="hero-content">
+        <div class="hero-content" data-i18n-html="hero">
           <img class="hero-logo" src="./assets/logo.png" width="720" height="720" alt="Pişti Online logosu" />
           <p class="eyebrow">Canlı çevrim içi kart oyunu</p>
           <h1>Pişti: Online</h1>
@@ -95,7 +97,7 @@
       </section>
 
       <section id="features" class="section">
-        <div class="section-inner">
+        <div class="section-inner" data-i18n-html="features">
           <div class="section-heading">
             <p class="eyebrow">Oyunun içinde</p>
             <h2>Tanıdık kurallar, canlı rekabet</h2>
@@ -130,7 +132,7 @@
       </section>
 
       <section id="screens" class="section alt">
-        <div class="section-inner">
+        <div class="section-inner" data-i18n-html="screens">
           <div class="section-heading">
             <p class="eyebrow">Gerçek uygulama ekranları</p>
             <h2>Masaya oturmadan önce</h2>
@@ -166,7 +168,7 @@
       </section>
 
       <section class="section">
-        <div class="section-inner info-grid">
+        <div class="section-inner info-grid" data-i18n-html="info">
           <article>
             <h2>Ücretsiz oyna</h2>
             <p>Misafir olarak hemen başlayın veya Apple ve Google hesabınızla profilinizi koruyun.</p>
@@ -189,7 +191,7 @@
       </section>
 
       <section class="developer-profile" aria-labelledby="developer-title">
-        <div class="section-inner developer-profile-inner">
+        <div class="section-inner developer-profile-inner" data-i18n-html="developer">
           <p class="developer-label">Geliştirici</p>
           <div>
             <h2 id="developer-title">
@@ -212,13 +214,13 @@
     <footer class="site-footer">
       <div class="footer-inner">
         <span>Pişti: Online 1.1.5</span>
-        <span><a href="./updates/">Yenilikler</a></span>
-        <span><a href="./support.html">Destek</a></span>
-        <span><a href="./privacy.html">Gizlilik Politikası</a></span>
-        <span><a href="./account-deletion.html">Hesap Silme</a></span>
+        <span><a href="./updates/" data-i18n="nav.updates">Yenilikler</a></span>
+        <span><a href="./support.html" data-i18n="nav.support">Destek</a></span>
+        <span><a href="./privacy.html" data-i18n="footer.privacy">Gizlilik Politikası</a></span>
+        <span><a href="./account-deletion.html" data-i18n="nav.accountDeletion">Hesap Silme</a></span>
         <span><a href="../app-ads.txt">app-ads.txt</a></span>
-        <span><a href="../hakkimda/">Geliştirici: Ümit Çağdaş</a></span>
-        <span><a href="../">Kişisel site</a></span>
+        <span><a href="../hakkimda/" data-i18n="footer.developer">Geliştirici: Ümit Çağdaş</a></span>
+        <span><a href="../" data-i18n="footer.personal">Kişisel site</a></span>
       </div>
     </footer>
   </body>
