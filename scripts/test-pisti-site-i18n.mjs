@@ -124,6 +124,20 @@ assert.deepEqual(
   languages,
   "updates language panels",
 );
+assert.deepEqual(
+  [...updatesHtml.matchAll(/release-card release-card-latest[\s\S]*?<p class="release-version">([^<]+)<\/p>/g)].map(
+    (match) => match[1],
+  ),
+  [
+    "Sürüm 1.1.6",
+    "Version 1.1.6",
+    "Version 1.1.6",
+    "Έκδοση 1.1.6",
+    "Versioni 1.1.6",
+  ],
+  "updates latest release per locale",
+);
+assert.match(updatesHtml, /Pişti: Online 1\.1\.6/, "updates footer version");
 for (const language of languages) {
   assert.ok(updates[language].meta?.title, `updates: ${language} title`);
   for (const key of [
