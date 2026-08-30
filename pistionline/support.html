@@ -10,25 +10,27 @@
     />
     <link rel="icon" href="./assets/app-icon.png" />
     <link rel="stylesheet" href="./assets/site.css" />
+    <script src="./assets/i18n-support.js" defer></script>
+    <script src="./assets/site-i18n.js" defer></script>
   </head>
-  <body>
+  <body data-page="support">
     <header class="site-header">
-      <a class="brand" href="./index.html" aria-label="Pişti Online ana sayfa">
+      <a class="brand" href="./index.html" aria-label="Pişti Online ana sayfa" data-i18n-aria="aria.home">
         <img src="./assets/app-icon.png" alt="" />
         <span>Pişti: Online</span>
       </a>
-      <nav class="nav" aria-label="Sayfa bölümleri">
-        <a href="./index.html#features">Özellikler</a>
-        <a href="./index.html#screens">Ekranlar</a>
-        <a href="./updates/">Yenilikler</a>
-        <a href="./support.html" aria-current="page">Destek</a>
-        <a href="./privacy.html">Gizlilik</a>
+      <nav class="nav" aria-label="Sayfa bölümleri" data-i18n-aria="aria.sections">
+        <a href="./index.html#features" data-i18n="nav.features">Özellikler</a>
+        <a href="./index.html#screens" data-i18n="nav.screens">Ekranlar</a>
+        <a href="./updates/" data-i18n="nav.updates">Yenilikler</a>
+        <a href="./support.html" aria-current="page" data-i18n="nav.support">Destek</a>
+        <a href="./privacy.html" data-i18n="nav.privacy">Gizlilik</a>
       </nav>
     </header>
 
     <main>
       <section class="legal-hero">
-        <div class="legal-inner">
+        <div class="legal-inner" data-i18n-html="hero">
           <p class="eyebrow">Pişti: Online Destek</p>
           <h1>Masaya dönmenize yardımcı olalım.</h1>
           <p class="hero-copy">
@@ -39,7 +41,7 @@
 
       <section class="section">
         <div class="legal-inner legal-stack">
-          <article class="legal-card">
+          <article class="legal-card" data-i18n-html="start">
             <h2>Oyuna başlama</h2>
             <ol>
               <li>Misafir olarak devam edin veya Apple/Google hesabınızla giriş yapın.</li>
@@ -49,7 +51,7 @@
             </ol>
           </article>
 
-          <article class="legal-card">
+          <article class="legal-card" data-i18n-html="login">
             <h2>Giriş yapılamıyor</h2>
             <ul>
               <li>İnternet bağlantınızı kontrol edin ve uygulamayı yeniden açın.</li>
@@ -59,7 +61,7 @@
             </ul>
           </article>
 
-          <article class="legal-card">
+          <article class="legal-card" data-i18n-html="matchmaking">
             <h2>Rakip bulunamıyor</h2>
             <p>
               Arama devam ederken uygulamayı açık tutun. Arama aralığı zamanla genişler;
@@ -67,7 +69,7 @@
             </p>
           </article>
 
-          <article class="legal-card">
+          <article class="legal-card" data-i18n-html="connection">
             <h2>Maç bağlantısı kesildi</h2>
             <ul>
               <li>Wi-Fi veya mobil veri bağlantınızı kontrol edin.</li>
@@ -76,7 +78,7 @@
             </ul>
           </article>
 
-          <article class="legal-card">
+          <article class="legal-card" data-i18n-html="reward">
             <h2>Coin veya reklam ödülü görünmüyor</h2>
             <p>
               Ödüllü reklam tamamlanmadan kapatılırsa veya reklam sağlayıcısı ödül onayı göndermezse coin verilmez.
@@ -84,7 +86,7 @@
             </p>
           </article>
 
-          <article class="legal-card">
+          <article class="legal-card" data-i18n-html="profile">
             <h2>Profil ve arkadaşlar</h2>
             <p>
               Ana menüde oyuncu adınıza veya avatarınıza dokunarak görünen adınızı ve avatarınızı yönetebilirsiniz.
@@ -97,7 +99,7 @@
             </p>
           </article>
 
-          <article class="legal-card danger-callout">
+          <article class="legal-card danger-callout" data-i18n-html="deletion">
             <h2>Hesabı kalıcı olarak silme</h2>
             <p>
               Profil ekranının altındaki <strong>Hesabı sil</strong> seçeneği Pişti hesabınızı ve ilişkili oyun verilerini kalıcı olarak kaldırır.
@@ -105,7 +107,7 @@
             </p>
           </article>
 
-          <article class="legal-card">
+          <article class="legal-card" data-i18n-html="privacy">
             <h2>Gizlilik</h2>
             <p>
               Hesap, oyun, reklam ve sosyal özelliklerde kullanılan veriler hakkında
@@ -113,7 +115,7 @@
             </p>
           </article>
 
-          <article class="legal-card contact-callout">
+          <article class="legal-card contact-callout" data-i18n-html="contact">
             <h2>İletişim</h2>
             <p>
               Sorun devam ederse cihaz modeli, işletim sistemi sürümü, uygulama sürümü ve sorunun kısa açıklamasıyla
@@ -127,11 +129,11 @@
 
     <footer class="site-footer">
       <div class="footer-inner">
-        <span>Pişti: Online Destek</span>
-        <span><a href="./index.html">Ana Sayfa</a></span>
-        <span><a href="./updates/">Yenilikler</a></span>
-        <span><a href="./privacy.html">Gizlilik Politikası</a></span>
-        <span><a href="./account-deletion.html">Hesap Silme</a></span>
+        <span data-i18n="footer.supportTitle">Pişti: Online Destek</span>
+        <span><a href="./index.html" data-i18n="nav.home">Ana Sayfa</a></span>
+        <span><a href="./updates/" data-i18n="nav.updates">Yenilikler</a></span>
+        <span><a href="./privacy.html" data-i18n="footer.privacy">Gizlilik Politikası</a></span>
+        <span><a href="./account-deletion.html" data-i18n="nav.accountDeletion">Hesap Silme</a></span>
       </div>
     </footer>
   </body>

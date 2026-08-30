@@ -10,25 +10,27 @@
     />
     <link rel="icon" href="./assets/app-icon.png" />
     <link rel="stylesheet" href="./assets/site.css" />
+    <script src="./assets/i18n-privacy.js" defer></script>
+    <script src="./assets/site-i18n.js" defer></script>
   </head>
-  <body>
+  <body data-page="privacy">
     <header class="site-header">
-      <a class="brand" href="./index.html" aria-label="Pişti Online ana sayfa">
+      <a class="brand" href="./index.html" aria-label="Pişti Online ana sayfa" data-i18n-aria="aria.home">
         <img src="./assets/app-icon.png" alt="" />
         <span>Pişti: Online</span>
       </a>
-      <nav class="nav" aria-label="Sayfa bölümleri">
-        <a href="./index.html#features">Özellikler</a>
-        <a href="./index.html#screens">Ekranlar</a>
-        <a href="./updates/">Yenilikler</a>
-        <a href="./support.html">Destek</a>
-        <a href="./privacy.html" aria-current="page">Gizlilik</a>
+      <nav class="nav" aria-label="Sayfa bölümleri" data-i18n-aria="aria.sections">
+        <a href="./index.html#features" data-i18n="nav.features">Özellikler</a>
+        <a href="./index.html#screens" data-i18n="nav.screens">Ekranlar</a>
+        <a href="./updates/" data-i18n="nav.updates">Yenilikler</a>
+        <a href="./support.html" data-i18n="nav.support">Destek</a>
+        <a href="./privacy.html" aria-current="page" data-i18n="nav.privacy">Gizlilik</a>
       </nav>
     </header>
 
     <main>
       <section class="legal-hero">
-        <div class="legal-inner">
+        <div class="legal-inner" data-i18n-html="hero">
           <p class="eyebrow">Gizlilik Politikası</p>
           <h1>Pişti: Online verilerinizi nasıl kullanır?</h1>
           <p class="hero-copy">
@@ -41,7 +43,7 @@
 
       <section class="section">
         <div class="legal-inner legal-stack">
-          <article class="legal-card">
+          <article class="legal-card" data-i18n-html="summary">
             <h2>Kısa özet</h2>
             <ul>
               <li>Misafir, Apple veya Google hesabıyla Pişti profili oluşturabilirsiniz.</li>
@@ -54,7 +56,7 @@
             </ul>
           </article>
 
-          <article class="legal-card">
+          <article class="legal-card" data-i18n-html="controller">
             <h2>Veri sorumlusu ve iletişim</h2>
             <p>
               Pişti: Online, Ümit Çağdaş tarafından sunulur. Gizlilik talepleri için
@@ -62,7 +64,7 @@
             </p>
           </article>
 
-          <article class="legal-card">
+          <article class="legal-card" data-i18n-html="categories">
             <h2>İşlenen veri kategorileri</h2>
             <dl class="legal-list">
               <dt>Hesap ve profil</dt>
@@ -100,7 +102,7 @@
             </dl>
           </article>
 
-          <article class="legal-card">
+          <article class="legal-card" data-i18n-html="purposes">
             <h2>Kullanım amaçları</h2>
             <ul>
               <li>Hesap oluşturmak, oturumu güvenli biçimde sürdürmek ve profilinizi göstermek.</li>
@@ -113,7 +115,7 @@
             </ul>
           </article>
 
-          <article class="legal-card">
+          <article class="legal-card" data-i18n-html="thirdParties">
             <h2>Üçüncü taraf hizmetleri</h2>
             <ul>
               <li><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple, Sign in with Apple ve App Store satın almaları</a></li>
@@ -130,7 +132,7 @@
             </p>
           </article>
 
-          <article class="legal-card">
+          <article class="legal-card" data-i18n-html="retention">
             <h2>Saklama ve hesap silme</h2>
             <p>
               Hesap ve oyun verileri Pişti hesabınız aktif olduğu sürece saklanır. Profil ekranındaki
@@ -157,7 +159,7 @@
             </p>
           </article>
 
-          <article class="legal-card">
+          <article class="legal-card" data-i18n-html="rights">
             <h2>Haklarınız</h2>
             <p>
               Uygulanabilir KVKK ve veri koruma mevzuatı kapsamında verilerinize erişme, düzeltme,
@@ -166,7 +168,7 @@
             </p>
           </article>
 
-          <article class="legal-card">
+          <article class="legal-card" data-i18n-html="children">
             <h2>Çocukların gizliliği</h2>
             <p>
               Pişti: Online 13 yaş altındaki çocuklara yönelik olarak tasarlanmamıştır. Ebeveyn veya vasi,
@@ -174,7 +176,7 @@
             </p>
           </article>
 
-          <article class="legal-card">
+          <article class="legal-card" data-i18n-html="security">
             <h2>Güvenlik ve değişiklikler</h2>
             <p>
               Verileri yetkisiz erişime karşı korumak için HTTPS, kimlik doğrulama ve erişim kontrolleri kullanılır.
@@ -182,7 +184,7 @@
             </p>
           </article>
 
-          <article class="legal-card contact-callout">
+          <article class="legal-card contact-callout" data-i18n-html="contact">
             <h2>İletişim</h2>
             <p>
               Gizlilik soruları: <a href="mailto:umitcagdas@gmail.com">umitcagdas@gmail.com</a><br />
@@ -190,7 +192,7 @@
             </p>
           </article>
 
-          <article class="legal-card english-summary" lang="en">
+          <article class="legal-card english-summary" lang="en" data-secondary-summary>
             <h2>English summary</h2>
             <p>
               Pişti: Online supports guest, Apple, and Google sign-in. The service stores player profile, gameplay,
@@ -211,10 +213,10 @@
     <footer class="site-footer">
       <div class="footer-inner">
         <span>Pişti: Online</span>
-        <span><a href="./index.html">Ana Sayfa</a></span>
-        <span><a href="./updates/">Yenilikler</a></span>
-        <span><a href="./support.html">Destek</a></span>
-        <span><a href="./account-deletion.html">Hesap Silme</a></span>
+        <span><a href="./index.html" data-i18n="nav.home">Ana Sayfa</a></span>
+        <span><a href="./updates/" data-i18n="nav.updates">Yenilikler</a></span>
+        <span><a href="./support.html" data-i18n="nav.support">Destek</a></span>
+        <span><a href="./account-deletion.html" data-i18n="nav.accountDeletion">Hesap Silme</a></span>
       </div>
     </footer>
   </body>

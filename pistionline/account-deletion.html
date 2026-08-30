@@ -10,25 +10,27 @@
     />
     <link rel="icon" href="./assets/app-icon.png" />
     <link rel="stylesheet" href="./assets/site.css" />
+    <script src="./assets/i18n-account-deletion.js" defer></script>
+    <script src="./assets/site-i18n.js" defer></script>
   </head>
-  <body>
+  <body data-page="account-deletion">
     <header class="site-header">
-      <a class="brand" href="./index.html" aria-label="Pişti Online ana sayfa">
+      <a class="brand" href="./index.html" aria-label="Pişti Online ana sayfa" data-i18n-aria="aria.home">
         <img src="./assets/app-icon.png" alt="" />
         <span>Pişti: Online</span>
       </a>
-      <nav class="nav" aria-label="Sayfa bölümleri">
-        <a href="./index.html#features">Özellikler</a>
-        <a href="./updates/">Yenilikler</a>
-        <a href="./support.html">Destek</a>
-        <a href="./privacy.html">Gizlilik</a>
-        <a href="./account-deletion.html" aria-current="page">Hesap Silme</a>
+      <nav class="nav" aria-label="Sayfa bölümleri" data-i18n-aria="aria.sections">
+        <a href="./index.html#features" data-i18n="nav.features">Özellikler</a>
+        <a href="./updates/" data-i18n="nav.updates">Yenilikler</a>
+        <a href="./support.html" data-i18n="nav.support">Destek</a>
+        <a href="./privacy.html" data-i18n="nav.privacy">Gizlilik</a>
+        <a href="./account-deletion.html" aria-current="page" data-i18n="nav.accountDeletion">Hesap Silme</a>
       </nav>
     </header>
 
     <main>
       <section class="legal-hero">
-        <div class="legal-inner">
+        <div class="legal-inner" data-i18n-html="hero">
           <p class="eyebrow">Hesap ve Veri Silme</p>
           <h1>Pişti hesabınızı uygulama içinden silebilirsiniz.</h1>
           <p class="hero-copy">
@@ -40,7 +42,7 @@
 
       <section class="section">
         <div class="legal-inner legal-stack">
-          <article class="legal-card">
+          <article class="legal-card" data-i18n-html="steps">
             <h2>Uygulama içinden silme adımları</h2>
             <ol>
               <li>Pişti: Online uygulamasını açın ve silmek istediğiniz hesapla giriş yapın.</li>
@@ -50,7 +52,7 @@
             </ol>
           </article>
 
-          <article class="legal-card danger-callout">
+          <article class="legal-card danger-callout" data-i18n-html="deleted">
             <h2>Silinen veriler</h2>
             <ul>
               <li>Pişti oyuncu profili ve görünen ad</li>
@@ -63,7 +65,7 @@
             <p>İşlem kalıcıdır ve silinen Pişti verileri geri getirilemez.</p>
           </article>
 
-          <article class="legal-card">
+          <article class="legal-card" data-i18n-html="firebase">
             <h2>Firebase ve cihaz kurulumu</h2>
             <p>
               Firebase Analytics ve Crashlytics verileri Pişti oyuncu kimliğiyle ilişkilendirilmez. Hesap silme sırasında
@@ -74,7 +76,7 @@
             </p>
           </article>
 
-          <article class="legal-card">
+          <article class="legal-card" data-i18n-html="retained">
             <h2>Sınırlı süre saklanabilen kayıtlar</h2>
             <p>
               Çifte hak tanınmasını ve dolandırıcılığı önlemek, iadeleri veya iptalleri işlemek ve yasal ya da muhasebesel
@@ -84,7 +86,7 @@
             </p>
           </article>
 
-          <article class="legal-card">
+          <article class="legal-card" data-i18n-html="external">
             <h2>Silinmeyen harici hesaplar</h2>
             <p>
               Pişti hesabını silmek Apple ID veya Google hesabınızın kendisini silmez.
@@ -92,7 +94,7 @@
             </p>
           </article>
 
-          <article class="legal-card">
+          <article class="legal-card" data-i18n-html="guest">
             <h2>Misafir hesapları</h2>
             <p>
               Misafir hesabı silindikten sonra aynı kurulum kimliğiyle eski profil geri yüklenemez.
@@ -100,7 +102,7 @@
             </p>
           </article>
 
-          <article class="legal-card contact-callout">
+          <article class="legal-card contact-callout" data-i18n-html="help">
             <h2>Yardıma mı ihtiyacınız var?</h2>
             <p>
               Uygulama içindeki silme aracına erişemiyorsanız
@@ -109,7 +111,7 @@
             </p>
           </article>
 
-          <article class="legal-card english-summary" lang="en">
+          <article class="legal-card english-summary" lang="en" data-secondary-summary>
             <h2>Account deletion summary</h2>
             <p>
               Open Pişti: Online, tap your player name or avatar, and choose Profile &gt; Delete Account.
@@ -127,10 +129,10 @@
     <footer class="site-footer">
       <div class="footer-inner">
         <span>Pişti: Online</span>
-        <span><a href="./index.html">Ana Sayfa</a></span>
-        <span><a href="./updates/">Yenilikler</a></span>
-        <span><a href="./support.html">Destek</a></span>
-        <span><a href="./privacy.html">Gizlilik Politikası</a></span>
+        <span><a href="./index.html" data-i18n="nav.home">Ana Sayfa</a></span>
+        <span><a href="./updates/" data-i18n="nav.updates">Yenilikler</a></span>
+        <span><a href="./support.html" data-i18n="nav.support">Destek</a></span>
+        <span><a href="./privacy.html" data-i18n="footer.privacy">Gizlilik Politikası</a></span>
       </div>
     </footer>
   </body>

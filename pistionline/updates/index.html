@@ -27,14 +27,15 @@
     <link rel="icon" href="../assets/app-icon.png" />
     <link rel="stylesheet" href="../assets/site.css" />
     <script src="../assets/updates.js" defer></script>
+    <script src="../assets/site-i18n.js" defer></script>
   </head>
-  <body>
+  <body data-page="updates">
     <header class="site-header">
-      <a class="brand" href="../" aria-label="Pişti Online">
+      <a class="brand" href="../" aria-label="Pişti Online" data-i18n-aria="aria.home">
         <img src="../assets/app-icon.png" width="256" height="256" alt="" />
         <span>Pişti: Online</span>
       </a>
-      <nav class="nav" aria-label="Pişti Online">
+      <nav class="nav" aria-label="Pişti Online" data-i18n-aria="aria.sections">
         <a href="../" data-copy="home">Ana Sayfa</a>
         <a href="./" aria-current="page" data-copy="updates">Yenilikler</a>
         <a href="../support.html" data-copy="support">Destek</a>
@@ -87,7 +88,7 @@
                 <li>Oyundaki arkadaşınızı özel odaya davet edebilir veya güvenli oda bağlantısını sistem paylaşım ekranıyla paylaşabilirsiniz.</li>
                 <li>Oda bağlantıları uygulamayı açıkken, arka plandayken ve tamamen kapalıyken açar; coin harcanmadan önce katılım onayı gerekir.</li>
                 <li>Giriş yapılmadan gelen davetler misafir, Apple veya Google girişi tamamlanana kadar güvenli biçimde bekletilir.</li>
-                <li>Ana menüdeki yenilik kartı artık ayrıntılı uygulama içi ekranı açar; sürüm arşivi beş desteklenen dilde sunulur.</li>
+                <li>Ana menüdeki yenilik kartı ayrıntılı uygulama içi ekranı açar; marketing sitesi, destek ve yasal sayfalar beş dilde sunulur.</li>
                 <li>Eski sürümler ve yedek kullanım için altı karakterli manuel oda kodu korunur.</li>
               </ul>
             </article>
@@ -134,7 +135,7 @@
                 <li>Invite an in-game friend to a private room or share a secure room link with the system share sheet.</li>
                 <li>Room links open the app in the foreground, background, and after a cold start; joining always requires confirmation before coins are spent.</li>
                 <li>Signed-out invitations are stored securely until guest, Apple, or Google sign-in is complete.</li>
-                <li>The home update card now opens a detailed in-app page, while this archive is available in all five supported languages.</li>
+                <li>The home update card opens a detailed in-app page; the marketing, support, and legal pages are available in all five supported languages.</li>
                 <li>Six-character manual room codes remain available for older versions and as a fallback.</li>
               </ul>
             </article>
@@ -181,7 +182,7 @@
                 <li>Lade einen Freund aus dem Spiel in einen privaten Raum ein oder teile einen sicheren Raumlink über das Systemmenü.</li>
                 <li>Raumlinks öffnen die App im Vordergrund, Hintergrund und nach einem Kaltstart; vor dem Einsatz von Münzen ist immer eine Bestätigung nötig.</li>
                 <li>Einladungen ohne Anmeldung werden sicher gespeichert, bis die Gast-, Apple- oder Google-Anmeldung abgeschlossen ist.</li>
-                <li>Die Aktualisierungskarte öffnet jetzt eine ausführliche In-App-Seite; dieses Archiv ist in allen fünf unterstützten Sprachen verfügbar.</li>
+                <li>Die Aktualisierungskarte öffnet eine ausführliche In-App-Seite; Marketing-, Support- und Rechtsseiten sind in allen fünf unterstützten Sprachen verfügbar.</li>
                 <li>Manuelle sechsstellige Raumcodes bleiben für ältere App-Versionen und als Ersatz verfügbar.</li>
               </ul>
             </article>
@@ -228,7 +229,7 @@
                 <li>Προσκάλεσε έναν φίλο του παιχνιδιού σε ιδιωτικό δωμάτιο ή μοιράσου έναν ασφαλή σύνδεσμο από το μενού κοινοποίησης.</li>
                 <li>Οι σύνδεσμοι ανοίγουν την εφαρμογή στο προσκήνιο, στο παρασκήνιο και μετά από κρύα εκκίνηση· η συμμετοχή απαιτεί επιβεβαίωση πριν δαπανηθούν νομίσματα.</li>
                 <li>Οι προσκλήσεις χωρίς σύνδεση αποθηκεύονται με ασφάλεια μέχρι να ολοκληρωθεί η είσοδος ως επισκέπτης, με Apple ή Google.</li>
-                <li>Η κάρτα ενημέρωσης ανοίγει πλέον αναλυτική οθόνη στην εφαρμογή και αυτό το αρχείο διατίθεται και στις πέντε υποστηριζόμενες γλώσσες.</li>
+                <li>Η κάρτα ενημέρωσης ανοίγει αναλυτική οθόνη στην εφαρμογή· οι σελίδες marketing, υποστήριξης και νομικών πληροφοριών διατίθενται και στις πέντε γλώσσες.</li>
                 <li>Οι χειροκίνητοι εξαψήφιοι κωδικοί δωματίου παραμένουν για παλαιότερες εκδόσεις και εφεδρική χρήση.</li>
               </ul>
             </article>
@@ -275,7 +276,7 @@
                 <li>Fto një mik të lojës në dhomë private ose ndaj një lidhje të sigurt nga menuja e sistemit.</li>
                 <li>Lidhjet hapin aplikacionin në plan të parë, në sfond dhe pas nisjes së ftohtë; hyrja kërkon konfirmim para se të shpenzohen monedhat.</li>
                 <li>Ftesat pa hyrje ruhen në mënyrë të sigurt derisa të përfundojë hyrja si vizitor, me Apple ose Google.</li>
-                <li>Karta e përditësimit tani hap një faqe të hollësishme në aplikacion dhe ky arkiv ofrohet në të pesë gjuhët e mbështetura.</li>
+                <li>Karta e përditësimit hap një faqe të hollësishme në aplikacion; faqet e marketingut, mbështetjes dhe informacionit ligjor ofrohen në të pesë gjuhët.</li>
                 <li>Kodet manuale gjashtëshifrore të dhomës mbeten për versionet e vjetra dhe përdorim rezervë.</li>
               </ul>
             </article>
