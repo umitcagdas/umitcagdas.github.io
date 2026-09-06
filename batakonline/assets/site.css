@@ -102,11 +102,10 @@ a {
 }
 
 .brand img {
-  width: 42px;
+  width: 37px;
   height: 42px;
-  border: 1px solid rgba(255, 201, 91, 0.36);
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+  object-fit: contain;
+  filter: drop-shadow(0 7px 12px rgba(0, 0, 0, 0.3));
 }
 
 .nav {
@@ -178,8 +177,9 @@ a {
 }
 
 .hero-logo {
-  width: min(390px, 73%);
-  margin: -54px 0 -50px -34px;
+  width: min(390px, 72%);
+  margin: -58px 0 -48px -30px;
+  filter: drop-shadow(0 24px 34px rgba(0, 0, 0, 0.3));
 }
 
 .hero h1,
@@ -279,24 +279,11 @@ a {
 .hero-phone {
   position: relative;
   z-index: 2;
-  width: min(76%, 330px);
+  width: auto;
+  height: min(68vh, 670px);
   border: 5px solid rgba(255, 246, 220, 0.92);
   border-radius: 42px;
   box-shadow: var(--shadow);
-  transform: rotate(2.5deg);
-}
-
-.hero-icon {
-  position: absolute;
-  z-index: 3;
-  right: 4%;
-  bottom: 14%;
-  width: 104px;
-  height: 104px;
-  border: 3px solid var(--gold-soft);
-  border-radius: 25px;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.46);
-  transform: rotate(-6deg);
 }
 
 .metric-strip {
@@ -438,27 +425,22 @@ a {
   margin-top: auto;
 }
 
-.screen-strip {
+.screen-grid {
   display: grid;
-  grid-auto-columns: minmax(240px, 310px);
-  grid-auto-flow: column;
-  gap: 24px;
-  overflow-x: auto;
-  padding: 12px max(24px, calc((100vw - 1180px) / 2)) 34px;
-  scroll-snap-type: x mandatory;
-  scrollbar-color: var(--gold) rgba(255, 255, 255, 0.06);
-  scrollbar-width: thin;
+  width: var(--shell);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 52px 28px;
+  margin: 0 auto;
 }
 
 .screen-card {
   min-width: 0;
-  scroll-snap-align: center;
 }
 
 .screen-card img {
   width: 100%;
-  border: 1px solid var(--line);
-  border-radius: 30px;
+  border: 4px solid rgba(255, 246, 220, 0.88);
+  border-radius: 36px;
   box-shadow: 0 28px 70px rgba(0, 0, 0, 0.34);
 }
 
@@ -777,7 +759,8 @@ a {
 
   .feature-grid,
   .mode-grid,
-  .resource-grid {
+  .resource-grid,
+  .screen-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -794,8 +777,8 @@ a {
   }
 
   .brand img {
-    width: 38px;
-    height: 38px;
+    width: 34px;
+    height: 39px;
   }
 
   .hero {
@@ -812,23 +795,17 @@ a {
   }
 
   .hero-phone {
-    width: min(74%, 286px);
+    width: auto;
+    height: min(65vh, 570px);
     border-width: 4px;
     border-radius: 34px;
-  }
-
-  .hero-icon {
-    right: 1%;
-    bottom: 13%;
-    width: 78px;
-    height: 78px;
-    border-radius: 20px;
   }
 
   .metric-grid,
   .feature-grid,
   .mode-grid,
-  .resource-grid {
+  .resource-grid,
+  .screen-grid {
     grid-template-columns: 1fr;
   }
 
@@ -845,11 +822,9 @@ a {
     min-height: 240px;
   }
 
-  .screen-strip {
-    grid-auto-columns: minmax(230px, 78vw);
-    gap: 16px;
-    padding-right: 14px;
-    padding-left: 14px;
+  .screen-grid {
+    width: min(calc(100% - 48px), 390px);
+    gap: 42px;
   }
 
   .legal-list {
