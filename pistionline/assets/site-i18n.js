@@ -1,11 +1,19 @@
 (() => {
   "use strict";
 
-  const supportedLanguages = ["tr", "en", "de", "el", "sq"];
+  const languageOrder = ["tr", "en", "de", "fr", "nl", "es", "it", "el", "sq"];
+  const pageTranslations = window.PistiPageI18n || {};
+  const supportedLanguages = languageOrder.filter(
+    (language) => pageTranslations[language],
+  );
   const localeTags = {
     tr: "tr_TR",
     en: "en_US",
     de: "de_DE",
+    fr: "fr_FR",
+    nl: "nl_NL",
+    es: "es_ES",
+    it: "it_IT",
     el: "el_GR",
     sq: "sq_AL",
   };
@@ -55,6 +63,66 @@
       "footer.personal": "Persönliche Website",
       "footer.supportTitle": "Pişti: Online Support",
     },
+    fr: {
+      "aria.home": "Page d’accueil de Pişti Online",
+      "aria.sections": "Sections de la page",
+      "nav.home": "Accueil",
+      "nav.features": "Fonctionnalités",
+      "nav.screens": "Écrans",
+      "nav.updates": "Nouveautés",
+      "nav.support": "Assistance",
+      "nav.privacy": "Confidentialité",
+      "nav.accountDeletion": "Supprimer le compte",
+      "footer.privacy": "Politique de confidentialité",
+      "footer.developer": "Développeur : Ümit Çağdaş",
+      "footer.personal": "Site personnel",
+      "footer.supportTitle": "Assistance Pişti: Online",
+    },
+    nl: {
+      "aria.home": "Startpagina van Pişti Online",
+      "aria.sections": "Paginaonderdelen",
+      "nav.home": "Start",
+      "nav.features": "Functies",
+      "nav.screens": "Schermen",
+      "nav.updates": "Nieuw",
+      "nav.support": "Ondersteuning",
+      "nav.privacy": "Privacy",
+      "nav.accountDeletion": "Account verwijderen",
+      "footer.privacy": "Privacybeleid",
+      "footer.developer": "Ontwikkelaar: Ümit Çağdaş",
+      "footer.personal": "Persoonlijke website",
+      "footer.supportTitle": "Pişti: Online-ondersteuning",
+    },
+    es: {
+      "aria.home": "Página de inicio de Pişti Online",
+      "aria.sections": "Secciones de la página",
+      "nav.home": "Inicio",
+      "nav.features": "Características",
+      "nav.screens": "Pantallas",
+      "nav.updates": "Novedades",
+      "nav.support": "Soporte",
+      "nav.privacy": "Privacidad",
+      "nav.accountDeletion": "Eliminar cuenta",
+      "footer.privacy": "Política de privacidad",
+      "footer.developer": "Desarrollador: Ümit Çağdaş",
+      "footer.personal": "Sitio personal",
+      "footer.supportTitle": "Soporte de Pişti: Online",
+    },
+    it: {
+      "aria.home": "Pagina iniziale di Pişti Online",
+      "aria.sections": "Sezioni della pagina",
+      "nav.home": "Home",
+      "nav.features": "Funzionalità",
+      "nav.screens": "Schermate",
+      "nav.updates": "Novità",
+      "nav.support": "Supporto",
+      "nav.privacy": "Privacy",
+      "nav.accountDeletion": "Elimina account",
+      "footer.privacy": "Informativa sulla privacy",
+      "footer.developer": "Sviluppatore: Ümit Çağdaş",
+      "footer.personal": "Sito personale",
+      "footer.supportTitle": "Supporto Pişti: Online",
+    },
     el: {
       "aria.home": "Αρχική σελίδα Pişti Online",
       "aria.sections": "Ενότητες σελίδας",
@@ -87,19 +155,36 @@
     },
   };
 
-  const pageTranslations = window.PistiPageI18n || {};
-
-  function normalizeLanguage(value) {
+  function normalizedLanguageCode(value) {
     const normalized = String(value || "")
       .trim()
       .toLowerCase()
       .split("-")[0];
+    return languageOrder.includes(normalized) ? normalized : null;
+  }
+
+  function normalizeLanguage(value) {
+    const normalized = normalizedLanguageCode(value);
     return supportedLanguages.includes(normalized) ? normalized : null;
+  }
+
+  function resolveCandidate(value, persist = false) {
+    const knownLanguage = normalizedLanguageCode(value);
+    if (!knownLanguage) return null;
+
+    if (supportedLanguages.includes(knownLanguage)) {
+      if (persist) storeLanguage(knownLanguage);
+      return knownLanguage;
+    }
+
+    return supportedLanguages.includes("en")
+      ? "en"
+      : supportedLanguages[0] || "tr";
   }
 
   function readStoredLanguage() {
     try {
-      return normalizeLanguage(window.localStorage.getItem("pisti-site-language"));
+      return window.localStorage.getItem("pisti-site-language");
     } catch (_) {
       return null;
     }
@@ -114,19 +199,19 @@
   }
 
   function resolveLanguage() {
-    const queryLanguage = normalizeLanguage(
+    const queryLanguage = resolveCandidate(
       new URLSearchParams(window.location.search).get("lang"),
+      true,
     );
     if (queryLanguage) {
-      storeLanguage(queryLanguage);
       return queryLanguage;
     }
 
-    const storedLanguage = readStoredLanguage();
+    const storedLanguage = resolveCandidate(readStoredLanguage());
     if (storedLanguage) return storedLanguage;
 
     for (const candidate of navigator.languages || [navigator.language]) {
-      const browserLanguage = normalizeLanguage(candidate);
+      const browserLanguage = resolveCandidate(candidate);
       if (browserLanguage) return browserLanguage;
     }
     return "tr";
@@ -213,6 +298,29 @@
     });
   }
 
+  function localizeScreenImages(language) {
+    const screenNames = ["gameplay", "main-menu", "leaderboard"];
+    document
+      .querySelectorAll('[data-i18n-html="screens"] .screen-card img')
+      .forEach((image, index) => {
+        const screenName = screenNames[index];
+        if (!screenName) return;
+
+        const fallbackSource = `./assets/${screenName}.webp`;
+        const localizedSource = `./assets/screens/${language}/${screenName}.webp`;
+        image.addEventListener(
+          "error",
+          () => {
+            if (image.getAttribute("src") !== fallbackSource) {
+              image.setAttribute("src", fallbackSource);
+            }
+          },
+          { once: true },
+        );
+        image.setAttribute("src", localizedSource);
+      });
+  }
+
   function localizedUrl(language) {
     const url = new URL(window.location.href);
     url.searchParams.set("lang", language);
@@ -235,6 +343,10 @@
       tr: "Türkçe",
       en: "English",
       de: "Deutsch",
+      fr: "Français",
+      nl: "Nederlands",
+      es: "Español",
+      it: "Italiano",
       el: "Ελληνικά",
       sq: "Shqip",
     };
@@ -269,6 +381,11 @@
   }
 
   function localizeInternalLinks(language) {
+    const englishFallbackPages = new Set([
+      "/pistionline/support.html",
+      "/pistionline/privacy.html",
+      "/pistionline/account-deletion.html",
+    ]);
     document.querySelectorAll("a[href]").forEach((link) => {
       if (link.hasAttribute("data-language-link")) return;
       const rawHref = link.getAttribute("href");
@@ -285,7 +402,12 @@
       ) {
         return;
       }
-      url.searchParams.set("lang", language);
+      const linkLanguage =
+        !["tr", "en", "de", "el", "sq"].includes(language) &&
+        englishFallbackPages.has(url.pathname)
+          ? "en"
+          : language;
+      url.searchParams.set("lang", linkLanguage);
       link.href = `${url.pathname}${url.search}${url.hash}`;
     });
   }
@@ -297,6 +419,7 @@
   applyMetadata(language, pageCopy);
   applyCommonCopy(language);
   applyPageCopy(language, pageCopy);
+  localizeScreenImages(language);
   addLanguagePicker(language);
   localizeLanguageLinks(language);
   localizeInternalLinks(language);
