@@ -4,139 +4,77 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Hesap Silme | Batak: Online</title>
-    <meta
-      name="description"
-      content="Batak: Online hesabınızı uygulama içinden veya destek talebiyle kalıcı olarak silme adımları."
-    />
+    <meta name="description" content="Batak: Online hesabınızı uygulama içinden veya destek talebiyle kalıcı olarak silme adımları." />
     <meta name="robots" content="index,follow" />
-    <meta name="theme-color" content="#031a17" />
+    <meta name="theme-color" content="#061413" />
     <link rel="canonical" href="https://umitcagdas.github.io/batakonline/account-deletion.html" />
     <link rel="icon" type="image/webp" href="./assets/app-icon.webp" />
     <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png" />
     <link rel="stylesheet" href="./assets/site.css" />
+    <script src="./assets/i18n-account-deletion.js" defer></script>
+    <script src="./assets/site-i18n.js" defer></script>
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="tr_TR" />
+    <meta property="og:title" content="Hesap Silme | Batak: Online" />
+    <meta property="og:description" content="Batak: Online hesabını kalıcı silme adımları." />
+    <meta property="og:url" content="https://umitcagdas.github.io/batakonline/account-deletion.html" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Hesap Silme | Batak: Online" />
+    <meta name="twitter:description" content="Batak: Online hesabını kalıcı silme adımları." />
   </head>
-  <body>
+  <body data-page="account-deletion">
     <header class="site-header">
-      <a class="brand" href="./" aria-label="Batak: Online ana sayfa">
-        <img src="./assets/brand-mark.webp" width="37" height="42" alt="" />
+      <a class="brand" href="./" aria-label="Batak: Online ana sayfa" data-i18n-aria="aria.home">
+        <img src="./assets/app-icon.webp" width="1024" height="1024" alt="" />
         <span>Batak: Online</span>
       </a>
-      <nav class="nav" aria-label="Sayfa navigasyonu">
-        <a href="./">Ana sayfa</a>
-        <a href="./support.html">Destek</a>
-        <a href="./privacy.html">Gizlilik</a>
-        <a href="#english">English</a>
+      <nav class="nav" aria-label="Sayfa bölümleri" data-i18n-aria="aria.sections">
+        <a href="./" data-i18n="nav.home">Ana Sayfa</a>
+        <a href="./support.html" data-i18n="nav.support">Destek</a>
+        <a href="./privacy.html" data-i18n="nav.privacy">Gizlilik</a>
+        <a href="./account-deletion.html" data-i18n="nav.accountDeletion" aria-current="page">Hesap Silme</a>
       </nav>
     </header>
 
     <main id="top">
-      <section class="legal-hero" id="turkce">
-        <div class="legal-inner">
+      <section class="legal-hero">
+        <div class="legal-inner" data-i18n-html="hero">
           <p class="eyebrow">Hesap ve veri silme</p>
-          <h1>Batak: Online hesabınızı kalıcı olarak silin.</h1>
-          <p class="hero-copy">
-            Hesabınızı en hızlı biçimde uygulamanın profil ekranından silebilir;
-            uygulamaya erişemiyorsanız destek üzerinden talep oluşturabilirsiniz.
-          </p>
+          <h1>Batak: Online hesabınızı kalıcı olarak silin</h1>
+          <p class="hero-copy">Hesabınızı en hızlı biçimde profil ekranından silebilir; uygulamaya erişemiyorsanız destek üzerinden talep oluşturabilirsiniz.</p>
           <p class="hero-note">Son güncelleme: 6 Eylül 2026</p>
         </div>
       </section>
 
       <section class="section">
         <div class="legal-inner legal-stack">
-          <article class="legal-card">
+          <article class="legal-card" data-i18n-html="steps">
             <h2>Uygulama içinden silme</h2>
             <ol>
               <li>Batak: Online'ı açın ve hesabınıza giriş yapın.</li>
               <li>Ana ekrandan profilinize, ardından hesap ayarlarına girin.</li>
               <li><strong>Hesabı sil</strong> seçeneğine dokunun.</li>
-              <li>Gösterilen bilgilendirmeyi okuyup kalıcı silme işlemini onaylayın.</li>
+              <li>Bilgilendirmeyi okuyup kalıcı silmeyi onaylayın.</li>
             </ol>
-            <p>
-              Hesabınız aktif bir maçın veya özel masanın sahibiyse veri bütünlüğünü korumak için
-              önce bu akıştan güvenli biçimde çıkmanız ya da akışın tamamlanması gerekebilir.
-            </p>
+            <p>Aktif maçınız veya sahibi olduğunuz özel masa varsa veri bütünlüğü için önce güvenli biçimde ayrılmanız ya da akışın tamamlanması gerekebilir.</p>
           </article>
-
-          <article class="legal-card contact-callout">
+          <article class="legal-card contact-callout" data-i18n-html="inaccessible">
             <h2>Uygulamaya erişemiyor musunuz?</h2>
-            <p>
-              <a href="mailto:umitcagdas@gmail.com?subject=Batak%3A%20Online%20hesap%20silme%20talebi">umitcagdas@gmail.com</a>
-              adresine “Batak: Online hesap silme talebi” konusuyla yazın. Mesajınıza oyuncu kodunuzu
-              ve kullandığınız giriş yöntemini (Misafir, Apple veya Google) ekleyin.
-            </p>
-            <p>
-              Hesabın size ait olduğunu doğrulamak için ek bilgi isteyebiliriz. Parolanızı, Apple/Google
-              doğrulama kodunu, erişim belirtecini veya ödeme kartı bilginizi hiçbir zaman göndermeyin.
-            </p>
+            <p><a href="mailto:umitcagdas@gmail.com?subject=Batak%3A%20Online%20hesap%20silme%20talebi">umitcagdas@gmail.com</a> adresine “Batak: Online hesap silme talebi” konusuyla yazın. Oyuncu kodunuzu ve giriş yönteminizi (Misafir, Apple veya Google) ekleyin.</p>
+            <p>Hesap sahipliğini doğrulamak için ek bilgi isteyebiliriz. Parola, doğrulama kodu, erişim belirteci veya ödeme kartı bilgisi göndermeyin.</p>
           </article>
-
-          <article class="legal-card danger-callout">
+          <article class="legal-card danger-callout" data-i18n-html="deleted">
             <h2>Silinen veriler</h2>
-            <p>
-              Hesap silme işlemi profilinizi, oyuncu kodunuzu, avatarınızı, cüzdan ve günlük ödül durumunuzu,
-              istatistiklerinizi, lig ilerlemenizi, arkadaşlıklarınızı, bildirim ayarlarınızı, eşleştirme ve özel
-              masa kayıtlarınızı kalıcı olarak kaldırır. Aktif oturumlar ve yenileme belirteçleri geçersiz olur.
-            </p>
+            <p>Profil, oyuncu kodu, avatar, cüzdan, günlük ödül, istatistik, lig, arkadaşlık, bildirim, eşleştirme, özel masa ve aktif oturum verileri kalıcı olarak kaldırılır.</p>
           </article>
-
-          <article class="legal-card">
+          <article class="legal-card" data-i18n-html="retained">
             <h2>Sınırlı biçimde korunabilen kayıtlar</h2>
-            <p>
-              Tamamlanmış maçların skor, sonuç, koltuk ve kural seti gibi oyun gerçekleri sistem tutarlılığı
-              için korunabilir; görünen ad, avatar, ülke ve herkese açık oyuncu kimliği kaldırılır veya genel
-              bir silinmiş oyuncu gösterimine dönüştürülür.
-            </p>
-            <p>
-              İade ve iptalleri işlemek, dolandırıcılığı veya aynı satın alma hakkının yeniden kullanılmasını
-              önlemek ve yasal yükümlülükleri yerine getirmek için mağaza işlem özeti hesap bağlantısı
-              kaldırılarak sınırlı süre saklanabilir. Hesap silme işlemi Apple veya Google hesabınızı silmez.
-            </p>
+            <p>Tamamlanmış maçların skor, sonuç, koltuk ve kural seti gibi oyun gerçekleri sistem tutarlılığı için korunabilir; görünen kimlik kaldırılır veya anonimleştirilir.</p>
+            <p>İade, dolandırıcılık veya mükerrer hak kullanımını önlemek ve yasal yükümlülükleri yerine getirmek için hesap bağlantısı kaldırılmış mağaza işlem özeti sınırlı süre tutulabilir. Bu işlem Apple veya Google hesabınızı silmez.</p>
           </article>
-
-          <article class="legal-card">
+          <article class="legal-card" data-i18n-html="more">
             <h2>Daha fazla bilgi</h2>
-            <p>
-              Hangi verileri neden işlediğimiz ve kullanıcı hakları hakkında ayrıntılı bilgi için
-              <a href="./privacy.html">Batak: Online Gizlilik Politikası</a> sayfasını inceleyin.
-              Teknik bir sorun yaşıyorsanız <a href="./support.html">Destek Merkezi</a> üzerinden çözüm adımlarına ulaşın.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section section-alt" id="english" lang="en">
-        <div class="legal-inner legal-stack">
-          <article class="legal-card english-summary">
-            <p class="eyebrow">Account and data deletion</p>
-            <h2>Delete your Batak: Online account</h2>
-            <p>
-              In the app, open Profile, go to account settings, choose <strong>Delete Account</strong>,
-              review the notice, and confirm permanent deletion. An active match or owned private table
-              may need to be safely completed or left first.
-            </p>
-          </article>
-
-          <article class="legal-card contact-callout">
-            <h2>If you cannot access the app</h2>
-            <p>
-              Email <a href="mailto:umitcagdas@gmail.com?subject=Batak%3A%20Online%20account%20deletion%20request">umitcagdas@gmail.com</a>
-              with the subject “Batak: Online account deletion request.” Include your player code and sign-in method
-              (Guest, Apple, or Google). We may request additional information to verify account ownership. Never send
-              a password, verification code, access token, or payment-card information.
-            </p>
-          </article>
-
-          <article class="legal-card">
-            <h2>What is deleted</h2>
-            <p>
-              Account-owned profile, player-code, avatar, wallet, reward, statistics, league, social, notification,
-              matchmaking, private-table, and active-session data is permanently removed. Completed match facts may
-              remain for system integrity, but identifying presentation data is removed or replaced with a deleted-player
-              representation. Limited de-linked store-transaction records may remain for refunds, fraud prevention,
-              duplicate-entitlement prevention, or legal duties. This does not delete your Apple or Google account.
-            </p>
-            <p>See our <a href="./privacy.html">Privacy Policy</a> for full details.</p>
+            <p>Ayrıntılar için <a href="./privacy.html">Gizlilik Politikası</a> sayfasını; teknik sorunlar için <a href="./support.html">Destek Merkezi</a> sayfasını inceleyin.</p>
           </article>
         </div>
       </section>
@@ -145,10 +83,10 @@
     <footer class="site-footer">
       <div class="footer-inner">
         <span>Batak: Online</span>
-        <a href="./">Ana sayfa</a>
-        <a href="./support.html">Destek</a>
-        <a href="./privacy.html">Gizlilik</a>
-        <a href="mailto:umitcagdas@gmail.com">İletişim</a>
+        <a href="./" data-i18n="nav.home">Ana Sayfa</a>
+        <a href="./support.html" data-i18n="nav.support">Destek</a>
+        <a href="./privacy.html" data-i18n="footer.privacy">Gizlilik Politikası</a>
+        <a href="mailto:umitcagdas@gmail.com">umitcagdas@gmail.com</a>
       </div>
     </footer>
   </body>

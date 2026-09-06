@@ -6,333 +6,196 @@
     <title>Batak: Online | Canlı Çok Oyunculu Batak</title>
     <meta
       name="description"
-      content="Batak: Online; İhaleli Batak, Gömmeli Batak ve Koz Maça modlarını canlı masalar, özel odalar, arkadaşlar, ligler ve günlük ödüllerle iPhone'a taşıyor."
+      content="Batak: Online ile İhaleli Batak, Gömmeli Batak ve Koz Maça oynayın; özel odalarda buluşun, liglerde ilerleyin ve arkadaşlarınızla aynı masaya oturun."
     />
     <meta name="robots" content="index,follow,max-image-preview:large" />
-    <meta name="theme-color" content="#031a17" />
+    <meta name="theme-color" content="#061413" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <link rel="canonical" href="https://umitcagdas.github.io/batakonline/" />
     <link rel="icon" type="image/webp" href="./assets/app-icon.webp" />
     <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png" />
     <link rel="stylesheet" href="./assets/site.css" />
+    <script src="./assets/i18n-home.js" defer></script>
+    <script src="./assets/site-i18n.js" defer></script>
 
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="tr_TR" />
     <meta property="og:site_name" content="Batak: Online" />
     <meta property="og:title" content="Batak: Online | Canlı Çok Oyunculu Batak" />
-    <meta
-      property="og:description"
-      content="Üç Batak modu, dört kişilik canlı masalar, özel odalar ve sosyal oyun deneyimi."
-    />
+    <meta property="og:description" content="Üç Batak modu, dört kişilik canlı masalar, özel odalar ve sosyal oyun deneyimi." />
     <meta property="og:url" content="https://umitcagdas.github.io/batakonline/" />
-    <meta
-      property="og:image"
-      content="https://umitcagdas.github.io/batakonline/assets/screens/01-gercek-oyun-deneyimi.webp"
-    />
-    <meta property="og:image:width" content="900" />
-    <meta property="og:image:height" content="1956" />
-    <meta property="og:image:alt" content="Batak: Online canlı oyun masası" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Batak: Online" />
-    <meta
-      name="twitter:description"
-      content="İhaleli, Gömmeli ve Koz Maça modlarıyla canlı çok oyunculu Batak."
-    />
-    <meta
-      name="twitter:image"
-      content="https://umitcagdas.github.io/batakonline/assets/screens/01-gercek-oyun-deneyimi.webp"
-    />
+    <meta property="og:image" content="https://umitcagdas.github.io/batakonline/assets/app-icon.webp" />
+    <meta property="og:image:width" content="1024" />
+    <meta property="og:image:height" content="1024" />
+    <meta property="og:image:alt" content="Batak: Online uygulama ikonu" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Batak: Online | Canlı Çok Oyunculu Batak" />
+    <meta name="twitter:description" content="İhaleli, Gömmeli ve Koz Maça modlarıyla canlı çok oyunculu Batak." />
+    <meta name="twitter:image" content="https://umitcagdas.github.io/batakonline/assets/app-icon.webp" />
 
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "Batak: Online",
-        "applicationCategory": "GameApplication",
-        "operatingSystem": "iOS",
-        "description": "İhaleli Batak, Gömmeli Batak ve Koz Maça modlarını canlı dört kişilik masalarla sunan çevrim içi kart oyunu.",
-        "url": "https://umitcagdas.github.io/batakonline/",
-        "author": {
-          "@type": "Person",
-          "name": "Ümit Çağdaş",
-          "url": "https://umitcagdas.github.io/"
-        }
+        "@graph": [
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://umitcagdas.github.io/batakonline/#software",
+            "name": "Batak: Online",
+            "applicationCategory": "GameApplication",
+            "operatingSystem": "iOS",
+            "url": "https://umitcagdas.github.io/batakonline/",
+            "image": "https://umitcagdas.github.io/batakonline/assets/app-icon.webp",
+            "description": "İhaleli Batak, Gömmeli Batak ve Koz Maça modlarını canlı dört kişilik masalarla sunan çevrim içi kart oyunu.",
+            "author": { "@id": "https://umitcagdas.github.io/#person" },
+            "sameAs": ["https://apps.apple.com/app/id6806760543"]
+          },
+          {
+            "@type": "Person",
+            "@id": "https://umitcagdas.github.io/#person",
+            "name": "Ümit Çağdaş",
+            "url": "https://umitcagdas.github.io/"
+          }
+        ]
       }
     </script>
   </head>
-  <body>
+  <body data-page="home">
     <header class="site-header">
-      <a class="brand" href="./" aria-label="Batak: Online ana sayfa">
-        <img src="./assets/brand-mark.webp" width="37" height="42" alt="" />
+      <a class="brand" href="#top" aria-label="Batak: Online ana sayfa" data-i18n-aria="aria.home">
+        <img src="./assets/app-icon.webp" width="1024" height="1024" alt="" />
         <span>Batak: Online</span>
       </a>
-      <nav class="nav" aria-label="Ana navigasyon">
-        <a href="#ozellikler">Özellikler</a>
-        <a href="#modlar">Oyun modları</a>
-        <a href="#ekranlar">Ekranlar</a>
-        <a href="./support.html">Destek</a>
-        <a href="./privacy.html">Gizlilik</a>
+      <nav class="nav" aria-label="Sayfa bölümleri" data-i18n-aria="aria.sections">
+        <a href="#features" data-i18n="nav.features">Özellikler</a>
+        <a href="#modes" data-i18n="nav.modes">Oyun modları</a>
+        <a href="#screens" data-i18n="nav.screens">Ekranlar</a>
+        <a href="./support.html" data-i18n="nav.support">Destek</a>
+        <a href="./privacy.html" data-i18n="nav.privacy">Gizlilik</a>
       </nav>
     </header>
 
-    <main>
+    <main id="top">
       <section class="hero">
-        <div class="hero-inner">
-          <div>
-            <p class="eyebrow">Canlı çok oyunculu kart oyunu</p>
-            <img
-              class="hero-logo"
-              src="./assets/logo.webp"
-              width="700"
-              height="700"
-              alt="Batak: Online"
-            />
-            <h1>Masaya otur.<br /><span>İhaleyi al.</span></h1>
-            <p class="hero-copy">
-              İhaleli Batak, Gömmeli Batak ve Koz Maça. Gerçek oyuncularla eşleş,
-              arkadaşlarını özel masaya çağır ve liglerde yüksel.
-            </p>
-            <div class="actions">
-              <a class="button button-primary" href="#ekranlar">Oyunu keşfet <span aria-hidden="true">↓</span></a>
-              <a class="button" href="./support.html">Destek merkezi <span aria-hidden="true">↗</span></a>
-            </div>
-            <p class="status-note">iPhone için tasarlandı ve geliştirildi.</p>
+        <div class="hero-content">
+          <img class="hero-logo" src="./assets/logo.webp" width="700" height="700" alt="Batak: Online logosu" data-copy-alt="hero.logoAlt" />
+          <p class="eyebrow" data-copy="hero.eyebrow">Canlı çevrim içi kart oyunu</p>
+          <h1>Batak: Online</h1>
+          <p class="hero-copy" data-copy="hero.copy">
+            İhaleli Batak, Gömmeli Batak ve Koz Maça. Gerçek oyuncularla eşleşin,
+            arkadaşlarınızı özel masaya çağırın ve liglerde yükselin.
+          </p>
+          <div class="actions" role="group" aria-label="Uygulama bağlantıları" data-copy-aria="hero.actionsAria">
+            <a class="button primary" href="https://apps.apple.com/app/id6806760543" target="_blank" rel="noopener noreferrer" data-copy="hero.store">App Store sayfası</a>
+            <a class="button" href="#screens" data-copy="hero.discover">Oyunu keşfet</a>
+            <a class="button" href="./support.html" data-copy="hero.support">Destek</a>
           </div>
-
-          <div class="hero-art">
-            <div class="hero-halo" aria-hidden="true"></div>
-            <img
-              class="hero-phone"
-              src="./assets/screens/03-online-lobi.webp"
-              width="900"
-              height="1956"
-              alt="Batak: Online ana lobi ekranı"
-              fetchpriority="high"
-            />
-          </div>
+          <div class="live-status" data-copy="hero.status">Canlı API, SignalR ve çevrim içi masalar</div>
         </div>
       </section>
 
-      <div class="metric-strip" role="group" aria-label="Oyun özeti">
-        <div class="metric-grid">
-          <article>
-            <strong>3</strong>
-            <span>Batak oyun modu</span>
-          </article>
-          <article>
-            <strong>4</strong>
-            <span>Oyunculu canlı masalar</span>
-          </article>
-          <article>
-            <strong>1</strong>
-            <span>Ortak profil, lig ve sosyal deneyim</span>
-          </article>
-        </div>
-      </div>
-
-      <section class="section section-alt" id="ozellikler">
+      <section id="features" class="section">
         <div class="section-inner">
           <div class="section-heading">
-            <p class="eyebrow">Oyunun kalbi</p>
-            <div>
-              <h2>Klasik Batak, modern bir çevrim içi masada.</h2>
-              <p>
-                Her hamle sunucu tarafından doğrulanır. Masalar gerçek oyuncularla kurulur;
-                boş koltuklar gerektiğinde açıkça etiketlenen botlarla tamamlanır.
-              </p>
-            </div>
+            <p class="eyebrow" data-copy="features.eyebrow">Oyunun içinde</p>
+            <h2 data-copy="features.title">Klasik Batak, modern bir çevrim içi masada</h2>
+            <p class="section-lead" data-copy="features.lead">Hızlı maç akışı, kalıcı profil, sosyal özellikler ve sunucu tarafından doğrulanan hamleler tek deneyimde buluşur.</p>
           </div>
 
           <div class="feature-grid">
-            <article class="feature-card">
-              <span>01 / CANLI OYUN</span>
-              <h3>Hızlı eşleşme</h3>
-              <p>Dört kişilik masaya katıl, bağlantın kesilirse aktif maçına geri dön ve oyunu kaldığın yerden sürdür.</p>
-            </article>
-            <article class="feature-card">
-              <span>02 / ÖZEL ODA</span>
-              <h3>Kendi masanı kur</h3>
-              <p>Arkadaşlarını davet et, masayı botlarla tamamla ve seçtiğiniz Batak modunda birlikte oynayın.</p>
-            </article>
-            <article class="feature-card">
-              <span>03 / İLERLEME</span>
-              <h3>Liglerde yüksel</h3>
-              <p>Maç sonuçların, çip cüzdanın, günlük ödüllerin ve rekabetçi ilerlemen aynı profilde korunur.</p>
-            </article>
+            <article><span class="feature-number">01</span><h3 data-copy="features.oneTitle">Hızlı eşleşme</h3><p data-copy="features.oneBody">Dört kişilik masaya katılın; bağlantınız kesilirse aktif maçınıza geri dönün.</p></article>
+            <article><span class="feature-number">02</span><h3 data-copy="features.twoTitle">Özel oda</h3><p data-copy="features.twoBody">Arkadaşlarınızı davet edin, boş koltukları botlarla tamamlayın ve birlikte oynayın.</p></article>
+            <article><span class="feature-number">03</span><h3 data-copy="features.threeTitle">Lig ve ekonomi</h3><p data-copy="features.threeBody">Maç sonuçlarınızı, çip cüzdanınızı, günlük ödülleri ve lig ilerlemenizi koruyun.</p></article>
+            <article><span class="feature-number">04</span><h3 data-copy="features.fourTitle">Sosyal oyun</h3><p data-copy="features.fourBody">Arkadaş ekleyin, özel masa daveti gönderin, hazır mesaj ve emoji tepkilerini kullanın.</p></article>
           </div>
         </div>
       </section>
 
-      <section class="section" id="modlar">
+      <section id="modes" class="section alt">
         <div class="section-inner">
           <div class="section-heading">
-            <p class="eyebrow">Üç farklı masa</p>
-            <div>
-              <h2>Sevdiğin Batak biçimini seç.</h2>
-              <p>
-                Her mod kendi teklif, koz ve puanlama akışını sunar; oyun kuralları
-                tüm oyuncular için aynı sürümlü kural setiyle uygulanır.
-              </p>
-            </div>
+            <p class="eyebrow" data-copy="modes.eyebrow">Üç farklı masa</p>
+            <h2 data-copy="modes.title">Sevdiğiniz Batak biçimini seçin</h2>
+            <p class="section-lead" data-copy="modes.lead">Her mod kendi teklif, koz ve puanlama akışını sunar; kurallar tüm oyuncular için aynı sürümlü kural setiyle uygulanır.</p>
           </div>
-
           <div class="mode-grid">
-            <article class="mode-card">
-              <span>01</span>
-              <h3>İhaleli Batak</h3>
-              <p>Teklifini ver, ihaleyi kazan, kozunu seç ve taahhüdünü tamamla.</p>
-            </article>
-            <article class="mode-card">
-              <span>02</span>
-              <h3>Gömmeli Batak</h3>
-              <p>Yerdeki kartları değerlendir, elini yeniden kur ve rakiplerinden daha fazla el al.</p>
-            </article>
-            <article class="mode-card">
-              <span>03</span>
-              <h3>Koz Maça</h3>
-              <p>Sabit kozla stratejini kur; doğru zamanda risk alarak masanın önüne geç.</p>
-            </article>
+            <article><span class="mode-number">01</span><h3>İhaleli Batak</h3><p data-copy="modes.oneBody">Teklifinizi verin, ihaleyi kazanın, kozunuzu seçin ve taahhüdünüzü tamamlayın.</p></article>
+            <article><span class="mode-number">02</span><h3>Gömmeli Batak</h3><p data-copy="modes.twoBody">Yerdeki kartları değerlendirin, elinizi yeniden kurun ve rakiplerinizden daha fazla el alın.</p></article>
+            <article><span class="mode-number">03</span><h3>Koz Maça</h3><p data-copy="modes.threeBody">Sabit kozla stratejinizi kurun ve doğru zamanda risk alarak masanın önüne geçin.</p></article>
           </div>
         </div>
       </section>
 
-      <section class="section section-alt" id="ekranlar">
+      <section id="screens" class="section">
         <div class="section-inner">
           <div class="section-heading">
-            <p class="eyebrow">Oyundan görüntüler</p>
-            <div>
-              <h2>Masa kadar, masanın çevresi de canlı.</h2>
-              <p>
-                Oyun modlarından özel odalara, günlük ödüllerden arkadaşlarına kadar
-                Batak: Online deneyiminin güncel ekranlarını incele.
-              </p>
-            </div>
+            <p class="eyebrow" data-copy="screens.eyebrow">Gerçek uygulama ekranları</p>
+            <h2 data-copy="screens.title">Masa kadar, masanın çevresi de canlı</h2>
+            <p class="section-lead" data-copy="screens.lead">Oyun modlarından özel odalara, günlük ödüllerden arkadaşlarınıza kadar Batak: Online'ın güncel ekranlarını inceleyin.</p>
           </div>
-        </div>
 
-        <div class="screen-grid" role="region" aria-label="Batak: Online ekran görüntüleri">
-          <article class="screen-card">
-            <img src="./assets/screens/01-gercek-oyun-deneyimi.webp" width="900" height="1956" alt="Canlı İhaleli Batak masası" loading="lazy" />
-            <h3>Gerçek oyun deneyimi</h3>
-            <p>Sunucu otoriteli dört kişilik masa</p>
-          </article>
-          <article class="screen-card">
-            <img src="./assets/screens/02-uc-oyun-modu.webp" width="900" height="1956" alt="Üç Batak oyun modu seçimi" loading="lazy" />
-            <h3>Üç oyun modu</h3>
-            <p>İhaleli, Gömmeli ve Koz Maça</p>
-          </article>
-          <article class="screen-card">
-            <img src="./assets/screens/03-online-lobi.webp" width="900" height="1956" alt="Batak Online ana lobi ekranı" loading="lazy" />
-            <h3>Online lobi</h3>
-            <p>Profil, lig, çip ve hızlı başlangıç</p>
-          </article>
-          <article class="screen-card">
-            <img src="./assets/screens/04-ozel-oda.webp" width="900" height="1956" alt="Arkadaşlarla özel Batak odası" loading="lazy" />
-            <h3>Özel oda</h3>
-            <p>Arkadaşlarınla kendi masan</p>
-          </article>
-          <article class="screen-card">
-            <img src="./assets/screens/05-gunluk-oduller.webp" width="900" height="1956" alt="Günlük ödüller ekranı" loading="lazy" />
-            <h3>Günlük ödüller</h3>
-            <p>Düzenli ilerleme ve çip ödülleri</p>
-          </article>
-          <article class="screen-card">
-            <img src="./assets/screens/06-arkadaslar.webp" width="900" height="1956" alt="Batak Online arkadaşlar ekranı" loading="lazy" />
-            <h3>Arkadaşlar</h3>
-            <p>Oyuncu bul, ekle ve davet et</p>
-          </article>
-          <article class="screen-card">
-            <img src="./assets/screens/07-profil-ve-avatarlar.webp" width="900" height="1956" alt="Oyuncu profili ve avatarlar" loading="lazy" />
-            <h3>Oyuncu profili</h3>
-            <p>Avatarın, istatistiklerin ve kimliğin</p>
-          </article>
+          <section class="screen-grid" aria-label="Batak: Online ekran görüntüleri" data-copy-aria="screens.regionAria">
+            <figure class="screen-card">
+              <img src="./assets/screens/01-gercek-oyun-deneyimi.webp" srcset="./assets/screens/450/01-gercek-oyun-deneyimi.webp 450w, ./assets/screens/01-gercek-oyun-deneyimi.webp 900w" sizes="(max-width: 640px) calc(100vw - 36px), (max-width: 920px) calc((100vw - 66px) / 2), 370px" width="900" height="1956" alt="Canlı İhaleli Batak masası" data-copy-alt="screens.oneAlt" loading="lazy" />
+              <figcaption><strong data-copy="screens.oneTitle">Gerçek oyun deneyimi</strong><p data-copy="screens.oneBody">Sunucu otoriteli dört kişilik masa</p></figcaption>
+            </figure>
+            <figure class="screen-card">
+              <img src="./assets/screens/02-uc-oyun-modu.webp" srcset="./assets/screens/450/02-uc-oyun-modu.webp 450w, ./assets/screens/02-uc-oyun-modu.webp 900w" sizes="(max-width: 640px) calc(100vw - 36px), (max-width: 920px) calc((100vw - 66px) / 2), 370px" width="900" height="1956" alt="Üç Batak oyun modu seçimi" data-copy-alt="screens.twoAlt" loading="lazy" />
+              <figcaption><strong data-copy="screens.twoTitle">Üç oyun modu</strong><p data-copy="screens.twoBody">İhaleli, Gömmeli ve Koz Maça</p></figcaption>
+            </figure>
+            <figure class="screen-card">
+              <img src="./assets/screens/03-online-lobi.webp" srcset="./assets/screens/450/03-online-lobi.webp 450w, ./assets/screens/03-online-lobi.webp 900w" sizes="(max-width: 640px) calc(100vw - 36px), (max-width: 920px) calc((100vw - 66px) / 2), 370px" width="900" height="1956" alt="Batak Online ana lobi ekranı" data-copy-alt="screens.threeAlt" loading="lazy" />
+              <figcaption><strong data-copy="screens.threeTitle">Online lobi</strong><p data-copy="screens.threeBody">Profil, lig, çip ve hızlı başlangıç</p></figcaption>
+            </figure>
+            <figure class="screen-card">
+              <img src="./assets/screens/04-ozel-oda.webp" srcset="./assets/screens/450/04-ozel-oda.webp 450w, ./assets/screens/04-ozel-oda.webp 900w" sizes="(max-width: 640px) calc(100vw - 36px), (max-width: 920px) calc((100vw - 66px) / 2), 370px" width="900" height="1956" alt="Arkadaşlarla özel Batak odası" data-copy-alt="screens.fourAlt" loading="lazy" />
+              <figcaption><strong data-copy="screens.fourTitle">Özel oda</strong><p data-copy="screens.fourBody">Arkadaşlarınızla kendi masanız</p></figcaption>
+            </figure>
+            <figure class="screen-card">
+              <img src="./assets/screens/05-gunluk-oduller.webp" srcset="./assets/screens/450/05-gunluk-oduller.webp 450w, ./assets/screens/05-gunluk-oduller.webp 900w" sizes="(max-width: 640px) calc(100vw - 36px), (max-width: 920px) calc((100vw - 66px) / 2), 370px" width="900" height="1956" alt="Günlük ödüller ekranı" data-copy-alt="screens.fiveAlt" loading="lazy" />
+              <figcaption><strong data-copy="screens.fiveTitle">Günlük ödüller</strong><p data-copy="screens.fiveBody">Düzenli ilerleme ve çip ödülleri</p></figcaption>
+            </figure>
+            <figure class="screen-card">
+              <img src="./assets/screens/06-arkadaslar.webp" srcset="./assets/screens/450/06-arkadaslar.webp 450w, ./assets/screens/06-arkadaslar.webp 900w" sizes="(max-width: 640px) calc(100vw - 36px), (max-width: 920px) calc((100vw - 66px) / 2), 370px" width="900" height="1956" alt="Batak Online arkadaşlar ekranı" data-copy-alt="screens.sixAlt" loading="lazy" />
+              <figcaption><strong data-copy="screens.sixTitle">Arkadaşlar</strong><p data-copy="screens.sixBody">Oyuncu bulun, ekleyin ve davet edin</p></figcaption>
+            </figure>
+            <figure class="screen-card">
+              <img src="./assets/screens/07-profil-ve-avatarlar.webp" srcset="./assets/screens/450/07-profil-ve-avatarlar.webp 450w, ./assets/screens/07-profil-ve-avatarlar.webp 900w" sizes="(max-width: 640px) calc(100vw - 36px), (max-width: 920px) calc((100vw - 66px) / 2), 370px" width="900" height="1956" alt="Oyuncu profili ve avatarlar" data-copy-alt="screens.sevenAlt" loading="lazy" />
+              <figcaption><strong data-copy="screens.sevenTitle">Oyuncu profili</strong><p data-copy="screens.sevenBody">Avatarınız, istatistikleriniz ve kimliğiniz</p></figcaption>
+            </figure>
+          </section>
         </div>
       </section>
 
-      <section class="section">
-        <div class="section-inner story-layout">
-          <div class="story-visual">
-            <img
-              src="./assets/screens/06-arkadaslar.webp"
-              width="900"
-              height="1956"
-              alt="Batak: Online sosyal arkadaşlar ekranı"
-              loading="lazy"
-            />
-          </div>
-          <div class="story-copy">
-            <p class="eyebrow">Sosyal oyun</p>
-            <h2>Bir masadan daha fazlası.</h2>
-            <p>
-              Oynadığın kişileri tekrar bul, arkadaşlık isteği gönder, özel masa daveti paylaş
-              ve maç içinde sınırlandırılmış hazır mesajlar ile emoji tepkilerini kullan.
-            </p>
-            <ul class="story-list">
-              <li><span>01</span> Arkadaşlar, istekler ve son oynanan oyuncular</li>
-              <li><span>02</span> Özel masa davetleri ve bildirim tercihleri</li>
-              <li><span>03</span> Maç geçmişi, rövanş ve lig ilerlemesi</li>
-            </ul>
-          </div>
+      <section class="section alt">
+        <div class="section-inner info-grid">
+          <article><h2 data-copy="info.playTitle">Ücretsiz oynayın</h2><p data-copy="info.playBody">Misafir olarak hemen başlayın veya Apple ve Google hesabınızla profilinizi koruyun.</p><a class="button primary" href="https://apps.apple.com/app/id6806760543" target="_blank" rel="noopener noreferrer">App Store</a></article>
+          <article><h2 data-copy="info.supportTitle">Destek</h2><p data-copy="info.supportBody">Giriş, eşleşme, çip, bağlantı ve hesap işlemleri için çözüm adımlarını inceleyin.</p><a class="button" href="./support.html" data-copy="info.supportAction">Destek sayfasına gidin</a></article>
+          <article><h2 data-copy="info.privacyTitle">Hesap ve gizlilik</h2><p data-copy="info.privacyBody">İşlenen verileri, üçüncü taraf hizmetleri ve kalıcı hesap silme sürecini öğrenin.</p><a class="button" href="./privacy.html" data-copy="info.privacyAction">Gizlilik politikasını okuyun</a></article>
         </div>
       </section>
 
-      <section class="section section-alt" id="baglantilar">
-        <div class="section-inner">
-          <div class="section-heading">
-            <p class="eyebrow">Resmî bağlantılar</p>
-            <div>
-              <h2>Destek ve yasal bilgiler tek yerde.</h2>
-              <p>
-                Mağaza kayıtları ve kullanıcı iletişimi için Batak: Online'ın kalıcı,
-                herkese açık bağlantıları bu alan altında tutulur.
-              </p>
-            </div>
-          </div>
-
-          <div class="resource-grid">
-            <a class="resource-card" href="./support.html">
-              <h3>Destek merkezi</h3>
-              <p>Hesap, bağlantı, oyun, reklam ödülü ve bildirimlerle ilgili çözüm adımları.</p>
-              <strong>Destek sayfasını aç <span aria-hidden="true">↗</span></strong>
-            </a>
-            <a class="resource-card" href="./privacy.html">
-              <h3>Gizlilik politikası</h3>
-              <p>İşlenen veriler, hizmet sağlayıcıları, saklama süreleri ve kullanıcı hakları.</p>
-              <strong>Politikayı incele <span aria-hidden="true">↗</span></strong>
-            </a>
-            <a class="resource-card" href="./account-deletion.html">
-              <h3>Hesap silme</h3>
-              <p>Uygulama içinden veya destek üzerinden kalıcı hesap silme adımları.</p>
-              <strong>Silme adımlarını gör <span aria-hidden="true">↗</span></strong>
-            </a>
-          </div>
+      <section class="developer-profile" aria-labelledby="developer-title">
+        <div class="section-inner developer-profile-inner">
+          <p class="developer-label" data-copy="developer.label">Geliştirici</p>
+          <div><h2 id="developer-title"><a href="../hakkimda/">Ümit Çağdaş</a></h2><p data-copy="developer.body">Batak: Online, Ümit Çağdaş tarafından güvenli, sosyal ve canlı bir mobil kart oyunu olarak geliştirildi.</p></div>
+          <nav class="developer-links" aria-label="Geliştirici bağlantıları" data-copy-aria="developer.linksAria">
+            <a href="../hakkimda/" data-copy="developer.profile">Geliştirici profili</a>
+            <a href="../projeler/" data-copy="developer.projects">Diğer projeler</a>
+            <a href="../" data-copy="developer.personal">Kişisel site</a>
+          </nav>
         </div>
       </section>
     </main>
 
-    <aside class="developer-profile" aria-label="Geliştirici bilgisi">
-      <div class="developer-profile-inner">
-        <div>
-          <p class="developer-label">Bağımsız olarak geliştirildi</p>
-          <h2>Ümit Çağdaş tarafından tasarlandı ve geliştirildi.</h2>
-        </div>
-        <div class="developer-links">
-          <a href="../">Portföy</a>
-          <a href="../projeler/">Tüm projeler</a>
-          <a href="mailto:umitcagdas@gmail.com">İletişim</a>
-        </div>
-      </div>
-    </aside>
-
     <footer class="site-footer">
       <div class="footer-inner">
-        <span>© 2026 Batak: Online</span>
-        <a href="./support.html">Destek</a>
-        <a href="./privacy.html">Gizlilik</a>
-        <a href="./account-deletion.html">Hesap silme</a>
+        <span>Batak: Online</span>
+        <a href="./support.html" data-i18n="nav.support">Destek</a>
+        <a href="./privacy.html" data-i18n="footer.privacy">Gizlilik Politikası</a>
+        <a href="./account-deletion.html" data-i18n="nav.accountDeletion">Hesap Silme</a>
         <a href="../app-ads.txt">app-ads.txt</a>
-        <a href="../">umitcagdas.github.io</a>
+        <a href="../hakkimda/" data-i18n="footer.developer">Geliştirici: Ümit Çağdaş</a>
+        <a href="../" data-i18n="footer.personal">Kişisel site</a>
       </div>
     </footer>
   </body>
