@@ -268,6 +268,16 @@
     });
   }
 
+  function applyLocalizedScreens(language) {
+    const screenRoot = language === "tr" ? "./assets/screens" : `./assets/screens/${language}`;
+    document.querySelectorAll("[data-localized-screen]").forEach((image) => {
+      const screenName = image.dataset.localizedScreen;
+      if (!/^[a-z0-9-]+$/.test(screenName || "")) return;
+      image.src = `${screenRoot}/${screenName}.webp`;
+      image.srcset = `${screenRoot}/450/${screenName}.webp 450w, ${screenRoot}/${screenName}.webp 900w`;
+    });
+  }
+
   function addLanguagePicker(language) {
     const header = document.querySelector(".site-header");
     if (!header || header.querySelector("[data-language-select]")) return;
@@ -322,6 +332,7 @@
   applyMetadata(language, pageCopy);
   applyCommonCopy(language);
   applyPageCopy(pageCopy);
+  applyLocalizedScreens(language);
   addLanguagePicker(language);
   localizeInternalLinks(language);
 })();

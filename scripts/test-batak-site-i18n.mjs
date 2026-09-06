@@ -60,6 +60,22 @@ for (const page of pages) {
 const home = read("batakonline/index.html");
 const responsiveScreens = [...home.matchAll(/<img[^>]+srcset="([^"]+)"/g)];
 assert.equal(responsiveScreens.length, 7, "home: seven responsive screenshots");
+const localizedScreens = [...home.matchAll(/data-localized-screen="([a-z0-9-]+)"/g)].map(
+  (match) => match[1],
+);
+assert.equal(localizedScreens.length, 7, "home: seven localized screenshot contracts");
+for (const language of languages.filter((language) => language !== "tr")) {
+  for (const screen of localizedScreens) {
+    assert.ok(
+      fs.existsSync(path.join(root, `batakonline/assets/screens/${language}/${screen}.webp`)),
+      `screens: missing ${language}/${screen}.webp`,
+    );
+    assert.ok(
+      fs.existsSync(path.join(root, `batakonline/assets/screens/${language}/450/${screen}.webp`)),
+      `screens: missing ${language}/450/${screen}.webp`,
+    );
+  }
+}
 assert.match(read("batakonline/assets/site.css"), /aspect-ratio:\s*110\s*\/\s*239/, "screens preserve source ratio");
 
 const core = read("batakonline/assets/site-i18n.js");
@@ -72,12 +88,18 @@ function runCore({ query = "", storedLanguage = null, browserLanguages = [] }) {
   const stored = new Map();
   if (storedLanguage) stored.set("batak-site-language", storedLanguage);
   const appendedHeadNodes = [];
+  const screenElements = localizedScreens.map((localizedScreen) => ({
+    dataset: { localizedScreen },
+    src: "",
+    srcset: "",
+  }));
   const document = {
     title: "",
     documentElement: { lang: "tr", dataset: {} },
     head: { appendChild: (node) => appendedHeadNodes.push(node) },
     querySelector: () => null,
-    querySelectorAll: () => [],
+    querySelectorAll: (selector) =>
+      selector === "[data-localized-screen]" ? screenElements : [],
     createElement: () => ({
       setAttribute(name, value) {
         this[name] = value;
@@ -104,12 +126,20 @@ function runCore({ query = "", storedLanguage = null, browserLanguages = [] }) {
     },
   };
   vm.runInNewContext(core, context, { filename: "site-i18n.js" });
-  return { document, stored, appendedHeadNodes };
+  return { document, stored, appendedHeadNodes, screenElements };
 }
 
 assert.equal(runCore({ query: "?lang=fr" }).document.documentElement.lang, "fr");
 assert.equal(runCore({ storedLanguage: "de", browserLanguages: ["el-GR"] }).document.documentElement.lang, "de");
 assert.equal(runCore({ browserLanguages: ["nl-NL", "en-US"] }).document.documentElement.lang, "nl");
 assert.equal(runCore({ query: "?lang=%3Cscript%3E", browserLanguages: ["es-ES"] }).document.documentElement.lang, "es");
+assert.equal(
+  runCore({ query: "?lang=fr" }).screenElements[0].src,
+  "./assets/screens/fr/01-gercek-oyun-deneyimi.webp",
+);
+assert.equal(
+  runCore({ query: "?lang=tr" }).screenElements[0].srcset,
+  "./assets/screens/450/01-gercek-oyun-deneyimi.webp 450w, ./assets/screens/01-gercek-oyun-deneyimi.webp 900w",
+);
 
 console.log("Batak site i18n contract passed for eight locales and four pages.");
