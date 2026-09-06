@@ -1643,6 +1643,12 @@ img {
     #09271e;
 }
 
+.product-batak-online .product-art {
+  background:
+    radial-gradient(circle at 68% 34%, rgba(255, 201, 91, 0.24), transparent 27%),
+    linear-gradient(145deg, #031c18, #0a4b40);
+}
+
 .product-batak .product-art {
   background:
     radial-gradient(circle at 70% 38%, rgba(225, 189, 94, 0.18), transparent 25%),
@@ -2808,6 +2814,12 @@ img {
 
 .project-featured-pisti .project-featured-visual {
   background: linear-gradient(145deg, #101729, #284c68);
+}
+
+.project-featured-batak-online .project-featured-visual {
+  background:
+    radial-gradient(circle at 70% 30%, rgba(255, 201, 91, 0.2), transparent 30%),
+    linear-gradient(145deg, #031c18, #0b5145);
 }
 
 .project-featured-batak .project-featured-visual {
