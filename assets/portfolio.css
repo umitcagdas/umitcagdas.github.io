@@ -4117,3 +4117,13 @@ img {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Tavla Online joins the game family in the product portfolio. */
+.product-tavla .product-art,
+.project-featured-tavla .project-featured-visual {
+  background: radial-gradient(circle at 70% 20%, #225148, #102c28 55%, #101512);
+}
+
+.product-tavla .product-art > p {
+  color: #ffe39a;
+}
