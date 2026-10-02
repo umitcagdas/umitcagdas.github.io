@@ -4127,3 +4127,6 @@ img {
 .product-tavla .product-art > p {
   color: #ffe39a;
 }
+
+.product-pis-yedili .product-art, .project-featured-pis-yedili .project-featured-visual {background:radial-gradient(circle at 25% 20%,#496e3e,#0a2922 70%);}
+.product-pis-yedili .product-art > p {color:#efd18a;font-size:clamp(2rem,4vw,4.2rem);}

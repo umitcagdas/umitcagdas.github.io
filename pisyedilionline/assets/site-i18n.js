@@ -1,0 +1,426 @@
+(() => {
+  "use strict";
+
+  const languageOrder = ["tr", "en", "de", "fr", "nl", "es", "it", "el", "sq"];
+  const pageTranslations = window.PisYediliPageI18n || {};
+  const supportedLanguages = languageOrder.filter(
+    (language) => pageTranslations[language],
+  );
+  const localeTags = {
+    tr: "tr_TR",
+    en: "en_US",
+    de: "de_DE",
+    fr: "fr_FR",
+    nl: "nl_NL",
+    es: "es_ES",
+    it: "it_IT",
+    el: "el_GR",
+    sq: "sq_AL",
+  };
+  const commonCopy = {
+    tr: {
+      "aria.home": "Pis Yedili Online ana sayfa",
+      "aria.sections": "Sayfa bölümleri",
+      "nav.home": "Ana Sayfa",
+      "nav.features": "Özellikler",
+      "nav.screens": "Ekranlar",
+      "nav.updates": "Yenilikler",
+      "nav.support": "Destek",
+      "nav.privacy": "Gizlilik",
+      "nav.accountDeletion": "Hesap Silme",
+      "footer.privacy": "Gizlilik Politikası",
+      "footer.developer": "Geliştirici: Ümit Çağdaş",
+      "footer.personal": "Kişisel site",
+      "footer.supportTitle": "Pis Yedili: Online Destek",
+    },
+    en: {
+      "aria.home": "Pis Yedili Online home page",
+      "aria.sections": "Page sections",
+      "nav.home": "Home",
+      "nav.features": "Features",
+      "nav.screens": "Screens",
+      "nav.updates": "What's New",
+      "nav.support": "Support",
+      "nav.privacy": "Privacy",
+      "nav.accountDeletion": "Delete Account",
+      "footer.privacy": "Privacy Policy",
+      "footer.developer": "Developer: Ümit Çağdaş",
+      "footer.personal": "Personal site",
+      "footer.supportTitle": "Pis Yedili: Online Support",
+    },
+    de: {
+      "aria.home": "Pis Yedili Online Startseite",
+      "aria.sections": "Seitenbereiche",
+      "nav.home": "Startseite",
+      "nav.features": "Funktionen",
+      "nav.screens": "Bildschirme",
+      "nav.updates": "Neuerungen",
+      "nav.support": "Support",
+      "nav.privacy": "Datenschutz",
+      "nav.accountDeletion": "Konto löschen",
+      "footer.privacy": "Datenschutzerklärung",
+      "footer.developer": "Entwickler: Ümit Çağdaş",
+      "footer.personal": "Persönliche Website",
+      "footer.supportTitle": "Pis Yedili: Online Support",
+    },
+    fr: {
+      "aria.home": "Page d’accueil de Pis Yedili Online",
+      "aria.sections": "Sections de la page",
+      "nav.home": "Accueil",
+      "nav.features": "Fonctionnalités",
+      "nav.screens": "Écrans",
+      "nav.updates": "Nouveautés",
+      "nav.support": "Assistance",
+      "nav.privacy": "Confidentialité",
+      "nav.accountDeletion": "Supprimer le compte",
+      "footer.privacy": "Politique de confidentialité",
+      "footer.developer": "Développeur : Ümit Çağdaş",
+      "footer.personal": "Site personnel",
+      "footer.supportTitle": "Assistance Pis Yedili: Online",
+    },
+    nl: {
+      "aria.home": "Startpagina van Pis Yedili Online",
+      "aria.sections": "Paginaonderdelen",
+      "nav.home": "Start",
+      "nav.features": "Functies",
+      "nav.screens": "Schermen",
+      "nav.updates": "Nieuw",
+      "nav.support": "Ondersteuning",
+      "nav.privacy": "Privacy",
+      "nav.accountDeletion": "Account verwijderen",
+      "footer.privacy": "Privacybeleid",
+      "footer.developer": "Ontwikkelaar: Ümit Çağdaş",
+      "footer.personal": "Persoonlijke website",
+      "footer.supportTitle": "Pis Yedili: Online-ondersteuning",
+    },
+    es: {
+      "aria.home": "Página de inicio de Pis Yedili Online",
+      "aria.sections": "Secciones de la página",
+      "nav.home": "Inicio",
+      "nav.features": "Características",
+      "nav.screens": "Pantallas",
+      "nav.updates": "Novedades",
+      "nav.support": "Soporte",
+      "nav.privacy": "Privacidad",
+      "nav.accountDeletion": "Eliminar cuenta",
+      "footer.privacy": "Política de privacidad",
+      "footer.developer": "Desarrollador: Ümit Çağdaş",
+      "footer.personal": "Sitio personal",
+      "footer.supportTitle": "Soporte de Pis Yedili: Online",
+    },
+    it: {
+      "aria.home": "Pagina iniziale di Pis Yedili Online",
+      "aria.sections": "Sezioni della pagina",
+      "nav.home": "Home",
+      "nav.features": "Funzionalità",
+      "nav.screens": "Schermate",
+      "nav.updates": "Novità",
+      "nav.support": "Supporto",
+      "nav.privacy": "Privacy",
+      "nav.accountDeletion": "Elimina account",
+      "footer.privacy": "Informativa sulla privacy",
+      "footer.developer": "Sviluppatore: Ümit Çağdaş",
+      "footer.personal": "Sito personale",
+      "footer.supportTitle": "Supporto Pis Yedili: Online",
+    },
+    el: {
+      "aria.home": "Αρχική σελίδα Pis Yedili Online",
+      "aria.sections": "Ενότητες σελίδας",
+      "nav.home": "Αρχική",
+      "nav.features": "Λειτουργίες",
+      "nav.screens": "Οθόνες",
+      "nav.updates": "Τι νέο υπάρχει",
+      "nav.support": "Υποστήριξη",
+      "nav.privacy": "Απόρρητο",
+      "nav.accountDeletion": "Διαγραφή λογαριασμού",
+      "footer.privacy": "Πολιτική απορρήτου",
+      "footer.developer": "Προγραμματιστής: Ümit Çağdaş",
+      "footer.personal": "Προσωπική ιστοσελίδα",
+      "footer.supportTitle": "Υποστήριξη Pis Yedili: Online",
+    },
+    sq: {
+      "aria.home": "Faqja kryesore e Pis Yedili Online",
+      "aria.sections": "Seksionet e faqes",
+      "nav.home": "Kreu",
+      "nav.features": "Veçoritë",
+      "nav.screens": "Ekranet",
+      "nav.updates": "Çfarë ka të re",
+      "nav.support": "Mbështetja",
+      "nav.privacy": "Privatësia",
+      "nav.accountDeletion": "Fshi llogarinë",
+      "footer.privacy": "Politika e privatësisë",
+      "footer.developer": "Zhvilluesi: Ümit Çağdaş",
+      "footer.personal": "Faqja personale",
+      "footer.supportTitle": "Mbështetja e Pis Yedili: Online",
+    },
+  };
+
+  function normalizedLanguageCode(value) {
+    const normalized = String(value || "")
+      .trim()
+      .toLowerCase()
+      .split("-")[0];
+    return languageOrder.includes(normalized) ? normalized : null;
+  }
+
+  function normalizeLanguage(value) {
+    const normalized = normalizedLanguageCode(value);
+    return supportedLanguages.includes(normalized) ? normalized : null;
+  }
+
+  function resolveCandidate(value, persist = false) {
+    const knownLanguage = normalizedLanguageCode(value);
+    if (!knownLanguage) return null;
+
+    if (supportedLanguages.includes(knownLanguage)) {
+      if (persist) storeLanguage(knownLanguage);
+      return knownLanguage;
+    }
+
+    return supportedLanguages.includes("en")
+      ? "en"
+      : supportedLanguages[0] || "tr";
+  }
+
+  function readStoredLanguage() {
+    try {
+      return window.localStorage.getItem("pis-yedili-site-language");
+    } catch (_) {
+      return null;
+    }
+  }
+
+  function storeLanguage(language) {
+    try {
+      window.localStorage.setItem("pis-yedili-site-language", language);
+    } catch (_) {
+      // Language selection still works through the URL when storage is blocked.
+    }
+  }
+
+  function resolveLanguage() {
+    const queryLanguage = resolveCandidate(
+      new URLSearchParams(window.location.search).get("lang"),
+      true,
+    );
+    if (queryLanguage) {
+      return queryLanguage;
+    }
+
+    const storedLanguage = resolveCandidate(readStoredLanguage());
+    if (storedLanguage) return storedLanguage;
+
+    for (const candidate of navigator.languages || [navigator.language]) {
+      const browserLanguage = resolveCandidate(candidate);
+      if (browserLanguage) return browserLanguage;
+    }
+    return "tr";
+  }
+
+  function setMeta(selector, value) {
+    if (!value) return;
+    const element = document.querySelector(selector);
+    if (element) element.setAttribute("content", value);
+  }
+
+  function applyMetadata(language, pageCopy) {
+    const meta = pageCopy.meta || {};
+    if (meta.title) document.title = meta.title;
+    setMeta('meta[name="description"]', meta.description);
+    setMeta('meta[property="og:title"]', meta.title);
+    setMeta('meta[property="og:description"]', meta.description);
+    setMeta('meta[name="twitter:title"]', meta.title);
+    setMeta('meta[name="twitter:description"]', meta.description);
+    setMeta('meta[property="og:locale"]', localeTags[language]);
+
+    const pageUrl = new URL(window.location.href);
+    pageUrl.hash = "";
+    pageUrl.search = language === "tr" ? "" : `?lang=${language}`;
+
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement("link");
+      canonical.rel = "canonical";
+      document.head.appendChild(canonical);
+    }
+    canonical.href = pageUrl.href;
+    setMeta('meta[property="og:url"]', pageUrl.href);
+
+    document.querySelectorAll('link[rel="alternate"][hreflang]').forEach((link) => {
+      link.remove();
+    });
+    for (const alternateLanguage of supportedLanguages) {
+      const alternate = document.createElement("link");
+      const alternateUrl = new URL(pageUrl.href);
+      alternateUrl.search = alternateLanguage === "tr" ? "" : `?lang=${alternateLanguage}`;
+      alternate.rel = "alternate";
+      alternate.hreflang = alternateLanguage;
+      alternate.href = alternateUrl.href;
+      document.head.appendChild(alternate);
+    }
+    const fallback = document.createElement("link");
+    const fallbackUrl = new URL(pageUrl.href);
+    fallbackUrl.search = "";
+    fallback.rel = "alternate";
+    fallback.hreflang = "x-default";
+    fallback.href = fallbackUrl.href;
+    document.head.appendChild(fallback);
+  }
+
+  function applyCommonCopy(language) {
+    const copy = commonCopy[language] || commonCopy.tr;
+    document.querySelectorAll("[data-i18n]").forEach((element) => {
+      const value = copy[element.dataset.i18n];
+      if (value) element.textContent = value;
+    });
+    document.querySelectorAll("[data-i18n-aria]").forEach((element) => {
+      const value = copy[element.dataset.i18nAria];
+      if (value) element.setAttribute("aria-label", value);
+    });
+  }
+
+  function applyPageCopy(language, pageCopy) {
+    const blocks = pageCopy.blocks || {};
+    document.querySelectorAll("[data-i18n-html]").forEach((element) => {
+      const value = blocks[element.dataset.i18nHtml];
+      if (value) element.innerHTML = value;
+    });
+    const copy = pageCopy.copy || {};
+    document.querySelectorAll("[data-copy]").forEach((element) => {
+      const value = copy[element.dataset.copy];
+      if (value) element.textContent = value;
+    });
+    document.querySelectorAll("[data-language-panel]").forEach((panel) => {
+      panel.hidden = panel.dataset.languagePanel !== language;
+    });
+    document.querySelectorAll("[data-secondary-summary]").forEach((summary) => {
+      summary.hidden = language !== "tr";
+    });
+  }
+
+  function localizeScreenImages(language) {
+    const screenNames = ["gameplay", "main-menu", "leaderboard"];
+    document
+      .querySelectorAll('[data-i18n-html="screens"] .screen-card img')
+      .forEach((image, index) => {
+        const screenName = screenNames[index];
+        if (!screenName) return;
+
+        const fallbackSource = `./assets/${screenName}.webp`;
+        const localizedSource = `./assets/screens/${language}/${screenName}.webp`;
+        image.addEventListener(
+          "error",
+          () => {
+            if (image.getAttribute("src") !== fallbackSource) {
+              image.setAttribute("src", fallbackSource);
+            }
+          },
+          { once: true },
+        );
+        image.setAttribute("src", localizedSource);
+      });
+  }
+
+  function localizedUrl(language) {
+    const url = new URL(window.location.href);
+    url.searchParams.set("lang", language);
+    return `${url.pathname}${url.search}${url.hash}`;
+  }
+
+  function addLanguagePicker(language) {
+    const header = document.querySelector(".site-header");
+    if (!header || header.querySelector("[data-language-select]")) return;
+
+    const label = document.createElement("label");
+    label.className = "site-language-picker";
+    const hiddenLabel = document.createElement("span");
+    hiddenLabel.className = "visually-hidden";
+    hiddenLabel.textContent = "Dil / Language";
+    const select = document.createElement("select");
+    select.setAttribute("data-language-select", "");
+    select.setAttribute("aria-label", "Dil / Language");
+    const labels = {
+      tr: "Türkçe",
+      en: "English",
+      de: "Deutsch",
+      fr: "Français",
+      nl: "Nederlands",
+      es: "Español",
+      it: "Italiano",
+      el: "Ελληνικά",
+      sq: "Shqip",
+    };
+    for (const optionLanguage of supportedLanguages) {
+      const option = document.createElement("option");
+      option.value = optionLanguage;
+      option.textContent = labels[optionLanguage];
+      option.selected = optionLanguage === language;
+      select.appendChild(option);
+    }
+    select.addEventListener("change", () => {
+      const selectedLanguage = normalizeLanguage(select.value);
+      if (!selectedLanguage) return;
+      storeLanguage(selectedLanguage);
+      window.location.assign(localizedUrl(selectedLanguage));
+    });
+    label.append(hiddenLabel, select);
+    header.appendChild(label);
+  }
+
+  function localizeLanguageLinks(language) {
+    document.querySelectorAll("[data-language-link]").forEach((link) => {
+      const linkLanguage = normalizeLanguage(link.dataset.languageLink);
+      if (!linkLanguage) return;
+      link.href = localizedUrl(linkLanguage);
+      if (linkLanguage === language) {
+        link.setAttribute("aria-current", "page");
+      } else {
+        link.removeAttribute("aria-current");
+      }
+    });
+  }
+
+  function localizeInternalLinks(language) {
+    const englishFallbackPages = new Set([
+      "/pisyedilionline/support.html",
+      "/pisyedilionline/privacy.html",
+      "/pisyedilionline/account-deletion.html",
+    ]);
+    document.querySelectorAll("a[href]").forEach((link) => {
+      if (link.hasAttribute("data-language-link")) return;
+      const rawHref = link.getAttribute("href");
+      if (!rawHref || rawHref.startsWith("#")) return;
+      let url;
+      try {
+        url = new URL(rawHref, window.location.href);
+      } catch (_) {
+        return;
+      }
+      if (
+        url.origin !== window.location.origin ||
+        !url.pathname.includes("/pisyedilionline/")
+      ) {
+        return;
+      }
+      const linkLanguage =
+        !["tr", "en", "de", "el", "sq"].includes(language) &&
+        englishFallbackPages.has(url.pathname)
+          ? "en"
+          : language;
+      url.searchParams.set("lang", linkLanguage);
+      link.href = `${url.pathname}${url.search}${url.hash}`;
+    });
+  }
+
+  const language = resolveLanguage();
+  const pageCopy = pageTranslations[language] || pageTranslations.tr || {};
+  document.documentElement.lang = language;
+  document.documentElement.dataset.language = language;
+  applyMetadata(language, pageCopy);
+  applyCommonCopy(language);
+  applyPageCopy(language, pageCopy);
+  // Gallery images are genuine Turkish app captures in both site languages.
+  addLanguagePicker(language);
+  localizeLanguageLinks(language);
+  localizeInternalLinks(language);
+})();
