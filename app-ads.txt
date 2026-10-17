@@ -2,6 +2,7 @@ google.com, pub-8621091384672374, DIRECT, f08c47fec0942fa0
 rubiconproject.com, 22884, DIRECT, 0bfd66d529a55807
 facebook.com, 1009898762154319, RESELLER, c3e20eee3f780d68
 openx.com, 631431353, DIRECT, 6a698e2ec38604c6
+vungle.com, 6ad3d1cc5f9902f69774d223, DIRECT, c107d686becd2d77
 
 ownerdomain=umitcagdas.github.io
 
