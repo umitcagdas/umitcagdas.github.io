@@ -142,7 +142,7 @@
   </url>
   <url>
     <loc>https://umitcagdas.github.io/pistionline/</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-10-26</lastmod>
   </url>
   <url>
     <loc>https://umitcagdas.github.io/pistionline/updates/</loc>
@@ -162,7 +162,7 @@
   </url>
   <url>
     <loc>https://umitcagdas.github.io/pistionline/?lang=en</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-10-26</lastmod>
   </url>
   <url>
     <loc>https://umitcagdas.github.io/pistionline/support.html?lang=en</loc>
@@ -182,7 +182,7 @@
   </url>
   <url>
     <loc>https://umitcagdas.github.io/pistionline/?lang=de</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-10-26</lastmod>
   </url>
   <url>
     <loc>https://umitcagdas.github.io/pistionline/support.html?lang=de</loc>
@@ -202,7 +202,7 @@
   </url>
   <url>
     <loc>https://umitcagdas.github.io/pistionline/?lang=el</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-10-26</lastmod>
   </url>
   <url>
     <loc>https://umitcagdas.github.io/pistionline/support.html?lang=el</loc>
@@ -222,7 +222,7 @@
   </url>
   <url>
     <loc>https://umitcagdas.github.io/pistionline/?lang=sq</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-10-26</lastmod>
   </url>
   <url>
     <loc>https://umitcagdas.github.io/pistionline/support.html?lang=sq</loc>
@@ -426,4 +426,10 @@
   <url><loc>https://umitcagdas.github.io/pisyedilionline/account-deletion.html?lang=en</loc><lastmod>2026-10-02</lastmod></url>
   <url><loc>https://umitcagdas.github.io/pisyedilionline/updates/</loc><lastmod>2026-10-02</lastmod></url>
   <url><loc>https://umitcagdas.github.io/pisyedilionline/updates/?lang=en</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://umitcagdas.github.io/pistionline/pisti-nasil-oynanir.html</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://umitcagdas.github.io/pistionline/arkadaslarla-pisti.html</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://umitcagdas.github.io/pistionline/?lang=fr</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://umitcagdas.github.io/pistionline/?lang=nl</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://umitcagdas.github.io/pistionline/?lang=es</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://umitcagdas.github.io/pistionline/?lang=it</loc><lastmod>2026-10-26</lastmod></url>
 </urlset>

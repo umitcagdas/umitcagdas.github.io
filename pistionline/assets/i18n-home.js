@@ -1,7 +1,7 @@
 window.PistiPageI18n = {
   tr: {
     meta: {
-      title: "Pişti: Online | Canlı Pişti Oyunu",
+      title: "Pişti Online | Arkadaşlarla Canlı Kart Oyunu",
       description:
         "Canlı rakiplerle oynayın, arkadaşlarınızı özel masaya davet edin, koleksiyonunuzu büyütün ve haftalık liderlikte yükselin.",
     },
@@ -22,7 +22,7 @@ window.PistiPageI18n = {
           <a class="button primary" href="https://apps.apple.com/app/id6785009534" target="_blank" rel="noopener noreferrer">View on the App Store</a>
           <a class="button" href="./support.html">Support</a>
         </div>
-        <div class="live-status">Live API and online tables</div>`,
+        <div class="live-status">Play Pişti at the same table with friends</div>`,
       features: `
         <div class="section-heading"><p class="eyebrow">Inside the game</p><h2>Live competition, friends, and lasting progress</h2><p class="section-lead">From quick matches and private tables to weekly rankings and collections, the full Pişti experience is in one place.</p></div>
         <div class="feature-grid">
@@ -67,7 +67,7 @@ window.PistiPageI18n = {
         <h1>Pişti: Online</h1>
         <p class="hero-copy">Erlebe klassisches Pişti gegen echte Gegner. Lade Freunde an private Tische ein, erweitere deine Sammlung und steige in der wöchentlichen Bestenliste auf.</p>
         <div class="actions" aria-label="App-Links"><a class="button primary" href="https://apps.apple.com/app/id6785009534" target="_blank" rel="noopener noreferrer">Im App Store ansehen</a><a class="button" href="./support.html">Support</a></div>
-        <div class="live-status">Live-API und Online-Tische</div>`,
+        <div class="live-status">Pişti mit Freunden am selben Tisch spielen</div>`,
       features: `
         <div class="section-heading"><p class="eyebrow">Im Spiel</p><h2>Wettbewerb, Freunde und dauerhafter Fortschritt</h2><p class="section-lead">Von schnellen Partien und privaten Tischen bis zu Wochenranglisten und Sammlungen: das komplette Pişti-Erlebnis an einem Ort.</p></div>
         <div class="feature-grid">
@@ -106,7 +106,7 @@ window.PistiPageI18n = {
         <p class="eyebrow">Ζωντανό διαδικτυακό παιχνίδι καρτών</p><h1>Pişti: Online</h1>
         <p class="hero-copy">Ζήσε το κλασικό Pişti με πραγματικούς αντιπάλους. Κάλεσε φίλους σε ιδιωτικά τραπέζια, μεγάλωσε τη συλλογή σου και ανέβα στην εβδομαδιαία κατάταξη.</p>
         <div class="actions" aria-label="Σύνδεσμοι εφαρμογής"><a class="button primary" href="https://apps.apple.com/app/id6785009534" target="_blank" rel="noopener noreferrer">Προβολή στο App Store</a><a class="button" href="./support.html">Υποστήριξη</a></div>
-        <div class="live-status">Ζωντανό API και διαδικτυακά τραπέζια</div>`,
+        <div class="live-status">Παίξε Pişti στο ίδιο τραπέζι με φίλους</div>`,
       features: `
         <div class="section-heading"><p class="eyebrow">Μέσα στο παιχνίδι</p><h2>Ανταγωνισμός, φίλοι και μόνιμη πρόοδος</h2><p class="section-lead">Από γρήγορους αγώνες και ιδιωτικά τραπέζια μέχρι εβδομαδιαίες κατατάξεις και συλλογές, όλη η εμπειρία Pişti βρίσκεται εδώ.</p></div>
         <div class="feature-grid">
@@ -145,7 +145,7 @@ window.PistiPageI18n = {
         <p class="eyebrow">Lojë me letra drejtpërdrejt online</p><h1>Pişti: Online</h1>
         <p class="hero-copy">Përjeto Pişti klasik me kundërshtarë realë. Fto miqtë në tavolina private, zgjero koleksionin dhe ngjitu në renditjen javore.</p>
         <div class="actions" aria-label="Lidhjet e aplikacionit"><a class="button primary" href="https://apps.apple.com/app/id6785009534" target="_blank" rel="noopener noreferrer">Shiko në App Store</a><a class="button" href="./support.html">Mbështetja</a></div>
-        <div class="live-status">API aktive dhe tavolina online</div>`,
+        <div class="live-status">Luaj Pişti në të njëjtën tavolinë me miqtë</div>`,
       features: `
         <div class="section-heading"><p class="eyebrow">Brenda lojës</p><h2>Garë, miq dhe përparim i qëndrueshëm</h2><p class="section-lead">Nga ndeshjet e shpejta dhe tavolinat private te renditjet javore dhe koleksionet, e gjithë përvoja e Pişti është këtu.</p></div>
         <div class="feature-grid">
@@ -179,7 +179,7 @@ window.PistiPageI18n = {
         "Jouez contre des adversaires en direct, invitez vos amis à des tables privées, développez votre collection et grimpez au classement hebdomadaire.",
     },
     blocks: {
-      hero: `<img class="hero-logo" src="./assets/logo.png" width="720" height="720" alt="Logo Pişti Online" /><p class="eyebrow">Jeu de cartes en ligne</p><h1>Pişti: Online</h1><p class="hero-copy">Retrouvez le Pişti classique face à de vrais adversaires. Invitez vos amis à une table privée, développez votre collection et grimpez au classement hebdomadaire.</p><div class="actions" aria-label="Liens de l’application"><a class="button primary" href="https://apps.apple.com/app/id6785009534" target="_blank" rel="noopener noreferrer">Voir sur l’App Store</a><a class="button" href="./support.html">Assistance</a></div><div class="live-status">API active et tables en ligne</div>`,
+      hero: `<img class="hero-logo" src="./assets/logo.png" width="720" height="720" alt="Logo Pişti Online" /><p class="eyebrow">Jeu de cartes en ligne</p><h1>Pişti: Online</h1><p class="hero-copy">Retrouvez le Pişti classique face à de vrais adversaires. Invitez vos amis à une table privée, développez votre collection et grimpez au classement hebdomadaire.</p><div class="actions" aria-label="Liens de l’application"><a class="button primary" href="https://apps.apple.com/app/id6785009534" target="_blank" rel="noopener noreferrer">Voir sur l’App Store</a><a class="button" href="./support.html">Assistance</a></div><div class="live-status">Jouez au Pişti à la même table entre amis</div>`,
       features: `<div class="section-heading"><p class="eyebrow">Dans le jeu</p><h2>Compétition, amis et progression durable</h2><p class="section-lead">Parties rapides, tables privées, classements hebdomadaires et collections : toute l’expérience Pişti au même endroit.</p></div><div class="feature-grid"><article><span class="feature-number">01</span><h3>Recherche rapide</h3><p>Trouvez vite un adversaire réel ou continuez avec un bot lorsqu’aucun joueur n’est disponible.</p></article><article><span class="feature-number">02</span><h3>Amis et tables privées</h3><p>Ajoutez votre adversaire après la partie, invitez un ami à une table privée ou partagez un lien sécurisé.</p></article><article><span class="feature-number">03</span><h3>Classement hebdomadaire</h3><p>Passez du classement des amis au classement mondial, suivez la remise à zéro et visez le sommet.</p></article><article><span class="feature-number">04</span><h3>Profil et collection</h3><p>Consultez vos dernières parties, choisissez votre avatar et débloquez des dos de carte avec coffres, tampons et pièces.</p></article><article><span class="feature-number">05</span><h3>Gardez le contrôle</h3><p>Utilisez les messages prédéfinis et les réactions emoji, gérez les notifications ou supprimez définitivement les publicités de fin de partie.</p></article><article><span class="feature-number">06</span><h3>Pişti en neuf langues</h3><p>Jouez en turc, anglais, allemand, français, néerlandais, espagnol, italien, grec ou albanais.</p></article></div>`,
       screens: `<div class="section-heading"><p class="eyebrow">Écrans réels de l’application</p><h2>Avant de prendre place</h2><p class="section-lead">Passez du menu principal à une partie en direct, suivez votre main et consultez votre classement.</p></div><div class="screen-grid"><figure class="screen-card"><img src="./assets/gameplay.webp" width="693" height="1500" alt="Table de jeu Pişti Online" loading="lazy" /><figcaption><strong>Table de jeu</strong><p>Cartes, score, temps du tour et pile capturée sur un seul écran.</p></figcaption></figure><figure class="screen-card"><img src="./assets/main-menu.webp" width="693" height="1500" alt="Menu principal Pişti Online" loading="lazy" /><figcaption><strong>Menu principal</strong><p>Pièces, progression de ligue, amis et accès au jeu rapide.</p></figcaption></figure><figure class="screen-card"><img src="./assets/leaderboard.webp" width="693" height="1500" alt="Classement Pişti Online" loading="lazy" /><figcaption><strong>Classement</strong><p>Parties, victoires, points et statistiques Pişti des joueurs.</p></figcaption></figure></div>`,
       info: `<article><h2>Jouez gratuitement</h2><p>Commencez comme invité ou protégez votre profil avec votre compte Apple ou Google.</p><div class="store-row"><a class="button primary" href="https://apps.apple.com/app/id6785009534" target="_blank" rel="noopener noreferrer">App Store</a><span class="button disabled" role="link" aria-disabled="true">Google Play en test</span></div></article><article><h2>Assistance</h2><p>Retrouvez les étapes pour la connexion, le matchmaking, les pièces, le réseau et le compte.</p><a class="button" href="./support.html">Voir l’assistance</a></article><article><h2>Compte et confidentialité</h2><p>Découvrez les données collectées, les services tiers et la suppression définitive du compte.</p><a class="button" href="./privacy.html">Lire la politique de confidentialité</a></article>`,
@@ -193,7 +193,7 @@ window.PistiPageI18n = {
         "Speel tegen live tegenstanders, nodig vrienden uit aan privétafels, breid je collectie uit en klim in de wekelijkse ranglijst.",
     },
     blocks: {
-      hero: `<img class="hero-logo" src="./assets/logo.png" width="720" height="720" alt="Pişti Online-logo" /><p class="eyebrow">Online kaartspel</p><h1>Pişti: Online</h1><p class="hero-copy">Speel klassiek Pişti tegen echte tegenstanders. Nodig vrienden uit aan een privétafel, breid je collectie uit en klim in de wekelijkse ranglijst.</p><div class="actions" aria-label="App-links"><a class="button primary" href="https://apps.apple.com/app/id6785009534" target="_blank" rel="noopener noreferrer">Bekijk in de App Store</a><a class="button" href="./support.html">Ondersteuning</a></div><div class="live-status">Live-API en online tafels</div>`,
+      hero: `<img class="hero-logo" src="./assets/logo.png" width="720" height="720" alt="Pişti Online-logo" /><p class="eyebrow">Online kaartspel</p><h1>Pişti: Online</h1><p class="hero-copy">Speel klassiek Pişti tegen echte tegenstanders. Nodig vrienden uit aan een privétafel, breid je collectie uit en klim in de wekelijkse ranglijst.</p><div class="actions" aria-label="App-links"><a class="button primary" href="https://apps.apple.com/app/id6785009534" target="_blank" rel="noopener noreferrer">Bekijk in de App Store</a><a class="button" href="./support.html">Ondersteuning</a></div><div class="live-status">Speel Pişti met vrienden aan dezelfde tafel</div>`,
       features: `<div class="section-heading"><p class="eyebrow">In het spel</p><h2>Competitie, vrienden en blijvende groei</h2><p class="section-lead">Van snelle partijen en privétafels tot wekelijkse ranglijsten en collecties: de hele Pişti-ervaring op één plek.</p></div><div class="feature-grid"><article><span class="feature-number">01</span><h3>Snel een tegenstander vinden</h3><p>Vind snel een echte tegenstander of speel verder tegen een bot wanneer niemand online is.</p></article><article><span class="feature-number">02</span><h3>Vrienden en privétafels</h3><p>Voeg je tegenstander na de partij toe, nodig vrienden uit aan een privétafel of deel een beveiligde link.</p></article><article><span class="feature-number">03</span><h3>Wekelijkse ranglijst</h3><p>Wissel tussen de ranglijst van vrienden en iedereen, volg de wekelijkse reset en ga voor de top.</p></article><article><span class="feature-number">04</span><h3>Profiel en collectie</h3><p>Bekijk je laatste partijen, kies je avatar en ontgrendel kaartruggen met kisten, stempels en munten.</p></article><article><span class="feature-number">05</span><h3>Jij houdt de controle</h3><p>Gebruik vooraf ingestelde berichten en emoji-reacties, beheer meldingen of verwijder advertenties na partijen permanent.</p></article><article><span class="feature-number">06</span><h3>Pişti in negen talen</h3><p>Speel in het Turks, Engels, Duits, Frans, Nederlands, Spaans, Italiaans, Grieks of Albanees.</p></article></div>`,
       screens: `<div class="section-heading"><p class="eyebrow">Echte app-schermen</p><h2>Voordat je aan tafel gaat</h2><p class="section-lead">Ga van het hoofdmenu naar een live partij, volg je hand en bekijk je plek in de ranglijst.</p></div><div class="screen-grid"><figure class="screen-card"><img src="./assets/gameplay.webp" width="693" height="1500" alt="Pişti Online-speeltafel" loading="lazy" /><figcaption><strong>Speeltafel</strong><p>Kaarten, score, beurtijd en veroverde stapel op één scherm.</p></figcaption></figure><figure class="screen-card"><img src="./assets/main-menu.webp" width="693" height="1500" alt="Pişti Online-hoofdmenu" loading="lazy" /><figcaption><strong>Hoofdmenu</strong><p>Munten, competitievoortgang, vrienden en snelle toegang tot spelen.</p></figcaption></figure><figure class="screen-card"><img src="./assets/leaderboard.webp" width="693" height="1500" alt="Pişti Online-ranglijst" loading="lazy" /><figcaption><strong>Ranglijst</strong><p>Partijen, overwinningen, punten en Pişti-statistieken.</p></figcaption></figure></div>`,
       info: `<article><h2>Speel gratis</h2><p>Begin direct als gast of bescherm je profiel met je Apple- of Google-account.</p><div class="store-row"><a class="button primary" href="https://apps.apple.com/app/id6785009534" target="_blank" rel="noopener noreferrer">App Store</a><span class="button disabled" role="link" aria-disabled="true">Google Play wordt getest</span></div></article><article><h2>Ondersteuning</h2><p>Bekijk hulp voor inloggen, matchmaking, munten, verbinding en accountacties.</p><a class="button" href="./support.html">Naar ondersteuning</a></article><article><h2>Account en privacy</h2><p>Lees over verzamelde gegevens, diensten van derden en permanente accountverwijdering.</p><a class="button" href="./privacy.html">Privacybeleid lezen</a></article>`,
@@ -207,7 +207,7 @@ window.PistiPageI18n = {
         "Juega contra rivales en vivo, invita a tus amigos a mesas privadas, amplía tu colección y sube en la clasificación semanal.",
     },
     blocks: {
-      hero: `<img class="hero-logo" src="./assets/logo.png" width="720" height="720" alt="Logotipo de Pişti Online" /><p class="eyebrow">Juego de cartas online</p><h1>Pişti: Online</h1><p class="hero-copy">Disfruta del Pişti clásico contra rivales reales. Invita a tus amigos a mesas privadas, amplía tu colección y sube en la clasificación semanal.</p><div class="actions" aria-label="Enlaces de la aplicación"><a class="button primary" href="https://apps.apple.com/app/id6785009534" target="_blank" rel="noopener noreferrer">Ver en el App Store</a><a class="button" href="./support.html">Soporte</a></div><div class="live-status">API activa y mesas online</div>`,
+      hero: `<img class="hero-logo" src="./assets/logo.png" width="720" height="720" alt="Logotipo de Pişti Online" /><p class="eyebrow">Juego de cartas online</p><h1>Pişti: Online</h1><p class="hero-copy">Disfruta del Pişti clásico contra rivales reales. Invita a tus amigos a mesas privadas, amplía tu colección y sube en la clasificación semanal.</p><div class="actions" aria-label="Enlaces de la aplicación"><a class="button primary" href="https://apps.apple.com/app/id6785009534" target="_blank" rel="noopener noreferrer">Ver en el App Store</a><a class="button" href="./support.html">Soporte</a></div><div class="live-status">Juega al Pişti en la misma mesa con amigos</div>`,
       features: `<div class="section-heading"><p class="eyebrow">Dentro del juego</p><h2>Competición, amigos y progreso duradero</h2><p class="section-lead">De las partidas rápidas y mesas privadas a las clasificaciones semanales y las colecciones: toda la experiencia de Pişti en un solo lugar.</p></div><div class="feature-grid"><article><span class="feature-number">01</span><h3>Emparejamiento rápido</h3><p>Encuentra rápidamente un rival real o sigue jugando contra un bot cuando no haya nadie online.</p></article><article><span class="feature-number">02</span><h3>Amigos y mesas privadas</h3><p>Añade a tu rival después de la partida, invita a un amigo a una mesa privada o comparte un enlace seguro.</p></article><article><span class="feature-number">03</span><h3>Clasificación semanal</h3><p>Alterna entre la clasificación de amigos y la global, sigue el reinicio semanal y busca la cima.</p></article><article><span class="feature-number">04</span><h3>Perfil y colección</h3><p>Consulta tus últimas partidas, elige tu avatar y desbloquea dorsos con cofres, sellos y monedas.</p></article><article><span class="feature-number">05</span><h3>Tú tienes el control</h3><p>Usa mensajes predefinidos y reacciones con emojis, gestiona las notificaciones o elimina para siempre los anuncios tras la partida.</p></article><article><span class="feature-number">06</span><h3>Pişti en nueve idiomas</h3><p>Juega en turco, inglés, alemán, francés, neerlandés, español, italiano, griego o albanés.</p></article></div>`,
       screens: `<div class="section-heading"><p class="eyebrow">Pantallas reales de la app</p><h2>Antes de sentarte a jugar</h2><p class="section-lead">Pasa del menú principal a una partida en vivo, sigue tus cartas y consulta tu posición en la clasificación.</p></div><div class="screen-grid"><figure class="screen-card"><img src="./assets/gameplay.webp" width="693" height="1500" alt="Mesa de juego de Pişti Online" loading="lazy" /><figcaption><strong>Mesa de juego</strong><p>Cartas, puntuación, tiempo del turno y montón capturado en una pantalla.</p></figcaption></figure><figure class="screen-card"><img src="./assets/main-menu.webp" width="693" height="1500" alt="Menú principal de Pişti Online" loading="lazy" /><figcaption><strong>Menú principal</strong><p>Monedas, progreso de liga, amigos y acceso a partida rápida.</p></figcaption></figure><figure class="screen-card"><img src="./assets/leaderboard.webp" width="693" height="1500" alt="Clasificación de Pişti Online" loading="lazy" /><figcaption><strong>Clasificación</strong><p>Partidas, victorias, puntos y estadísticas de Pişti.</p></figcaption></figure></div>`,
       info: `<article><h2>Juega gratis</h2><p>Empieza como invitado o protege tu perfil con tu cuenta de Apple o Google.</p><div class="store-row"><a class="button primary" href="https://apps.apple.com/app/id6785009534" target="_blank" rel="noopener noreferrer">App Store</a><span class="button disabled" role="link" aria-disabled="true">Google Play en pruebas</span></div></article><article><h2>Soporte</h2><p>Consulta la ayuda para iniciar sesión, buscar partidas, monedas, conexión y cuenta.</p><a class="button" href="./support.html">Ir al soporte</a></article><article><h2>Cuenta y privacidad</h2><p>Conoce los datos recopilados, los servicios de terceros y la eliminación permanente de la cuenta.</p><a class="button" href="./privacy.html">Leer la política de privacidad</a></article>`,
@@ -221,7 +221,7 @@ window.PistiPageI18n = {
         "Gioca contro avversari reali, invita gli amici ai tavoli privati, amplia la tua collezione e scala la classifica settimanale.",
     },
     blocks: {
-      hero: `<img class="hero-logo" src="./assets/logo.png" width="720" height="720" alt="Logo di Pişti Online" /><p class="eyebrow">Gioco di carte online</p><h1>Pişti: Online</h1><p class="hero-copy">Vivi il Pişti classico contro avversari reali. Invita gli amici ai tavoli privati, amplia la tua collezione e scala la classifica settimanale.</p><div class="actions" aria-label="Link dell’app"><a class="button primary" href="https://apps.apple.com/app/id6785009534" target="_blank" rel="noopener noreferrer">Vedi sull’App Store</a><a class="button" href="./support.html">Supporto</a></div><div class="live-status">API attiva e tavoli online</div>`,
+      hero: `<img class="hero-logo" src="./assets/logo.png" width="720" height="720" alt="Logo di Pişti Online" /><p class="eyebrow">Gioco di carte online</p><h1>Pişti: Online</h1><p class="hero-copy">Vivi il Pişti classico contro avversari reali. Invita gli amici ai tavoli privati, amplia la tua collezione e scala la classifica settimanale.</p><div class="actions" aria-label="Link dell’app"><a class="button primary" href="https://apps.apple.com/app/id6785009534" target="_blank" rel="noopener noreferrer">Vedi sull’App Store</a><a class="button" href="./support.html">Supporto</a></div><div class="live-status">Gioca a Pişti allo stesso tavolo con gli amici</div>`,
       features: `<div class="section-heading"><p class="eyebrow">Nel gioco</p><h2>Competizione, amici e progressi duraturi</h2><p class="section-lead">Dalle partite rapide ai tavoli privati, dalle classifiche settimanali alle collezioni: tutta l’esperienza Pişti in un unico posto.</p></div><div class="feature-grid"><article><span class="feature-number">01</span><h3>Ricerca rapida</h3><p>Trova velocemente un avversario reale oppure continua contro un bot quando nessuno è online.</p></article><article><span class="feature-number">02</span><h3>Amici e tavoli privati</h3><p>Aggiungi l’avversario dopo la partita, invita un amico a un tavolo privato o condividi un link sicuro.</p></article><article><span class="feature-number">03</span><h3>Classifica settimanale</h3><p>Passa dalla classifica degli amici a quella globale, segui il reset settimanale e punta alla vetta.</p></article><article><span class="feature-number">04</span><h3>Profilo e collezione</h3><p>Guarda le ultime partite, scegli il tuo avatar e sblocca i dorsi con forzieri, timbri e monete.</p></article><article><span class="feature-number">05</span><h3>Il controllo è tuo</h3><p>Usa messaggi predefiniti e reazioni emoji, gestisci le notifiche o rimuovi definitivamente gli annunci di fine partita.</p></article><article><span class="feature-number">06</span><h3>Pişti in nove lingue</h3><p>Gioca in turco, inglese, tedesco, francese, olandese, spagnolo, italiano, greco o albanese.</p></article></div>`,
       screens: `<div class="section-heading"><p class="eyebrow">Schermate reali dell’app</p><h2>Prima di sederti al tavolo</h2><p class="section-lead">Passa dal menu principale a una partita live, segui la tua mano e controlla la posizione in classifica.</p></div><div class="screen-grid"><figure class="screen-card"><img src="./assets/gameplay.webp" width="693" height="1500" alt="Tavolo di gioco Pişti Online" loading="lazy" /><figcaption><strong>Tavolo di gioco</strong><p>Carte, punteggio, tempo del turno e mazzo catturato in un’unica schermata.</p></figcaption></figure><figure class="screen-card"><img src="./assets/main-menu.webp" width="693" height="1500" alt="Menu principale di Pişti Online" loading="lazy" /><figcaption><strong>Menu principale</strong><p>Monete, progressi della lega, amici e accesso alla partita rapida.</p></figcaption></figure><figure class="screen-card"><img src="./assets/leaderboard.webp" width="693" height="1500" alt="Classifica di Pişti Online" loading="lazy" /><figcaption><strong>Classifica</strong><p>Partite, vittorie, punti e statistiche Pişti dei giocatori.</p></figcaption></figure></div>`,
       info: `<article><h2>Gioca gratis</h2><p>Inizia subito come ospite oppure proteggi il tuo profilo con l’account Apple o Google.</p><div class="store-row"><a class="button primary" href="https://apps.apple.com/app/id6785009534" target="_blank" rel="noopener noreferrer">App Store</a><span class="button disabled" role="link" aria-disabled="true">Google Play in test</span></div></article><article><h2>Supporto</h2><p>Trova aiuto per accesso, matchmaking, monete, connessione e account.</p><a class="button" href="./support.html">Vai al supporto</a></article><article><h2>Account e privacy</h2><p>Scopri dati raccolti, servizi di terze parti ed eliminazione permanente dell’account.</p><a class="button" href="./privacy.html">Leggi l’informativa privacy</a></article>`,
@@ -229,3 +229,96 @@ window.PistiPageI18n = {
     },
   },
 };
+
+// These guides are currently available in Turkish.
+const pistiGuideLabels = {
+  "en": [
+    "Guides in Turkish",
+    "Learn the rules and play with friends",
+    "How to play Pişti",
+    "Read the Turkish guide to dealing, captures, Pişti bonuses, and scoring.",
+    "Read the rules (Turkish)",
+    "Play Pişti with friends",
+    "Create a private room and join through a code, a shared link, or an invitation.",
+    "Read the guide (Turkish)"
+  ],
+  "de": [
+    "Ratgeber auf Türkisch",
+    "Regeln lernen und mit Freunden spielen",
+    "Wie spielt man Pişti?",
+    "Türkischer Ratgeber zu Karten, Stichen, Pişti und Punkten.",
+    "Regeln lesen (Türkisch)",
+    "Pişti mit Freunden",
+    "Privaten Raum erstellen und per Code, Link oder Einladung beitreten.",
+    "Ratgeber lesen (Türkisch)"
+  ],
+  "fr": [
+    "Guides en turc",
+    "Apprenez les règles et jouez entre amis",
+    "Comment jouer au Pişti ?",
+    "Guide en turc sur la distribution, les captures, les bonus et les points.",
+    "Lire les règles (turc)",
+    "Jouer au Pişti entre amis",
+    "Créez une salle privée et rejoignez-la par code, lien ou invitation.",
+    "Lire le guide (turc)"
+  ],
+  "nl": [
+    "Gidsen in het Turks",
+    "Leer de regels en speel met vrienden",
+    "Hoe speel je Pişti?",
+    "Turkse uitleg over delen, kaarten pakken, Pişti en de puntentelling.",
+    "Lees de regels (Turks)",
+    "Pişti met vrienden",
+    "Maak een privékamer en doe mee via een code, link of uitnodiging.",
+    "Lees de gids (Turks)"
+  ],
+  "es": [
+    "Guías en turco",
+    "Aprende las reglas y juega con amigos",
+    "¿Cómo se juega al Pişti?",
+    "Guía en turco sobre reparto, capturas, bonificaciones y puntuación.",
+    "Leer las reglas (turco)",
+    "Pişti con amigos",
+    "Crea una sala privada y entra con un código, enlace o invitación.",
+    "Leer la guía (turco)"
+  ],
+  "it": [
+    "Guide in turco",
+    "Impara le regole e gioca con gli amici",
+    "Come si gioca a Pişti?",
+    "Guida in turco a distribuzione, prese, bonus e punteggio.",
+    "Leggi le regole (turco)",
+    "Pişti con gli amici",
+    "Crea una stanza privata e partecipa tramite codice, link o invito.",
+    "Leggi la guida (turco)"
+  ],
+  "el": [
+    "Οδηγοί στα τουρκικά",
+    "Μάθε τους κανόνες και παίξε με φίλους",
+    "Πώς παίζεται το Pişti;",
+    "Τουρκικός οδηγός για μοίρασμα, συλλογή φύλλων, μπόνους και βαθμολογία.",
+    "Διάβασε τους κανόνες (τουρκικά)",
+    "Pişti με φίλους",
+    "Δημιούργησε ιδιωτικό δωμάτιο και μπες με κωδικό, σύνδεσμο ή πρόσκληση.",
+    "Διάβασε τον οδηγό (τουρκικά)"
+  ],
+  "sq": [
+    "Udhëzues në turqisht",
+    "Mëso rregullat dhe luaj me miqtë",
+    "Si luhet Pişti?",
+    "Udhëzues në turqisht për shpërndarjen, marrjen e letrave, bonuset dhe pikët.",
+    "Lexo rregullat (turqisht)",
+    "Pişti me miqtë",
+    "Krijo një dhomë private dhe hyr me kod, lidhje ose ftesë.",
+    "Lexo udhëzuesin (turqisht)"
+  ]
+};
+Object.entries(pistiGuideLabels).forEach(([language, labels]) => {
+  const [eyebrow, title, rulesTitle, rulesCopy, rulesLink, friendsTitle, friendsCopy, friendsLink] = labels;
+  window.PistiPageI18n[language].blocks.guides = `
+    <div class="section-heading"><p class="eyebrow">${eyebrow}</p><h2>${title}</h2></div>
+    <div class="info-grid">
+      <article><h3>${rulesTitle}</h3><p>${rulesCopy}</p><a class="button" href="./pisti-nasil-oynanir.html" hreflang="tr">${rulesLink}</a></article>
+      <article><h3>${friendsTitle}</h3><p>${friendsCopy}</p><a class="button" href="./arkadaslarla-pisti.html" hreflang="tr">${friendsLink}</a></article>
+    </div>`;
+});
