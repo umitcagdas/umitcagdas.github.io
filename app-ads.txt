@@ -1090,3 +1090,7 @@ themediagrid.com,IRK975,RESELLER,35d5010d7789b49d
 # OneTag Exchange - assigned Open Bidding seller, 2026-11-04
 onetag.com, 98665375b20fe62, DIRECT
 onetag.com, 98665375b20fe62-OB, DIRECT
+
+# Equativ - official Open Bidding reseller entries, 2026-11-04
+smartadserver.com, 4194-OB, RESELLER, 060d053dcf45cbf3
+smartadserver.com, 4194, RESELLER, 060d053dcf45cbf3
