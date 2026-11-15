@@ -1099,3 +1099,13 @@ sharethrough.com, 4194, RESELLER, 060d053dcf45cbf3
 
 # PubMatic - approved Pisti iOS Open Bidding inventory, 2026-11-04
 pubmatic.com, 159856, DIRECT, 5d62403b186f2ace
+
+# BIGO Ads - additional authorized resellers, 2026-11-15
+openx.com, 540543195, RESELLER, 6a698e2ec38604c6
+smartadserver.com, 6058, RESELLER, 060d053dcf45cbf3
+triplelift.com, 14867, RESELLER, 6c33edb13117fd86
+triplelift.com, 14923, RESELLER, 6c33edb13117fd86
+triplelift.com, 14919, RESELLER, 6c33edb13117fd86
+rubiconproject.com, 27945, RESELLER, 0bfd66d529a55807
+rubiconproject.com, 28945, RESELLER, 0bfd66d529a55807
+toponad.com, 16aec6880be2e7, RESELLER
