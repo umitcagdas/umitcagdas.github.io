@@ -146,7 +146,11 @@ async function deliverEmail(message) {
 exports.sendContactMessage = onCall(
   {
     region: "europe-west1",
-    cors: ["https://umitcagdas.github.io"],
+    cors: [
+      "https://umitcagdas.github.io",
+      "https://umitcagdas.com",
+      "https://www.umitcagdas.com",
+    ],
     enforceAppCheck: true,
     secrets: [resendApiKey, rateLimitSecret],
     timeoutSeconds: 15,
