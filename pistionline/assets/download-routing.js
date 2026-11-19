@@ -159,10 +159,7 @@
       applyChoice(choice);
       return;
     }
-    const query = new URLSearchParams(browser.location.search);
-    const campaignVisit = query.has('fbclid') || campaignKeys.some(function (key) { return query.has(key); });
-    if (navigate && !campaignVisit) navigate();
-    else showOptions(true);
+    if (navigate) navigate();
   }
 
   return Object.freeze({ stores: stores, detectPlatform: detectPlatform, destination: destination, start: start });
