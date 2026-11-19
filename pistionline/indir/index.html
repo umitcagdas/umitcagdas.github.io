@@ -23,7 +23,7 @@
   <meta name="twitter:title" content="Pişti Online • iOS ve Android" />
   <meta name="twitter:description" content="Arkadaşını davet et, aynı masada buluş. App Store ve Google Play’den indir." />
   <meta name="twitter:image" content="https://umitcagdas.github.io/pistionline/assets/social-launch-2026-10-30.jpg" />
-  <script src="../assets/download-routing.js" defer></script>
+  <script src="../assets/download-routing.js?v=2" defer></script>
   <style>
     :root{color-scheme:dark;--gold:#ffd26a;--cream:#fff4d9;--muted:#c9d8cf}
     *{box-sizing:border-box}
@@ -47,8 +47,16 @@
     .note{font-size:13px;color:var(--muted);margin-top:22px}
     .screen{justify-self:center;width:min(100%,286px);transform:rotate(4deg);border:2px solid var(--gold);padding:7px;border-radius:32px;background:#021e1c;box-shadow:0 20px 70px #0008}
     .screen img{display:block;width:100%;height:auto;border-radius:23px}
+    .measurement{margin:0 0 20px;padding:14px 16px;border:1px solid #d8b65d55;border-radius:14px;background:#082e29;font-size:14px;line-height:1.5}
+    .measurement h2{margin:0;font-size:16px}
+    .measurement p{margin:6px 0 12px;color:var(--muted)}
+    .measurement a{color:inherit}
+    .measurement-actions{display:flex;flex-wrap:wrap;gap:8px}
+    .measurement-actions button{padding:8px 12px;border:1px solid #a78e57;border-radius:8px;background:#0b4037;color:var(--cream);font:inherit;cursor:pointer}
+    button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
     footer{display:flex;gap:24px;flex-wrap:wrap;border-top:1px solid #d8b65d33;padding-top:24px;font-size:13px}
     footer a{color:var(--muted);text-underline-offset:5px}
+    footer button{padding:0;border:0;background:none;color:var(--muted);font:inherit;text-decoration:underline;text-underline-offset:5px;cursor:pointer}
     @media(max-width:760px){main{padding:30px 24px}.layout{grid-template-columns:1fr;gap:30px;padding:35px 0}.lead{font-size:17px}.screen{display:none}.stores{display:grid;grid-template-columns:1fr}.store{width:100%}h1{font-size:46px}.brand img{width:48px;height:48px}.note{line-height:1.6}footer{gap:18px}}
     @media(prefers-reduced-motion:reduce){.store{transition:none}.screen{transform:none}}
   </style>
@@ -62,6 +70,14 @@
         <h1 id="download-title">Masa hazır.<br /><span>Sen de gel.</span></h1>
         <p class="lead">Arkadaşını özel masaya davet et, canlı maçlara katıl ve haftalık ligde yerini al.</p>
         <p id="device-status" role="status">Pişti Online’ı telefonuna uygun mağazadan ücretsiz indirebilirsin.</p>
+        <section class="measurement" id="measurement-options" aria-labelledby="measurement-title" hidden>
+          <h2 id="measurement-title">Ziyaret ölçümü</h2>
+          <p>İzin verirsen Google Analytics, bu sayfanın ziyaretini ve geldiğin kampanyayı en fazla 90 gün saklanan analitik çerezlerle ölçer. Tercihini bu sayfadan değiştirebilirsin. <a href="../privacy.html">Gizlilik bilgileri</a></p>
+          <div class="measurement-actions">
+            <button id="measurement-allow" type="button">İzin ver</button>
+            <button id="measurement-decline" type="button">İzin verme</button>
+          </div>
+        </section>
         <div class="stores" aria-label="İndirme seçenekleri">
           <a class="store" href="https://apps.apple.com/app/id6785009534"><small>iPhone ve iPad için</small><strong>App Store’dan indir ↗</strong></a>
           <a class="store" href="https://play.google.com/store/apps/details?id=com.umitcagdas.pistionline"><small>Android için</small><strong>Google Play’den indir ↗</strong></a>
@@ -70,7 +86,7 @@
       </div>
       <figure class="screen"><img src="../assets/gameplay.webp" width="693" height="1500" alt="Pişti Online’daki gerçek oyun masası" /></figure>
     </section>
-    <footer><a href="../">Oyunu keşfet</a><a href="../support.html">Destek</a><a href="../privacy.html">Gizlilik</a></footer>
+    <footer><a href="../">Oyunu keşfet</a><a href="../support.html">Destek</a><a href="../privacy.html">Gizlilik</a><button id="measurement-preferences" type="button" aria-controls="measurement-options" aria-expanded="false" hidden>Ölçüm tercihleri</button></footer>
   </main>
 </body>
 </html>
