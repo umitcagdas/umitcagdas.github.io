@@ -28,6 +28,28 @@
     return platform ? stores[platform] : null;
   }
 
+  function measureGoogleAdsStoreClicks(browser) {
+    const { hostname, href, search } = browser.location;
+    if (hostname !== 'umitcagdas.com' || typeof browser.fetch !== 'function') return;
+    const params = new URLSearchParams(search);
+    const campaignId = params.get('gad_campaignid');
+    if (params.get('manual') !== '1' || campaignId !== '24498275745') return;
+
+    for (const link of browser.document.querySelectorAll('a[data-google-ads-store]')) {
+      const measurement = new URL('store-click.html', href);
+      measurement.searchParams.set('campaign_id', campaignId);
+      measurement.searchParams.set('store', link.dataset.googleAdsStore);
+      link.addEventListener('click', () => {
+        browser.fetch(measurement.href, {
+          keepalive: true,
+          cache: 'no-store',
+          credentials: 'omit',
+          referrerPolicy: 'no-referrer'
+        }).catch(() => {});
+      });
+    }
+  }
+
   function start(browser) {
     const target = destination(browser.navigator, browser.location.search);
     const status = browser.document.getElementById('device-status');
@@ -36,7 +58,11 @@
         ? 'App Store açılıyor. Açılmazsa aşağıdaki bağlantıya dokunabilirsin.'
         : 'Google Play açılıyor. Açılmazsa aşağıdaki bağlantıya dokunabilirsin.';
     }
-    if (target) browser.location.replace(target);
+    if (target) {
+      browser.location.replace(target);
+    } else {
+      measureGoogleAdsStoreClicks(browser);
+    }
   }
 
   return Object.freeze({ stores: stores, detectPlatform: detectPlatform, destination: destination, start: start });
