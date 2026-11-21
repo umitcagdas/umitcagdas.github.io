@@ -388,6 +388,9 @@
     const sitePages = new Set([
       "",
       "index.html",
+      "indir",
+      "indir/",
+      "indir/index.html",
       "updates",
       "updates/",
       "updates/index.html",
