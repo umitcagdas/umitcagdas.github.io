@@ -9,6 +9,7 @@
   <meta name="theme-color" content="#061413">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <link rel="canonical" href="https://pisyedili.umitcagdas.com/indir/">
+  <link rel="icon" type="image/webp" href="../assets/download-icon.webp">
   <link rel="stylesheet" href="../assets/site.css?v=20261002">
   <script src="../assets/legacy-redirect.js" defer></script>
   <script src="../assets/download-routing.js?v=1" defer></script>
@@ -18,45 +19,196 @@
       min-height: 100svh;
       display: grid;
       grid-template-rows: auto 1fr auto;
+      background: radial-gradient(ellipse at 74% 38%, #12493f 0%, transparent 47%),
+        linear-gradient(155deg, #0a2723, var(--bg) 74%);
+    }
+
+    .download-width {
+      width: min(1100px, calc(100% - 64px));
+      margin-inline: auto;
+    }
+
+    .download-header {
+      padding-block: 24px;
+    }
+
+    .download-header .brand img {
+      width: 48px;
+      height: 48px;
+      border-radius: 13px;
     }
 
     .download-main {
       display: grid;
-      place-items: center;
-      text-align: center;
-      background: radial-gradient(ellipse at 50% 0%, var(--surface-strong), var(--bg) 78%);
+      grid-template-columns: minmax(0, 1.23fr) minmax(0, 0.77fr);
+      align-items: center;
+      gap: clamp(28px, 6vw, 86px);
+      padding-block: clamp(24px, 5vw, 58px) clamp(42px, 7vw, 86px);
     }
 
     .download-main h1 {
-      font-size: clamp(2.5rem, 8vw, 4.5rem);
+      margin-top: 14px;
+      font-size: clamp(2.6rem, 5.4vw, 4.65rem);
+      line-height: 1.03;
+      letter-spacing: -0.045em;
     }
 
-    .download-page .footer-inner {
-      justify-content: center;
+    .download-main h1 span {
+      display: block;
+    }
+
+    .download-main h1 span + span {
+      color: var(--gold-soft);
+    }
+
+    .download-main .hero-copy {
+      max-width: 35rem;
+      margin-inline: 0;
+      color: var(--muted);
+    }
+
+    .download-features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 19px;
+      margin: 23px 0 0;
+      padding: 0;
+      list-style: none;
+      color: var(--cream);
+      font-size: 0.9rem;
+    }
+
+    .download-features li::before {
+      content: "◆";
+      margin-inline-end: 8px;
+      color: var(--gold);
+      font-size: 0.57em;
+      vertical-align: 0.18em;
+    }
+
+    .download-cta {
+      min-height: 65px;
+      gap: 28px;
+      margin-top: 29px;
+      padding-inline: 22px;
+      border-radius: 13px;
+      font-size: 1.05rem;
+    }
+
+    .download-cta:hover {
+      background: var(--gold-soft);
+    }
+
+    #device-status:empty {
+      margin: 0;
+    }
+
+    .download-preview {
+      width: min(100%, 282px);
+      margin: 0;
+      justify-self: center;
+    }
+
+    .download-preview img {
+      width: 100%;
+      padding: 6px;
+      border: 1px solid var(--gold);
+      border-radius: 29px;
+      background: var(--bg);
+      box-shadow: 0 22px 55px #0008;
+      transform: rotate(3deg);
+    }
+
+    .download-preview figcaption {
+      margin-top: 16px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    .download-footer {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px 22px;
+      padding-block: 20px 26px;
+      border-top: 1px solid #f2c15b30;
+      font-size: 0.85rem;
+    }
+
+    .download-footer a {
+      color: var(--muted);
+      text-underline-offset: 4px;
+    }
+
+    @media (max-width: 740px) {
+      .download-width {
+        width: calc(100% - 40px);
+      }
+
+      .download-header {
+        padding-block: 18px;
+      }
+
+      .download-main {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 36px;
+        padding-block: 18px 36px;
+      }
+
+      .download-main h1 {
+        font-size: clamp(2.2rem, 10vw, 3.5rem);
+      }
+
+      .download-cta {
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      .download-preview {
+        width: min(72%, 246px);
+      }
+
+      .download-preview img {
+        transform: none;
+      }
     }
   </style>
 </head>
 <body class="download-page">
-  <header class="site-header">
-    <a class="brand" href="../" data-keep-language>Pis Yedili: Online</a>
+  <header class="download-header download-width">
+    <a class="brand" href="../" data-keep-language>
+      <img src="../assets/download-icon.webp" width="128" height="128" alt="" decoding="async">
+      Pis Yedili: Online
+    </a>
   </header>
-  <main class="download-main" aria-labelledby="download-title">
-    <div class="legal-inner">
-      <p class="eyebrow">iPhone · iPad</p>
-      <h1 id="download-title">Pis Yedili: Online</h1>
-      <p class="hero-copy" data-en="Play classic Pis Yedili online with friends.">Arkadaşlarınla klasik Pis Yedili’yi çevrim içi oyna.</p>
-      <div class="actions">
-        <a class="button primary" id="app-store-link" href="https://apps.apple.com/app/id6817348276" data-en="Download on the App Store">App Store’dan indir</a>
-      </div>
+  <main class="download-main download-width" aria-labelledby="download-title">
+    <div>
+      <p class="eyebrow" data-en="For iPhone and iPad">iPhone ve iPad için</p>
+      <h1 id="download-title">
+        <span data-en="Take your seat.">Masana otur.</span>
+        <span data-en="Play your last card.">Son kartını oyna.</span>
+      </h1>
+      <p class="hero-copy" data-en="Play classic Pis Yedili online. Match cards, plan your moves, and empty your hand before your rivals.">Klasik Pis Yedili’yi çevrim içi oyna. Kartlarını eşleştir, hamleni planla ve rakiplerinden önce elini bitir.</p>
+      <ul class="download-features">
+        <li data-en="2–4 player tables">2–4 kişilik masalar</li>
+        <li data-en="Private rooms with friends">Arkadaşlarla özel oda</li>
+        <li data-en="Practice with bots">Botlarla pratik</li>
+      </ul>
+      <a class="button primary download-cta" id="app-store-link" href="https://apps.apple.com/app/id6817348276">
+        <span data-en="Download on the App Store">App Store’dan indir</span>
+        <span aria-hidden="true">↗</span>
+      </a>
       <p class="hero-note" id="device-status" role="status"></p>
     </div>
+    <figure class="download-preview">
+      <img src="../assets/download-gameplay.webp" width="640" height="1386" alt="" loading="lazy" decoding="async">
+      <figcaption data-en="A four-player match in Pis Yedili: Online">Pis Yedili: Online’da dört kişilik maç</figcaption>
+    </figure>
   </main>
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <a href="../" data-keep-language data-en="About the game">Oyunu keşfet</a>
-      <a href="../support.html" data-keep-language data-en="Support">Destek</a>
-      <a href="../privacy.html" data-keep-language data-en="Privacy">Gizlilik</a>
-    </div>
+  <footer class="download-footer download-width">
+    <a href="../" data-keep-language data-en="About the game">Oyunu keşfet</a>
+    <a href="../support.html" data-keep-language data-en="Support">Destek</a>
+    <a href="../privacy.html" data-keep-language data-en="Privacy">Gizlilik</a>
   </footer>
 </body>
 </html>
