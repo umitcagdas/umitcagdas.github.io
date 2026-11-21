@@ -233,8 +233,10 @@
     setMeta('meta[name="twitter:description"]', meta.description);
     setMeta('meta[property="og:locale"]', localeTags[language]);
 
-    const pageUrl = new URL(window.location.href);
-    pageUrl.hash = "";
+    const pageUrl = new URL("https://pisyedili.umitcagdas.com");
+    pageUrl.pathname = window.location.pathname
+      .replace(/^\/pisyedilionline(?=\/|$)/, "")
+      .replace(/\/index\.html$/, "/") || "/";
     pageUrl.search = language === "tr" ? "" : `?lang=${language}`;
 
     let canonical = document.querySelector('link[rel="canonical"]');
@@ -381,10 +383,22 @@
   }
 
   function localizeInternalLinks(language) {
+    const legacyPrefix = "/pisyedilionline/";
+    const prefix = window.location.pathname.startsWith(legacyPrefix) ? legacyPrefix : "/";
+    const sitePages = new Set([
+      "",
+      "index.html",
+      "updates",
+      "updates/",
+      "updates/index.html",
+      "support.html",
+      "privacy.html",
+      "account-deletion.html",
+    ]);
     const englishFallbackPages = new Set([
-      "/pisyedilionline/support.html",
-      "/pisyedilionline/privacy.html",
-      "/pisyedilionline/account-deletion.html",
+      "support.html",
+      "privacy.html",
+      "account-deletion.html",
     ]);
     document.querySelectorAll("a[href]").forEach((link) => {
       if (link.hasAttribute("data-language-link")) return;
@@ -396,15 +410,17 @@
       } catch (_) {
         return;
       }
+      const page = url.pathname.slice(prefix.length);
       if (
         url.origin !== window.location.origin ||
-        !url.pathname.includes("/pisyedilionline/")
+        !url.pathname.startsWith(prefix) ||
+        !sitePages.has(page)
       ) {
         return;
       }
       const linkLanguage =
         !["tr", "en", "de", "el", "sq"].includes(language) &&
-        englishFallbackPages.has(url.pathname)
+        englishFallbackPages.has(page)
           ? "en"
           : language;
       url.searchParams.set("lang", linkLanguage);
