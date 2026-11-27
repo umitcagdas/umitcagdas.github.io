@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="https://ellibir.umitcagdas.com/updates/">
+  <title>51 Online · Sürüm notları</title>
+</head>
+<body>
+  <p><a id="notes" href="https://ellibir.umitcagdas.com/updates/">51 Online sürüm notları / Release notes</a></p>
+  <script>
+    const link = document.getElementById("notes");
+    const target = new URL(link.href);
+    target.search = window.location.search;
+    target.hash = window.location.hash;
+    link.href = target.href;
+    window.location.replace(target.href);
+  </script>
+</body>
+</html>
