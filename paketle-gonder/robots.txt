@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://paketlegonder.umitcagdas.com/sitemap.xml
