@@ -6,9 +6,13 @@
     <meta name="robots" content="noindex">
     <title>Sayfa bulunamadı</title>
     <script>
-      if (location.pathname.toLowerCase().startsWith("/remotiq")) {
-        const suffix = location.pathname.slice("/remotiq".length);
-        location.replace("/Remotiq" + (suffix || "/") + location.search + location.hash);
+      if (["umitcagdas.github.io", "umitcagdas.com", "www.umitcagdas.com"].includes(location.hostname) &&
+          /^\/remotiq(?:\/|$)/i.test(location.pathname)) {
+        const target = new URL("https://remotiq.umitcagdas.com/");
+        target.pathname = location.pathname.slice("/remotiq".length) || "/";
+        target.search = location.search;
+        target.hash = location.hash;
+        location.replace(target.href);
       }
     </script>
   </head>

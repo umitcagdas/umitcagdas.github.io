@@ -1,0 +1,23 @@
+{
+  "name": "remotiq-public-site",
+  "main": "worker.mjs",
+  "compatibility_date": "2026-11-21",
+  "workers_dev": false,
+  "preview_urls": false,
+  "observability": { "enabled": false },
+  "routes": [
+    { "pattern": "remotiq.umitcagdas.com", "custom_domain": true },
+    { "pattern": "umitcagdas.com/Remotiq*", "zone_name": "umitcagdas.com" },
+    { "pattern": "umitcagdas.com/remotiq*", "zone_name": "umitcagdas.com" },
+    { "pattern": "www.umitcagdas.com/Remotiq*", "zone_name": "umitcagdas.com" },
+    { "pattern": "www.umitcagdas.com/remotiq*", "zone_name": "umitcagdas.com" }
+  ],
+  "build": { "command": "node prepare-assets.mjs" },
+  "assets": {
+    "directory": ".public",
+    "binding": "ASSETS",
+    "html_handling": "none",
+    "not_found_handling": "none",
+    "run_worker_first": true
+  }
+}
