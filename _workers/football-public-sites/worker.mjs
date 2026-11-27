@@ -32,6 +32,22 @@ function backendPath(host, url, isSocket) {
   return null;
 }
 
+const policyFiles = new Map([
+  ['/gizlilik', 'privacy.html'], ['/kullanim-kosullari', 'terms.html'], ['/oyun', ''],
+]);
+
+function localizedDocument(url, request) {
+  const file = policyFiles.get(url.pathname.replace(/\/$/, ''));
+  if (file === undefined) return null;
+  const languageTag = url.searchParams.get('lang') || request.headers.get('accept-language')?.split(',')[0] || 'tr';
+  const language = languageTag.toLowerCase().split(/[-_;]/)[0];
+  const destination = new URL(url);
+  destination.pathname = '/' + (languages.has(language) ? language + '/' : '') + file;
+  return new Response(null, { status: 302, headers: {
+    location: destination.href, vary: 'Accept-Language', 'cache-control': 'no-store',
+  } });
+}
+
 // Browser game sessions and pending web OAuth attempts are stored by origin.
 // Keep the existing web player for these entries. Native clients use the new API.
 function existingBrowserPlayer(path) {
@@ -88,6 +104,10 @@ export async function handle(request, env, send = fetch) {
   const path = backendPath(url.hostname, url, isSocket);
   if (path !== null) return backendResponse(request, url, path, isSocket, send);
   if (!['GET', 'HEAD'].includes(request.method)) return new Response(null, { status: 405, headers: { Allow: 'GET, HEAD' } });
+  if (url.hostname === eleven) {
+    const document = localizedDocument(url, request);
+    if (document) return document;
+  }
   const player = url.hostname === eleven && existingBrowserPlayer(url.pathname);
   if (player) {
     return new Response(null, { status: 307, headers: {

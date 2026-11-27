@@ -81,3 +81,15 @@ test('web game preserves its storage and OAuth origin, language and invitation',
   }
   assert.equal((await handle(new Request('https://other.example/api/health'),env)).status,404);
 });
+
+test('existing legal, support and OAuth home links find the localized published document',async()=>{
+  for (const [path,languageHeader,target] of [
+    ['/gizlilik/?lang=fr&utm_source=game','tr','/fr/privacy.html?lang=fr&utm_source=game'],
+    ['/kullanim-kosullari','en-US,en;q=0.9','/en/terms.html'],
+    ['/oyun?lang=tr','de','/?lang=tr'], ['/oyun/?lang=sq','tr','/sq/?lang=sq'],
+    ['/gizlilik?lang=unknown','it','/privacy.html?lang=unknown']]) {
+    const response = await handle(new Request(eleven+path,{headers:{'accept-language':languageHeader}}),env);
+    assert.equal(response.status,302);
+    assert.equal(response.headers.get('location'),eleven+target);
+  }
+});
