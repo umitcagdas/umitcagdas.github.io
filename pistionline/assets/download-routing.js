@@ -2,7 +2,7 @@
   'use strict';
   const api = factory();
   if (typeof module === 'object' && module.exports) module.exports = api;
-  if (root && root.document) api.start(root);
+  if (root && root.document && !root.pistiNavigatingToCanonical) api.start(root);
 })(typeof window === 'undefined' ? null : window, function () {
   'use strict';
   const stores = Object.freeze({

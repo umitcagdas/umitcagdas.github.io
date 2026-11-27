@@ -23,7 +23,7 @@ const pages = [
   {
     html: "pistionline/index.html",
     script: "pistionline/assets/i18n-home.js",
-    blocks: ["hero", "features", "screens", "info", "developer"],
+    blocks: ["hero", "features", "screens", "info", "guides", "developer"],
     languages: marketingLanguages,
   },
   {

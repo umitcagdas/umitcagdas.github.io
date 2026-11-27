@@ -233,11 +233,10 @@
     setMeta('meta[name="twitter:description"]', meta.description);
     setMeta('meta[property="og:locale"]', localeTags[language]);
 
-    const pageUrl = new URL(window.location.href);
+    let canonical = document.querySelector('link[rel="canonical"]');
+    const pageUrl = new URL(canonical?.href || window.location.href);
     pageUrl.hash = "";
     pageUrl.search = language === "tr" ? "" : `?lang=${language}`;
-
-    let canonical = document.querySelector('link[rel="canonical"]');
     if (!canonical) {
       canonical = document.createElement("link");
       canonical.rel = "canonical";
