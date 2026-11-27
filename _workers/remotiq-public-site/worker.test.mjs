@@ -37,9 +37,43 @@ test('existing portfolio downloads, manifests, other paths and methods reach the
 });
 
 test('new host supports installer and manifest paths plus human-friendly aliases',async()=>{
-  for (const path of ['/mobile-version.json','/downloads/latest.json','/downloads/SHA256SUMS.txt','/downloads/Remotiq.app.tar.gz','/assets/site.css','/robots.txt','/sitemap.xml']) {
+  for (const path of ['/mobile-version.json','/assets/site.css','/robots.txt','/sitemap.xml']) {
     assert.equal(await (await handle(new Request(base+path),files)).text(),path);
   }
   assert.equal((await handle(new Request(base+'/en/get.html'+query),files)).headers.get('location'),base+'/en/get/'+query);
   assert.equal((await handle(new Request('https://unknown.example/'),files)).status,404);
+});
+
+test('canonical release URLs retain upstream range, validators, and HEAD semantics without sending visitor credentials', async () => {
+  for (const [method, path] of [['HEAD','/downloads/latest.json'],['GET','/downloads/Remotiq.app.tar.gz'],['GET','/downloads/SHA256SUMS.txt']]) {
+    const request = new Request(base+path+query,{method,headers:{range:'bytes=0-5','if-range':'"release"',cookie:'example=private',authorization:'Bearer private'}});
+    const resp = await handle(request,files,(req,options)=>{
+      assert.equal(options.cache,'no-store');
+      assert.equal(req.headers.get('accept-encoding'),'identity');
+      assert.equal(req.url,'https://umitcagdas.github.io/Remotiq'+path+query);
+      assert.equal(req.method,method);
+      assert.equal(req.headers.get('range'),'bytes=0-5');
+      assert.equal(req.headers.get('if-range'),'"release"');
+      assert.equal(req.headers.has('cookie'),false);
+      assert.equal(req.headers.has('authorization'),false);
+      return new Response(null,{status:206,headers:{'content-range':'bytes 0-5/300'}});
+    });
+    assert.equal(resp.status,206);
+    assert.equal(resp.headers.get('content-range'),'bytes 0-5/300');
+  }
+});
+
+test('installer HEAD exposes the identity representation length and preserves conditional 304 responses',async()=>{
+  const req=new Request(base+'/downloads/Remotiq.app.tar.gz',{method:'HEAD'});
+  const r=await handle(req,files,upstream=>{
+    assert.equal(upstream.method,'GET');
+    assert.equal(upstream.headers.get('range'),'bytes=0-0');
+    return new Response(new Uint8Array([1]),{status:206,headers:{'content-range':'bytes 0-0/10674979','content-length':'1'}});
+  });
+  assert.equal(r.status,200);
+  assert.equal(r.headers.get('content-length'),'10674979');
+  assert.equal(r.headers.has('content-range'),false);
+  assert.equal(r.body,null);
+  const unchanged=await handle(req,files,()=>new Response(null,{status:304}));
+  assert.equal(unchanged.status,304);
 });
