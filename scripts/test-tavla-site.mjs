@@ -5,6 +5,29 @@ import assert from "node:assert/strict";
 import { fileURLToPath } from "node:url";
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const pages = ["index", "privacy", "terms", "support", "account-deletion"];
+const publicOrigin = "https://tavla.umitcagdas.com";
+const navigation = fs.readFileSync(path.join(root, "tavlaonline/assets/site-i18n.js"), "utf8");
+
+function navigate(address, canonicalHref, translations) {
+  const canonical = { href: canonicalHref };
+  const alternates = [];
+  const document = {
+    documentElement: { dataset: {} },
+    querySelector: (selector) => selector === 'link[rel="canonical"]' ? canonical : null,
+    querySelectorAll: () => [],
+    createElement: () => ({}),
+    head: { appendChild: (element) => alternates.push(element) },
+  };
+  let redirectedTo = null;
+  const location = new URL(address);
+  location.replace = (url) => { redirectedTo = url; };
+  vm.runInNewContext(navigation, {
+    URL, URLSearchParams, document, navigator: { languages: ["tr"] },
+    window: { location, TavlaPageI18n: translations },
+  });
+  return { redirectedTo, canonical: canonical.href, alternates };
+}
+
 let links = 0;
 for (const name of pages) {
   const file = path.join(root, "tavlaonline", name + ".html");
@@ -25,6 +48,34 @@ for (const name of pages) {
   vm.runInNewContext(fs.readFileSync(script, "utf8"), c);
   const data = c.window.TavlaPageI18n;
   assert.deepEqual(Object.keys(data), ["tr", "en"]);
+  const publicUrl = publicOrigin + (name === "index" ? "/" : "/" + name);
+  const canonical = html.match(/rel="canonical"\s+href="([^"]+)"/)?.[1];
+  assert.equal(canonical, publicUrl, file);
+  assert.equal(html.match(/property="og:url"\s+content="([^"]+)"/)?.[1], publicUrl, file);
+  assert(!html.includes("https://umitcagdas.github.io/tavlaonline/"), file);
+  const variants = [
+    ["tr", publicUrl], ["en", publicUrl + "?lang=en"], ["x-default", publicUrl],
+  ];
+  assert.deepEqual(
+    Array.from(html.matchAll(/rel="alternate"\s+hreflang="([^"]+)"\s+href="([^"]+)"/g),
+      ([, language, href]) => [language, href]),
+    variants,
+    file,
+  );
+  const suffix = "?lang=en&utm_source=store&tag=a%2Bb#choices";
+  const paths = name === "index"
+    ? ["/tavlaonline", "/tavlaonline/", "/tavlaonline/index.html"]
+    : ["/tavlaonline/" + name + ".html"];
+  for (const host of ["umitcagdas.github.io", "umitcagdas.com", "www.umitcagdas.com"]) {
+    for (const oldPath of paths) {
+      const visit = navigate("https://" + host + oldPath + suffix, canonical, data);
+      assert.equal(visit.redirectedTo, publicUrl + suffix);
+    }
+  }
+  const proxied = navigate(publicUrl + suffix, canonical, data);
+  assert.equal(proxied.redirectedTo, null);
+  assert.equal(proxied.canonical, publicUrl + "?lang=en");
+  assert.deepEqual(proxied.alternates.map(({ hreflang, href }) => [hreflang, href]), variants);
   const blocks = [...html.matchAll(/data-i18n-html="([^"]+)"/g)].map(
     (x) => x[1],
   );
@@ -67,5 +118,5 @@ assert.equal(
   10,
 );
 console.log(
-  `5 pages, 2 languages, ${links} local references and 10 sitemap entries verified.`,
+  `5 pages, 2 languages, legacy redirects, canonical metadata, ${links} local references and 10 sitemap entries verified.`,
 );

@@ -1,6 +1,18 @@
 (() => {
   "use strict";
 
+  const canonical = document.querySelector('link[rel="canonical"]');
+  const { hostname, pathname, search, hash } = window.location;
+  const portfolioHosts = ["umitcagdas.github.io", "umitcagdas.com", "www.umitcagdas.com"];
+  if (portfolioHosts.includes(hostname) &&
+      (pathname === "/tavlaonline" || pathname.startsWith("/tavlaonline/"))) {
+    const destination = new URL(canonical.href);
+    destination.search = search;
+    destination.hash = hash;
+    window.location.replace(destination.href);
+    return;
+  }
+
   const languageOrder = ["tr", "en", "de", "fr", "nl", "es", "it", "el", "sq"];
   const pageTranslations = window.TavlaPageI18n || {};
   const supportedLanguages = languageOrder.filter(
@@ -236,16 +248,9 @@
     setMeta('meta[name="twitter:description"]', meta.description);
     setMeta('meta[property="og:locale"]', localeTags[language]);
 
-    const pageUrl = new URL(window.location.href);
-    pageUrl.hash = "";
+    const pageUrl = new URL(canonical.href);
     pageUrl.search = language === "tr" ? "" : `?lang=${language}`;
 
-    let canonical = document.querySelector('link[rel="canonical"]');
-    if (!canonical) {
-      canonical = document.createElement("link");
-      canonical.rel = "canonical";
-      document.head.appendChild(canonical);
-    }
     canonical.href = pageUrl.href;
     setMeta('meta[property="og:url"]', pageUrl.href);
 
