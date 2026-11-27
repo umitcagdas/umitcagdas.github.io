@@ -1,6 +1,16 @@
 (() => {
   "use strict";
 
+  const { hostname, pathname, search, hash } = window.location;
+  if (["umitcagdas.github.io", "umitcagdas.com", "www.umitcagdas.com"].includes(hostname) &&
+      (pathname === "/batakonline" || pathname.startsWith("/batakonline/"))) {
+    const target = new URL(document.querySelector('link[rel="canonical"]').href);
+    target.search = search;
+    target.hash = hash;
+    window.location.replace(target.href);
+    return;
+  }
+
   const supportedLanguages = ["tr", "en", "de", "el", "es", "fr", "it", "nl"];
   const languageLabels = {
     tr: "Türkçe",

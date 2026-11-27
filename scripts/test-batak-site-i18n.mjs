@@ -84,8 +84,12 @@ for (const language of languages) {
 }
 assert.doesNotMatch(core, /innerHTML\s*=\s*[^;]*(location|searchParams)/);
 
-function runCore({ query = "", storedLanguage = null, browserLanguages = [] }) {
+function runCore({ query = "", address = "https://batak.umitcagdas.com/", canonicalUrl,
+                   storedLanguage = null, browserLanguages = [] }) {
   const stored = new Map();
+  const location = new URL(address + query);
+  let redirectedTo = null;
+  location.replace = (url) => { redirectedTo = url; };
   if (storedLanguage) stored.set("batak-site-language", storedLanguage);
   const appendedHeadNodes = [];
   const screenElements = localizedScreens.map((localizedScreen) => ({
@@ -97,7 +101,8 @@ function runCore({ query = "", storedLanguage = null, browserLanguages = [] }) {
     title: "",
     documentElement: { lang: "tr", dataset: {} },
     head: { appendChild: (node) => appendedHeadNodes.push(node) },
-    querySelector: () => null,
+    querySelector: (selector) =>
+      selector === 'link[rel="canonical"]' && canonicalUrl ? { href: canonicalUrl } : null,
     querySelectorAll: (selector) =>
       selector === "[data-localized-screen]" ? screenElements : [],
     createElement: () => ({
@@ -113,12 +118,7 @@ function runCore({ query = "", storedLanguage = null, browserLanguages = [] }) {
     navigator: { language: browserLanguages[0] || "", languages: browserLanguages },
     window: {
       BatakPageI18n: loadTranslations("batakonline/assets/i18n-home.js"),
-      location: {
-        href: `https://umitcagdas.github.io/batakonline/${query}`,
-        origin: "https://umitcagdas.github.io",
-        search: query,
-        assign() {},
-      },
+      location,
       localStorage: {
         getItem: (key) => stored.get(key) || null,
         setItem: (key, value) => stored.set(key, value),
@@ -126,7 +126,24 @@ function runCore({ query = "", storedLanguage = null, browserLanguages = [] }) {
     },
   };
   vm.runInNewContext(core, context, { filename: "site-i18n.js" });
-  return { document, stored, appendedHeadNodes, screenElements };
+  return { document, stored, appendedHeadNodes, screenElements, redirectedTo };
+}
+
+for (const page of pages) {
+  const html = read(page.html);
+  const name = path.basename(page.html);
+  const target = "https://batak.umitcagdas.com/" + (name === "index.html" ? "" : name);
+  const canonicalUrl = html.match(/rel="canonical" href="([^"]+)"/)?.[1];
+  assert.equal(canonicalUrl, target);
+  assert.ok(html.includes(`<noscript><meta http-equiv="refresh" content="0;url=${target}"`));
+  const query = "?lang=en&utm_source=store&tag=a%2Bb#choices";
+  for (const host of ["umitcagdas.github.io", "umitcagdas.com", "www.umitcagdas.com"]) {
+    const paths = name === "index.html" ? ["/batakonline", "/batakonline/", "/batakonline/index.html"] : ["/" + page.html];
+    for (const pathname of paths) {
+      assert.equal(runCore({address: "https://" + host + pathname, canonicalUrl, query}).redirectedTo, target + query);
+    }
+  }
+  assert.equal(runCore({address: target, canonicalUrl, query}).redirectedTo, null);
 }
 
 assert.equal(runCore({ query: "?lang=fr" }).document.documentElement.lang, "fr");
