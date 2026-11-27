@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Super Soccer 2026 | Masa futbolu</title>
+  <meta name="description" content="Super Soccer 2026’da sıra tabanlı masa futbolu oyna. Çevrim içi rakiple eşleş, aynı cihazda arkadaşınla karşılaş veya lig ve turnuvalara katıl.">
+  <meta name="theme-color" content="#10291e">
+  <link rel="canonical" href="https://supersoccer.umitcagdas.com/">
+  <link rel="alternate" hreflang="tr" href="https://supersoccer.umitcagdas.com/">
+  <link rel="alternate" hreflang="en" href="https://supersoccer.umitcagdas.com/?lang=en">
+  <link rel="alternate" hreflang="x-default" href="https://supersoccer.umitcagdas.com/">
+  <link rel="icon" href="./assets/icon.webp">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Super Soccer 2026">
+  <meta property="og:url" content="https://supersoccer.umitcagdas.com/">
+  <meta property="og:image" content="https://supersoccer.umitcagdas.com/assets/training-field.webp">
+  <script>
+    const query = new URLSearchParams(location.search);
+    const english = query.get("lang") === "en";
+    document.documentElement.lang = english ? "en" : "tr";
+    document.documentElement.classList.add("localized");
+    if (english) {
+      document.title = "Super Soccer 2026 | Table football";
+      document.querySelector('meta[name="description"]').content = "Play turn-based table football. Challenge an online opponent, go head-to-head on one device or compete in leagues and tournaments.";
+      document.querySelector('link[rel="canonical"]').href += "?lang=en";
+      document.querySelector('meta[property="og:url"]').content += "?lang=en";
+    }
+    if (["umitcagdas.github.io", "umitcagdas.com", "www.umitcagdas.com"].includes(location.hostname) &&
+        location.pathname === "/supersoccer/oyun.html") {
+      location.replace("https://supersoccer.umitcagdas.com/" + location.search + location.hash);
+    }
+  </script>
+  <style>
+    :root {color-scheme:dark; background:#10291e; color:#f4f2df; font:100%/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    * {box-sizing:border-box}
+    body {margin:0}
+    .wrap {width:min(1120px,90%); margin:auto}
+    a {color:inherit; text-underline-offset:.25rem}
+    a:focus-visible {outline:3px solid #c4e579; outline-offset:4px}
+    header,footer {display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:1rem 0}
+    header {border-bottom:1px solid #58765d}
+    .identity {display:inline-flex; align-items:center; gap:.7rem; font-weight:700; text-decoration:none}
+    .identity img {border-radius:.55rem}
+    .languages {display:flex; gap:.9rem; font-size:.9rem}
+    .hero {display:grid; grid-template-columns:minmax(0,.78fr) minmax(0,1.22fr); align-items:center; gap:clamp(1.5rem,5vw,4rem); margin:clamp(2.2rem,7vw,6.25rem) 0}
+    h1,h2,p {margin:0}
+    h1 {font-family:Georgia,serif; font-weight:normal; font-size:clamp(3rem,6.5vw,5.8rem); line-height:.96; letter-spacing:-.055em; max-width:10ch}
+    .story {margin-top:1.25rem; color:#e2e9d6; font-size:clamp(1.05rem,1.8vw,1.32rem); max-width:34ch}
+    .field {display:block; width:100%; height:auto; border:1px solid #66825d; border-radius:.65rem; box-shadow:0 1.5rem 3rem #06180c66}
+    .details {border-top:1px solid #58765d; padding:2rem 0 2.65rem; display:grid; grid-template-columns:1fr 1fr; gap:clamp(1.5rem,5vw,5rem)}
+    .details h2 {font:normal clamp(1.6rem,3vw,2.35rem)/1.14 Georgia,serif}
+    .details p {margin-top:.65rem; color:#deead5; max-width:47ch}
+    footer {border-top:1px solid #58765d; font-size:.9rem; color:#c7d6bc}
+    .localized:lang(tr) [lang="en"].copy,.localized:lang(en) [lang="tr"].copy {display:none}
+    .localized:lang(tr) .languages [hreflang="tr"],.localized:lang(en) .languages [hreflang="en"] {font-weight:700; color:#dbf3a0}
+    @media(max-width:730px) {.hero,.details {grid-template-columns:1fr}.hero {gap:1.65rem}.story {max-width:50ch}.details{padding:1.7rem 0}.wrap{width:90%}}
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <a class="identity" href="https://supersoccer.umitcagdas.com/"><img src="./assets/icon.webp" width="40" height="40" alt="">Super Soccer 2026</a>
+    <nav class="languages" aria-label="Dil / Language"><a href="?lang=tr" lang="tr" hreflang="tr">Türkçe</a><a href="?lang=en" lang="en" hreflang="en">English</a></nav>
+  </header>
+  <main class="wrap">
+    <section class="hero">
+      <div>
+        <h1>Super Soccer 2026</h1>
+        <p class="story copy" lang="tr">Masa futbolunu telefonda oyna. Taşını çek, şutunu bırak ve sıranı rakibine ver.</p>
+        <p class="story copy" lang="en">Play table football on your phone. Pull your piece back, release your shot and hand the next turn to your opponent.</p>
+      </div>
+      <img class="field" src="./assets/training-field.webp" width="1500" height="690" alt="Super Soccer 2026 · 4 × 4">
+    </section>
+    <section class="details" aria-label="Oyun / Game">
+      <div>
+        <div class="copy" lang="tr"><h2>Rakibini seç</h2><p>Çevrim içi teke tek maça gir veya aynı telefonda bir arkadaşınla oyna. Antrenmanda şutlarını çalış, yapay zekâya karşı lig ve kıta turnuvalarına katıl.</p></div>
+        <div class="copy" lang="en"><h2>Choose your opponent</h2><p>Go head-to-head online or take turns with a friend on one phone. Practise your shots, then face the AI in league seasons and continental tournaments.</p></div>
+      </div>
+      <div>
+        <div class="copy" lang="tr"><h2>Şut çek</h2><p>Bir taşına basılı tut. Atmak istediğin yönün tersine doğru çekerek gücünü ayarla ve bırak. Topu doğrudan kaleye gönderebilir veya yan duvardan sektirebilirsin.</p></div>
+        <div class="copy" lang="en"><h2>Take a shot</h2><p>Hold one of your pieces and pull back from the direction you want to shoot. Release to strike the ball. Aim straight at goal or bank your shot off a side wall.</p></div>
+      </div>
+    </section>
+  </main>
+  <footer class="wrap"><span>Super Soccer 2026</span><a class="copy" lang="tr" href="https://supersoccer.umitcagdas.com/privacy/#turkce">Gizlilik politikası</a><a class="copy" lang="en" href="https://supersoccer.umitcagdas.com/privacy/#english">Privacy policy</a></footer>
+</body>
+</html>
