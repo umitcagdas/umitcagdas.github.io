@@ -1,0 +1,21 @@
+.project-featured-elli-bir .project-featured-visual {
+  background: linear-gradient(145deg, #0b1f21, #1d5751);
+}
+
+.project-featured-101-okey .project-featured-visual {
+  background: linear-gradient(145deg, #11231c, #456440);
+}
+
+.project-featured-11-metre .project-featured-visual {
+  background: radial-gradient(circle at 50% 50%, #426c47, #10342e 70%);
+}
+
+.projects-showcase .project-featured-visual > img.project-wide-shot {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+  box-shadow: none;
+}
