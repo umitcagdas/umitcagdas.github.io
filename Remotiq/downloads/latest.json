@@ -5,11 +5,11 @@
   "platforms": {
     "darwin-aarch64": {
       "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSL29yWnhlajlmUEt1WkZldXZxQ0RNcjFsM3RJMEVPay8vd09JU05uOE1iNm1ULyt1UW1wYjJDTks2aGpBUlErT2hwUmxCYXVsTU5uQTc0QVRUak1KNDA5L2FGUnIxbWdrPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg1NjgyOTAwCWZpbGU6UmVtb3RpcS5hcHAudGFyLmd6Cmw0ZHhkLzBzZXEyU2RieEdLVzVvWHlMU3VLTVhtdThOTlJrUGs3RUY3WTFqRlA2emRGOVRJaVNEa2NsVmNEN2hOcWhTS3JCLzZudVo0MzBxOWZtcUNRPT0K",
-      "url": "https://umitcagdas.github.io/Remotiq/downloads/Remotiq.app.tar.gz"
+      "url": "https://remotiq.umitcagdas.com/downloads/Remotiq.app.tar.gz"
     },
     "windows-x86_64": {
       "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSL29yWnhlajlmUExiM0xFVUY0K1A1c1ZMZFdlWU9GelBDSmNURXV1RzZPV2ZGTWRrWHQreUVVOHJCV2R5aW1KMnRMeEhKS3NnL1B3R3JqWU16Tk02aEtJS01CYncyaGdBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg1NjgzMzQ3CWZpbGU6UmVtb3RpcV8wLjEuMl94NjQtc2V0dXAuZXhlCnpMaG1xVUJ1WWZCVTZpSlN5ZjIwWEYzV09ReG45OU56bFNTbDg2OXd5U1pBMjF3d0srZTNMZTNna3V1eWoybWRXT2hLM0xsUnVDTzZ5ejVRN1hVcUF3PT0K",
-      "url": "https://umitcagdas.github.io/Remotiq/downloads/Remotiq_0.1.2_x64-setup.exe"
+      "url": "https://remotiq.umitcagdas.com/downloads/Remotiq_0.1.2_x64-setup.exe"
     }
   }
 }

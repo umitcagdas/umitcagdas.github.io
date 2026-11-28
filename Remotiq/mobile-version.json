@@ -1,8 +1,8 @@
 {
   "schema": 1,
   "ios": {
-    "latest": "1.0.1",
-    "latestBuild": 9,
+    "latest": "1.0.4",
+    "latestBuild": 21,
     "minimum": "1.0.1",
     "minimumBuild": 9
   },
