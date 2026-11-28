@@ -1,0 +1,4 @@
+a261a254966a343816f4cc680b37011a32b3a1efe6db77fed421f908f13ac383  Remotiq_0.1.3_aarch64.zip
+6c94a67bd22fbc1c6c62803eab98b6a6fe17d8f360f0df391268b512b1c5dd74  Remotiq_0.1.3_aarch64.app.tar.gz
+a7061c6df8b5fc598c6ceecb7e4e884e1bc64e73a09e203f89b5319ae0e8f05b  Remotiq_0.1.3_aarch64.app.tar.gz.sig
+6472f4b9b0afc4049ddfc2ce9f1122c579912f3136bddb9c2463401ac789a8a5  latest-0.1.3-macos.json

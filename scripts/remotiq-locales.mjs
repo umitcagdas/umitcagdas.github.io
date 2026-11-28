@@ -12,6 +12,20 @@ export const localeOrder = [
   "id",
 ];
 
+export const macReleaseSetup = {
+  en: "For Apple Silicon Macs with Remotiq Mobile 1.0.5 or later. Unzip the file, move Remotiq to Applications, and pair again.",
+  tr: "Remotiq Mobil 1.0.5 veya üstüyle kullanılan Apple Silicon Mac’ler için. ZIP’i açın, Remotiq’i Uygulamalar klasörüne taşıyın ve yeniden eşleştirin.",
+  de: "Für Apple-Silicon-Macs mit Remotiq Mobile 1.0.5 oder neuer. Entpacke die ZIP-Datei, verschiebe Remotiq in den Ordner „Programme“ und kopple die Geräte erneut.",
+  es: "Para Mac con Apple Silicon y Remotiq Mobile 1.0.5 o posterior. Descomprime el ZIP, mueve Remotiq a Aplicaciones y vuelve a emparejar los dispositivos.",
+  fr: "Pour les Mac Apple Silicon avec Remotiq Mobile 1.0.5 ou une version ultérieure. Décompressez le ZIP, placez Remotiq dans Applications et associez à nouveau vos appareils.",
+  "pt-BR": "Para Macs com Apple Silicon e Remotiq Mobile 1.0.5 ou posterior. Extraia o ZIP, mova o Remotiq para Aplicativos e refaça o pareamento.",
+  it: "Per Mac con Apple Silicon e Remotiq Mobile 1.0.5 o successiva. Estrai lo ZIP, sposta Remotiq in Applicazioni e abbina di nuovo i dispositivi.",
+  ja: "Remotiq Mobile 1.0.5 以降を使用する Apple Silicon 搭載 Mac 向けです。ZIP を解凍して Remotiq を「アプリケーション」に移動し、再度ペアリングしてください。",
+  ko: "Remotiq Mobile 1.0.5 이상을 사용하는 Apple Silicon Mac용입니다. ZIP을 풀고 Remotiq을 응용 프로그램 폴더로 옮긴 뒤 다시 페어링하세요.",
+  "zh-Hans": "适用于搭配 Remotiq Mobile 1.0.5 或更高版本的 Apple 芯片 Mac。解压 ZIP，将 Remotiq 移到“应用程序”文件夹，然后重新配对。",
+  id: "Untuk Mac dengan Apple Silicon yang menggunakan Remotiq Mobile 1.0.5 atau lebih baru. Ekstrak ZIP, pindahkan Remotiq ke folder Applications, lalu pasangkan kembali.",
+};
+
 export const locales = {
   en: {
     name: "English",
