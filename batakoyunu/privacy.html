@@ -1,140 +1,924 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="tr">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Gizlilik Politikası | Batak Oyunu</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="Batak Oyunu gizlilik politikası: yerel kayıtlar, reklamlar, cihaz verileri ve kullanıcı hakları."
-    />
-    <link rel="stylesheet" href="./assets/site.css" />
+      content="Batak Oyunu gizlilik politikası ve privacy policy: reklamlar, analiz, hata raporlama, uygulama bütünlüğü ve uygulama içi satın almalar."
+    >
+    <title>Batak Oyunu Gizlilik Politikası | Privacy Policy</title>
+    <link rel="canonical" href="https://batakoffline.umitcagdas.com/privacy.html">
+    <link rel="icon" href="./assets/app-icon.png">
+    <script src="./legacy-navigation.js" defer></script>
+    <style>
+      :root {
+        color-scheme: light dark;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.65;
+      }
+      body {
+        margin: 0;
+        padding: 40px 20px;
+      }
+      main {
+        max-width: 960px;
+        margin: 0 auto;
+      }
+      h1, h2, h3 {
+        line-height: 1.25;
+      }
+      h2 {
+        margin-top: 2rem;
+      }
+      .meta, .note {
+        color: #666;
+      }
+      .language-nav {
+        margin-bottom: 2rem;
+      }
+      .language-nav a + a {
+        margin-left: 1rem;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1rem 0;
+      }
+      th, td {
+        border: 1px solid #aaa;
+        padding: 0.7rem;
+        text-align: left;
+        vertical-align: top;
+      }
+      th {
+        background: rgba(127, 127, 127, 0.12);
+      }
+      hr {
+        margin: 3.5rem 0;
+      }
+      @media (prefers-color-scheme: dark) {
+        .meta, .note {
+          color: #aaa;
+        }
+      }
+      @media (max-width: 700px) {
+        body {
+          padding: 24px 16px;
+        }
+        table, thead, tbody, tr, th, td {
+          display: block;
+        }
+        thead {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          overflow: hidden;
+          clip: rect(0 0 0 0);
+        }
+        tr {
+          margin-bottom: 1rem;
+          border: 1px solid #aaa;
+        }
+        td {
+          border: 0;
+          border-bottom: 1px solid #aaa;
+        }
+        td:last-child {
+          border-bottom: 0;
+        }
+        td::before {
+          content: attr(data-label);
+          display: block;
+          font-weight: 700;
+          margin-bottom: 0.25rem;
+        }
+      }
+    </style>
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href="./index.html" aria-label="Batak Oyunu ana sayfa">
-        <img src="./assets/app-icon.png" alt="" />
-        <span>Batak Oyunu</span>
-      </a>
-      <nav class="nav" aria-label="Sayfa bölümleri">
-        <a href="./index.html#features">Özellikler</a>
-        <a href="./index.html#download">İndir</a>
-        <a href="./support.html">Destek</a>
-        <a href="./privacy.html" aria-current="page">Gizlilik</a>
-      </nav>
-    </header>
-
     <main>
-      <section class="legal-hero">
-        <div class="legal-inner">
-          <p class="eyebrow">Gizlilik Politikası</p>
-          <h1>Batak Oyunu hesap veya bulut senkronu kullanmaz.</h1>
-          <p class="hero-copy">
-            Bu politika Batak Oyunu mobil uygulamasının yerel kayıtlarını, reklam kullanımını
-            ve üçüncü taraf hizmetlerle ilişkisini açıklar.
-          </p>
-          <p class="hero-note">Son güncelleme: 9 Haziran 2026</p>
-        </div>
-      </section>
+      <nav class="language-nav" aria-label="Dil seçimi / Language selection">
+        <a href="#turkce">Türkçe</a>
+        <a href="#english">English</a>
+      </nav>
 
-      <section class="section">
-        <div class="legal-inner">
-          <article class="legal-card">
-            <h2>Kısa Özet</h2>
-            <ul>
-              <li>Batak Oyunu kullanıcı hesabı veya giriş sistemi kullanmaz.</li>
-              <li>Oyun istatistikleri, ayarlar ve coin bakiyesi cihazınızda yerel olarak tutulur.</li>
-              <li>Uygulama reklam göstermek için Google AdMob kullanabilir.</li>
-              <li>Reklam sağlayıcıları cihaz bilgileri, reklam kimliği ve etkileşim sinyallerini kendi politikalarına göre işleyebilir.</li>
-              <li>Uygulama, tarafımızca işletilen bir bulut sunucusuna oyun verisi göndermez.</li>
-            </ul>
-          </article>
+      <article id="turkce" lang="tr">
+        <h1>Batak Oyunu Gizlilik Politikası</h1>
+        <p class="meta">Yürürlük ve son güncelleme tarihi: 16 Temmuz 2026</p>
 
-          <article class="legal-card">
-            <h2>Toplanan ve Saklanan Veriler</h2>
-            <p>
-              Batak Oyunu, oyun ilerlemesi için bazı bilgileri yalnızca cihazınızda saklar:
-              oynanan oyun sayısı, kazanılan oyun sayısı, toplam skor, en yüksek skor, coin bakiyesi
-              ve kullanıcı ayarları. Bu veriler uygulama tarafından işletilen bir sunucuya gönderilmez.
-            </p>
-          </article>
+        <p>
+          Bu gizlilik politikası, CagdasBT tarafından Android ve iOS için
+          yayınlanan Batak Oyunu mobil uygulamasında bilgilerin nasıl işlendiğini
+          açıklar. Bu politika açısından uygulamanın yayıncısı CagdasBT'dir.
+          Google, Apple ve diğer hizmet sağlayıcıları, kendi hizmetleri kapsamında
+          ayrıca veri sorumlusu veya veri işleyen olarak hareket edebilir.
+        </p>
 
-          <article class="legal-card">
-            <h2>Reklamlar ve Üçüncü Taraf Hizmetler</h2>
-            <p>
-              Uygulama Google AdMob üzerinden reklam gösterebilir. Google AdMob, reklam sunumu,
-              sahtekarlık önleme, ölçüm ve reklam kişiselleştirme tercihleri için cihaz bilgileri,
-              IP adresi, reklam kimliği ve reklam etkileşimleri gibi verileri işleyebilir.
-            </p>
-            <p>
-              Google'ın reklam ve veri kullanımı hakkında daha fazla bilgi için Google politikalarını
-              inceleyebilirsiniz: <a href="https://policies.google.com/technologies/ads">Google Reklam Teknolojileri</a>.
-            </p>
-          </article>
+        <h2>1. Kısa özet</h2>
+        <ul>
+          <li>
+            Uygulama içinde hesap açılmaz; ad, e-posta adresi veya telefon numarası
+            girmeniz istenmez.
+          </li>
+          <li>
+            Oyun kaydı, ayarlar, istatistikler, coin bakiyesi ve reklamsız kullanım
+            hakkı gibi temel oyun verileri cihazınızda yerel olarak tutulur.
+          </li>
+          <li>
+            Reklam, analiz, hata teşhisi, uzaktan yapılandırma, kötüye kullanımın
+            önlenmesi ve satın alma doğrulaması için Google/Firebase, Google Play
+            ve Apple hizmetleri kullanılır.
+          </li>
+          <li>
+            Uygulama geliştiricisi olarak kişisel verileri satmayız. Reklam
+            sağlayıcıları, izinleriniz ve yürürlükteki kurallar doğrultusunda
+            reklam sunmak ve ölçmek için belirli verileri işleyebilir veya
+            paylaşabilir.
+          </li>
+        </ul>
 
-          <article class="legal-card">
-            <h2>İzinler</h2>
-            <dl class="legal-list">
-              <dt>İnternet</dt>
-              <dd>Reklam yüklemek ve uygulamanın ağ gerektiren parçalarını çalıştırmak için kullanılabilir.</dd>
+        <h2>2. İşlenen veri kategorileri ve amaçları</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Kategori</th>
+              <th>Örnekler</th>
+              <th>Amaç</th>
+              <th>Nerede işlenir?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Kategori">Yerel oyun verileri</td>
+              <td data-label="Örnekler">
+                Oyun ve tur ilerlemesi, oyun ayarları, istatistikler, skorlar,
+                coin bakiyesi, öğretici ilerlemesi, reklam sıklık bilgisi ve
+                reklamsız kullanım hakkı kaydı
+              </td>
+              <td data-label="Amaç">
+                Oyunu kaldığınız yerden sürdürmek, tercihleri ve kazanımları
+                korumak, reklam sıklığını uygulamak
+              </td>
+              <td data-label="Nerede işlenir?">
+                Cihazda. Aşağıda açıklanan analiz olayları haricinde tam oyun
+                kaydı Firebase'e yüklenmez.
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Kategori">Uygulama kullanımı ve analiz</td>
+              <td data-label="Örnekler">
+                Uygulama örneği/kurulum tanımlayıcıları, uygulama sürümü, cihaz ve
+                işletim sistemi bilgileri, dil/ülke gibi yaklaşık sinyaller;
+                açılış, öğretici, oyun modu ve zorluk seçimi, oyun/tur sonucu,
+                sanal coin hareketleri, reklam ve satın alma akışı olayları
+              </td>
+              <td data-label="Amaç">
+                Özelliklerin kullanımını anlamak, dengeyi ve kullanıcı deneyimini
+                geliştirmek, teknik ve ticari performansı ölçmek
+              </td>
+              <td data-label="Nerede işlenir?">Google Firebase Analytics</td>
+            </tr>
+            <tr>
+              <td data-label="Kategori">Hata ve tanılama verileri</td>
+              <td data-label="Örnekler">
+                Çökme yığın izleri, hata türü ve zamanı, uygulama sürümü, cihaz
+                modeli, işletim sistemi, bellek/disk gibi teknik bilgiler,
+                Crashlytics ve Firebase kurulum tanımlayıcıları
+              </td>
+              <td data-label="Amaç">
+                Çökmeleri ve teknik sorunları tespit etmek, gidermek ve uygulama
+                güvenilirliğini artırmak
+              </td>
+              <td data-label="Nerede işlenir?">Google Firebase Crashlytics</td>
+            </tr>
+            <tr>
+              <td data-label="Kategori">Reklam ve izin verileri</td>
+              <td data-label="Örnekler">
+                IP adresi ve bundan türetilen genel konum, reklam kimliği veya
+                uygulama seti kimliği, cihaz/hesap tanımlayıcıları, reklam
+                etkileşimleri ve video görüntülemeleri, reklam performansı,
+                tanılama bilgileri ve gizlilik/izin seçimleri
+              </td>
+              <td data-label="Amaç">
+                Geçiş reklamları ve isteğe bağlı ödüllü reklamlar sunmak,
+                kişiselleştirme izinlerini uygulamak, reklam performansını ölçmek,
+                dolandırıcılık ve kötüye kullanımı önlemek
+              </td>
+              <td data-label="Nerede işlenir?">
+                Google AdMob / Google Mobile Ads ve Google User Messaging
+                Platform (UMP); yapılandırılan reklam teknolojisi sağlayıcıları
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Kategori">Uygulama bütünlüğü ve güvenlik</td>
+              <td data-label="Örnekler">
+                Uygulama/cihaz bütünlüğü tasdik materyali, Play Integrity,
+                App Attest veya DeviceCheck sonucu, Firebase App Check belirteci,
+                istek ve ağ güvenliği bilgileri
+              </td>
+              <td data-label="Amaç">
+                Satın alma doğrulama hizmetine yalnızca gerçek uygulamanın
+                erişmesini sağlamak; sahtecilik, tekrar oynatma ve kötüye
+                kullanımı engellemek
+              </td>
+              <td data-label="Nerede işlenir?">
+                Firebase App Check; Android'de Google Play Integrity, iOS'ta
+                Apple App Attest ve gerektiğinde DeviceCheck
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Kategori">Satın alma ve hak bilgileri</td>
+              <td data-label="Örnekler">
+                Mağaza adı, ürün kimliği, satın alma/geri yükleme durumu, satın
+                alma belirteci veya Apple imzalı işlem verisi, işlem/sipariş
+                kimliği, işlem tarihi, fiyat ve para birimi, doğrulama sonucu
+              </td>
+              <td data-label="Amaç">
+                Tek seferlik reklamsız kullanım satın alımını gerçekleştirmek,
+                doğrulamak, geri yüklemek ve dolandırıcılığı önlemek
+              </td>
+              <td data-label="Nerede işlenir?">
+                Google Play Billing veya Apple StoreKit; Firebase Cloud Functions
+                üzerindeki doğrulama hizmetimiz ve ilgili mağaza doğrulama
+                mekanizmaları
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Kategori">Uzaktan yapılandırma</td>
+              <td data-label="Örnekler">
+                Uygulama/kurulum tanımlayıcısı ve uygulama sürümüyle ilişkili
+                yapılandırma istekleri
+              </td>
+              <td data-label="Amaç">
+                Özellik kullanılabilirliği, oyun ekonomisi ve reklam sıklığı gibi
+                değerleri güvenli biçimde yönetmek
+              </td>
+              <td data-label="Nerede işlenir?">Google Firebase Remote Config</td>
+            </tr>
+          </tbody>
+        </table>
 
-              <dt>Reklam Kimliği</dt>
-              <dd>Android tarafında Google reklam hizmetleri tarafından reklam ve ölçüm amaçlarıyla kullanılabilir.</dd>
-            </dl>
-          </article>
+        <p class="note">
+          Analiz olayları oyuncunun yazdığı bir ad veya iletişim bilgisi içermez;
+          ancak işlem kimliği, ürün kimliği, fiyat/para birimi ve uygulama örneği
+          tanımlayıcısı gibi veriler bir satın alma olayıyla ilişkilendirilebilir.
+        </p>
 
-          <article class="legal-card">
-            <h2>Verileri Silme</h2>
-            <p>
-              Yerel oyun verilerini kaldırmak için uygulamayı silebilir veya işletim sisteminizin uygulama
-              verilerini temizleme seçeneklerini kullanabilirsiniz. Reklam kimliği tercihleri cihazınızın
-              gizlilik ayarlarından yönetilir.
-            </p>
-          </article>
+        <h2>3. Reklamlar, UMP ve iOS Takip Şeffaflığı (ATT)</h2>
+        <p>
+          Batak Oyunu, oyun sonu geçiş reklamları ve yalnızca oyuncu seçtiğinde
+          gösterilen ödüllü reklamlar için Google AdMob kullanır. Google Mobile
+          Ads SDK; reklamcılık, analiz ve sahteciliği önleme amaçlarıyla IP adresi,
+          ürün etkileşimleri, tanılama bilgileri ve cihaz/hesap tanımlayıcılarını
+          otomatik olarak toplayıp paylaşabilir.
+        </p>
+        <p>
+          Yasal olarak gerektiği bölgelerde Google UMP üzerinden reklam gizlilik
+          mesajı gösterilir. Uygulamanın Ayarlar bölümündeki gizlilik seçenekleri
+          üzerinden uygun olduğunda seçiminizi yeniden açabilirsiniz. iOS'ta
+          reklam kimliğine (IDFA) erişim için Apple'ın ATT izni istenir. ATT'yi
+          reddetmeniz IDFA erişimini engeller; yine de izin durumunuza ve mevcut
+          kurallara göre sınırlı, bağlamsal veya kişiselleştirilmemiş reklamlar
+          sunulabilir. Android reklam kimliğini cihaz ayarlarından sıfırlayabilir
+          veya silebilirsiniz.
+        </p>
+        <p>
+          “Reklamları Kaldır” satın alımı zorunlu oyun sonu geçiş reklamlarını
+          kaldırır. Oyuncunun coin kazanmak için kendi isteğiyle başlattığı ödüllü
+          reklamlar, izinler uygunsa seçenek olarak kalabilir.
+        </p>
 
-          <article class="legal-card">
-            <h2>Çocukların Gizliliği</h2>
-            <p>
-              Batak Oyunu çocuklara özel olarak tasarlanmış bir uygulama değildir. Uygulama içinde hesap
-              oluşturma veya tarafımızca işletilen bir profil servisi bulunmaz.
-            </p>
-          </article>
+        <h2>4. Firebase hizmetleri</h2>
+        <ul>
+          <li>
+            <strong>Firebase Analytics:</strong> uygulama ve oyun etkileşim
+            olaylarını, uygulama/cihaz özelliklerini ve uygulama örneği
+            tanımlayıcılarını ölçüm ve iyileştirme amacıyla işler.
+          </li>
+          <li>
+            <strong>Firebase Crashlytics:</strong> çökmeler ve uygulamada
+            yakalanan teknik hatalarla ilgili tanılama verilerini işler.
+          </li>
+          <li>
+            <strong>Firebase Remote Config:</strong> uygulama davranışını ve
+            özellik ayarlarını uzaktan sunar.
+          </li>
+          <li>
+            <strong>Firebase App Check:</strong> satın alma doğrulama isteğinin
+            gerçek uygulamadan geldiğini kontrol etmek için bütünlük tasdiklerini
+            ve kısa ömürlü güvenlik belirteçlerini işler.
+          </li>
+          <li>
+            <strong>Firebase Cloud Functions:</strong> mağaza satın alma kanıtını
+            sunucu tarafında doğrular. Doğrulama isteği; mağaza ve ürün bilgisi,
+            işlem kanıtı, işlem kimliği/tarihi ve App Check belirtecini içerebilir.
+          </li>
+        </ul>
 
-          <article class="legal-card">
-            <h2>Değişiklikler</h2>
-            <p>
-              Uygulama özellikleri veya kullanılan üçüncü taraf hizmetler değişirse bu politika güncellenir.
-              En güncel sürüm bu sayfada yayınlanır.
-            </p>
-          </article>
+        <h2>5. Uygulama içi satın almalar</h2>
+        <p>
+          Ödeme Android'de Google Play, iOS'ta Apple App Store tarafından
+          işlenir. Uygulama ve CagdasBT tam ödeme kartı bilgilerinizi veya mağaza
+          hesabı parolanızı almaz. Mağaza; ödeme yöntemini, mağaza hesabını,
+          işlem geçmişini ve vergi/faturalandırma bilgilerini kendi politikaları
+          kapsamında işler.
+        </p>
+        <p>
+          Satın alma sahteciliğini önlemek için mağazadan alınan satın alma
+          belirteci veya Apple imzalı işlem, Firebase üzerindeki sunucu
+          doğrulama hizmetimize gönderilir. Android kanıtı Google Play Developer
+          API üzerinden kontrol edilir; Apple işleminin kriptografik imzası,
+          uygulama/ürün bilgisi ve iptal durumu sunucuda doğrulanır. Doğrulama
+          hizmeti bu kanıtları uygulamaya ait ayrı bir kullanıcı veya satın alma
+          veritabanında saklamaz; istek sırasında işler ve doğrulama sonucunu
+          döndürür. Bulut altyapısı güvenlik ve işletim amacıyla sınırlı teknik
+          günlükler tutabilir. Doğrulanan reklamsız hak ve işlem kimliği cihazda
+          saklanır; mağaza hesabıyla ücretsiz geri yükleme yapılabilir.
+        </p>
 
-          <article class="legal-card">
-            <h2>İletişim</h2>
-            <p>
-              Gizlilik veya destek konuları için Batak Oyunu destek sayfasını kullanabilirsiniz:
-              <a href="./support.html">Batak Oyunu Destek</a>
-            </p>
-          </article>
+        <h2>6. Paylaşım ve üçüncü taraflar</h2>
+        <p>
+          Uygulama geliştiricisi olarak kişisel verileri para karşılığı satmayız.
+          Veriler yalnızca yukarıdaki amaçlar için aşağıdaki hizmet kategorileriyle
+          paylaşılabilir veya bu hizmetler tarafından doğrudan toplanabilir:
+        </p>
+        <ul>
+          <li>Google LLC: AdMob, UMP, Firebase, Google Cloud ve Google Play;</li>
+          <li>Apple Inc.: App Store, StoreKit, App Attest ve DeviceCheck;</li>
+          <li>
+            kullanıcının reklam gizlilik seçimleri kapsamında Google tarafından
+            kullanılan reklam teknolojisi sağlayıcıları;
+          </li>
+          <li>
+            hukuken zorunlu olması veya haklarımızı, kullanıcıları ve hizmeti
+            korumak için gerekli olması halinde yetkili makamlar.
+          </li>
+        </ul>
+        <p>
+          Bazı hukuk düzenlerinde kişiselleştirilmiş reklamcılık için yapılan
+          aktarım “paylaşım” veya hedefli reklamcılık olarak değerlendirilebilir.
+          Uygun olduğunda bu tercihleri UMP gizlilik seçeneklerinden ve cihazınızın
+          reklam/gizlilik ayarlarından yönetebilirsiniz.
+        </p>
 
-          <article class="legal-card english-summary" lang="en">
-            <h2>English Summary</h2>
-            <p>
-              Batak Oyunu does not use user accounts or cloud sync. Game statistics, settings, and coin
-              balance are stored locally on the device. The app may use Google AdMob to serve ads. Google
-              AdMob may process device information, advertising identifiers, IP address, and ad interaction
-              signals under Google's own policies.
-            </p>
-          </article>
-        </div>
-      </section>
+        <h2>7. Hukuki dayanaklar ve izinler</h2>
+        <p>
+          Geçerli hukuka göre veri işleme; oyunu, seçtiğiniz özellikleri ve satın
+          almayı sunmak için sözleşmenin ifası veya talebiniz; güvenlik,
+          dolandırıcılığın önlenmesi, hata giderme ve hizmetin geliştirilmesi için
+          meşru menfaatlerimiz; yasal yükümlülüklerimiz; kişiselleştirilmiş reklam
+          ve cihazlar arası takip gibi durumlarda ise izniniz temeline dayanabilir.
+          İzninizi geri çekmeniz, geri çekmeden önceki işlemenin hukuka uygunluğunu
+          etkilemez.
+        </p>
+
+        <h2>8. Saklama süreleri</h2>
+        <ul>
+          <li>
+            <strong>Yerel oyun verileri:</strong> uygulama verilerini temizleyene
+            veya uygulamayı kaldırana kadar cihazınızda kalır. Mağaza satın alma
+            kaydı Google veya Apple hesabınızda kalabileceği için reklamsız hak
+            daha sonra geri yüklenebilir.
+          </li>
+          <li>
+            <strong>Firebase Analytics:</strong> kullanıcı düzeyindeki olay
+            verileri Firebase/Google Analytics proje ayarına göre genellikle 2
+            veya 14 ay tutulur; standart toplu raporlar bu süreden daha uzun
+            kalabilir.
+          </li>
+          <li>
+            <strong>Firebase Crashlytics:</strong> çökme yığın izleri ve ilişkili
+            tanımlayıcılar Google'ın güncel açıklamasına göre 90 gün tutulur ve
+            ardından canlı ve yedek sistemlerden kaldırılma süreci başlar.
+          </li>
+          <li>
+            <strong>Firebase App Check:</strong> tasdik materyali App Check
+            tarafından saklanmaz. Tekrar oynatma korumasında kullanılan
+            belirteçler en fazla 30 gün tutulabilir; diğer belirteçler kısa
+            geçerlilik süreleri boyunca kullanılır.
+          </li>
+          <li>
+            <strong>Satın alma doğrulaması:</strong> doğrulama kanıtları uygulamaya
+            ait ayrı bir veritabanına yazılmaz. Google Cloud'un teknik günlükleri
+            ile Google Play ve Apple işlem kayıtları kendi yapılandırma, yasal
+            yükümlülük ve politikalarına göre saklanır.
+          </li>
+          <li>
+            <strong>Reklam verileri:</strong> Google ve reklam teknolojisi
+            sağlayıcıları verileri kendi politikaları, izinler ve yasal
+            gereklilikler doğrultusunda saklar.
+          </li>
+        </ul>
+        <p>
+          Sağlayıcıların saklama süreleri ve ürün davranışları değişebileceğinden,
+          güncel ayrıntılar için aşağıdaki bağlantıları da inceleyin.
+        </p>
+
+        <h2>9. Veri güvenliği</h2>
+        <p>
+          Aktarım sırasında şifreleme (HTTPS/TLS), mağaza tarafından imzalanmış
+          satın alma kanıtları, Firebase App Check, Play Integrity, App Attest,
+          tekrar oynatma koruması ve sunucu tarafı ürün/uygulama kontrolleri gibi
+          makul teknik ve organizasyonel önlemler kullanırız. Yine de hiçbir
+          elektronik aktarım veya depolama yöntemi yüzde yüz güvenli değildir.
+        </p>
+
+        <h2>10. Seçimleriniz, silme ve haklarınız</h2>
+        <ul>
+          <li>
+            Yerel oyun verilerini cihaz ayarlarından uygulama verilerini
+            temizleyerek veya uygulamayı kaldırarak silebilirsiniz.
+          </li>
+          <li>
+            Uygulamanın Ayarlar bölümündeki gizlilik seçeneklerinden uygun
+            olduğunda reklam izinlerini güncelleyebilirsiniz.
+          </li>
+          <li>
+            iOS ATT iznini ve Android reklam kimliği seçeneklerini işletim sistemi
+            ayarlarından değiştirebilirsiniz.
+          </li>
+          <li>
+            Mağaza satın alma geçmişi ve ödeme verileri için doğrudan Google Play
+            veya Apple hesap/gizlilik araçlarını kullanmalısınız.
+          </li>
+        </ul>
+        <p>
+          Bulunduğunuz yere bağlı olarak erişim, düzeltme, silme, işlemeyi
+          kısıtlama, itiraz, veri taşınabilirliği, izni geri çekme ve yetkili veri
+          koruma kurumuna şikâyet haklarınız olabilir. Uygulama hesabı
+          oluşturmadığımız için uzaktaki bir kaydı yalnızca adınızla bulamayabiliriz.
+          Bir talepte bulunurken platformu ve varsa ilgili uygulama örneği veya
+          işlem bilgisini paylaşmanız istenebilir; talebi doğrulamak için yalnızca
+          gerekli bilgileri isteriz. Talebinizi aşağıdaki iletişim kanalı üzerinden
+          iletebilirsiniz.
+        </p>
+
+        <h2>11. Çocukların gizliliği</h2>
+        <p>
+          Batak Oyunu çocuklara yönelik olarak tasarlanmamıştır ve bilerek
+          çocuklardan ad, e-posta veya telefon numarası istemez. Bir çocuğun
+          kişisel verisinin uygun izin olmadan işlendiğini düşünüyorsanız bizimle
+          iletişime geçin; doğrulanabilir bir talep üzerine uygun adımları atarız.
+          Ebeveynler ayrıca cihazın uygulama içi satın alma, reklam ve gizlilik
+          kontrollerini kullanmalıdır.
+        </p>
+
+        <h2>12. Uluslararası aktarımlar</h2>
+        <p>
+          Google, Apple ve altyapı sağlayıcıları verileri Türkiye veya ikamet
+          ettiğiniz ülke dışındaki sunucularda işleyebilir. Bu aktarımlar,
+          sağlayıcıların sözleşmesel ve yasal güvenceleri ile geçerli veri koruma
+          kurallarına tabi olur.
+        </p>
+
+        <h2>13. Üçüncü taraf politikaları</h2>
+        <ul>
+          <li>
+            <a href="https://policies.google.com/privacy">Google Gizlilik Politikası</a>
+          </li>
+          <li>
+            <a href="https://firebase.google.com/support/privacy">Firebase'de Gizlilik ve Güvenlik</a>
+          </li>
+          <li>
+            <a href="https://developers.google.com/admob/android/privacy/play-data-disclosure">Google Mobile Ads veri açıklaması</a>
+          </li>
+          <li>
+            <a href="https://developers.google.com/admob/flutter/privacy">Google UMP ve reklam gizliliği</a>
+          </li>
+          <li>
+            <a href="https://www.apple.com/legal/privacy/">Apple Gizlilik Politikası</a>
+          </li>
+          <li>
+            <a href="https://www.apple.com/legal/privacy/data/en/app-store/">Apple App Store ve gizlilik</a>
+          </li>
+        </ul>
+
+        <h2>14. Değişiklikler</h2>
+        <p>
+          Uygulamadaki hizmetler veya yasal gereklilikler değiştiğinde bu
+          politikayı güncelleyebiliriz. Yeni sürüm bu sayfada yayımlanır ve
+          üstteki “son güncelleme” tarihi değiştirilir. Önemli değişikliklerde
+          uygun olduğunda uygulama içinde ek bildirim veya yeniden izin isteme
+          yöntemi kullanılabilir.
+        </p>
+
+        <h2>15. İletişim</h2>
+        <p>
+          Gizlilik soruları veya hak talepleri için
+          <a href="mailto:umitcagdas@gmail.com">umitcagdas@gmail.com</a>
+          adresine e-posta gönderebilir veya
+          <a href="support.html">Batak Oyunu Destek sayfasını</a>
+          kullanabilirsiniz.
+        </p>
+      </article>
+
+      <hr>
+
+      <article id="english" lang="en">
+        <h1>Batak Oyunu Privacy Policy</h1>
+        <p class="meta">Effective and last updated: July 16, 2026</p>
+
+        <p>
+          This Privacy Policy explains how information is processed in the Batak
+          Oyunu mobile application published by CagdasBT for Android and iOS.
+          CagdasBT is the app publisher for the purposes of this policy. Google,
+          Apple, and other service providers may also act as separate controllers
+          or processors for their respective services.
+        </p>
+
+        <h2>1. Summary</h2>
+        <ul>
+          <li>
+            The app does not create an in-app account and does not ask you to
+            enter your name, email address, or phone number.
+          </li>
+          <li>
+            Core game data such as saved games, settings, statistics, coin
+            balance, and the remove-ads entitlement is stored locally on your
+            device.
+          </li>
+          <li>
+            Google/Firebase, Google Play, and Apple services are used for ads,
+            analytics, crash diagnostics, remote configuration, abuse prevention,
+            and purchase verification.
+          </li>
+          <li>
+            We do not sell personal data as the app developer. Advertising
+            providers may process or share certain data to serve and measure ads,
+            subject to your choices and applicable rules.
+          </li>
+        </ul>
+
+        <h2>2. Categories of data and purposes</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Examples</th>
+              <th>Purpose</th>
+              <th>Where it is processed</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Category">Local game data</td>
+              <td data-label="Examples">
+                Game and round progress, game settings, statistics, scores, coin
+                balance, tutorial progress, ad-frequency state, and remove-ads
+                entitlement
+              </td>
+              <td data-label="Purpose">
+                Resume gameplay, preserve preferences and achievements, and apply
+                ad-frequency limits
+              </td>
+              <td data-label="Where it is processed">
+                On the device. The full saved game is not uploaded to Firebase,
+                except for analytics events described below.
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Category">App usage and analytics</td>
+              <td data-label="Examples">
+                App-instance/installation identifiers, app version, device and OS
+                information, approximate signals such as language/country; app
+                launch, tutorial, game mode and difficulty, game/round results,
+                virtual-coin changes, ad events, and purchase-flow events
+              </td>
+              <td data-label="Purpose">
+                Understand feature use, improve game balance and user experience,
+                and measure technical and commercial performance
+              </td>
+              <td data-label="Where it is processed">Google Firebase Analytics</td>
+            </tr>
+            <tr>
+              <td data-label="Category">Crash and diagnostic data</td>
+              <td data-label="Examples">
+                Crash stack traces, error type and time, app version, device
+                model, OS, technical information such as memory/disk, and
+                Crashlytics/Firebase installation identifiers
+              </td>
+              <td data-label="Purpose">
+                Detect and resolve crashes and technical issues and improve app
+                reliability
+              </td>
+              <td data-label="Where it is processed">Google Firebase Crashlytics</td>
+            </tr>
+            <tr>
+              <td data-label="Category">Advertising and consent data</td>
+              <td data-label="Examples">
+                IP address and general location derived from it, advertising ID
+                or app-set ID, device/account identifiers, ad interactions and
+                video views, ad performance, diagnostics, and privacy/consent
+                choices
+              </td>
+              <td data-label="Purpose">
+                Serve interstitial and optional rewarded ads, apply personalization
+                choices, measure performance, and prevent fraud and abuse
+              </td>
+              <td data-label="Where it is processed">
+                Google AdMob / Google Mobile Ads, Google User Messaging Platform
+                (UMP), and configured advertising technology providers
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Category">App integrity and security</td>
+              <td data-label="Examples">
+                App/device attestation material, Play Integrity, App Attest or
+                DeviceCheck results, Firebase App Check tokens, and request/network
+                security information
+              </td>
+              <td data-label="Purpose">
+                Ensure that only the authentic app can access purchase verification
+                and prevent fraud, replay, and abuse
+              </td>
+              <td data-label="Where it is processed">
+                Firebase App Check; Google Play Integrity on Android; Apple App
+                Attest and, when needed, DeviceCheck on iOS
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Category">Purchase and entitlement data</td>
+              <td data-label="Examples">
+                Store, product ID, purchase/restore status, purchase token or
+                Apple-signed transaction, transaction/order ID, transaction date,
+                price and currency, and verification outcome
+              </td>
+              <td data-label="Purpose">
+                Process, verify, and restore the one-time remove-ads purchase and
+                prevent fraud
+              </td>
+              <td data-label="Where it is processed">
+                Google Play Billing or Apple StoreKit; our verification service on
+                Firebase Cloud Functions and the relevant store-verification
+                mechanisms
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Category">Remote configuration</td>
+              <td data-label="Examples">
+                Configuration requests associated with app/installation
+                identifiers and app version
+              </td>
+              <td data-label="Purpose">
+                Securely manage feature availability, game-economy values, and ad
+                frequency
+              </td>
+              <td data-label="Where it is processed">Google Firebase Remote Config</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p class="note">
+          Analytics events do not contain a player-entered name or contact
+          details, but a transaction identifier, product ID, price/currency, and
+          app-instance identifier may be associated with a purchase event.
+        </p>
+
+        <h2>3. Advertising, UMP, and iOS App Tracking Transparency (ATT)</h2>
+        <p>
+          Batak Oyunu uses Google AdMob for end-of-game interstitial ads and
+          rewarded ads that are shown only when the player chooses them. The
+          Google Mobile Ads SDK may automatically collect and share IP address,
+          product interactions, diagnostic information, and device/account
+          identifiers for advertising, analytics, and fraud prevention.
+        </p>
+        <p>
+          Where legally required, an advertising privacy message is shown through
+          Google UMP. You can reopen your choices, when available, through the
+          privacy options in the app's Settings screen. On iOS, Apple's ATT
+          permission is requested before access to the advertising identifier
+          (IDFA). Denying ATT prevents access to the IDFA; limited, contextual, or
+          non-personalized ads may still be served in accordance with your consent
+          status and applicable rules. You can reset or delete the Android
+          advertising ID in device settings.
+        </p>
+        <p>
+          The “Remove Ads” purchase removes forced end-of-game interstitial ads.
+          Optional rewarded ads that a player starts to earn coins may remain
+          available when consent permits them.
+        </p>
+
+        <h2>4. Firebase services</h2>
+        <ul>
+          <li>
+            <strong>Firebase Analytics:</strong> processes app/game interaction
+            events, app/device characteristics, and app-instance identifiers for
+            measurement and improvement.
+          </li>
+          <li>
+            <strong>Firebase Crashlytics:</strong> processes diagnostic data about
+            crashes and technical errors caught by the app.
+          </li>
+          <li>
+            <strong>Firebase Remote Config:</strong> remotely provides app behavior
+            and feature settings.
+          </li>
+          <li>
+            <strong>Firebase App Check:</strong> processes integrity attestations
+            and short-lived security tokens to confirm that purchase-verification
+            requests come from the authentic app.
+          </li>
+          <li>
+            <strong>Firebase Cloud Functions:</strong> verifies store purchase
+            evidence on the server. A verification request may include the store
+            and product, transaction evidence, transaction ID/date, and an App
+            Check token.
+          </li>
+        </ul>
+
+        <h2>5. In-app purchases</h2>
+        <p>
+          Payments are processed by Google Play on Android and the Apple App Store
+          on iOS. The app and CagdasBT do not receive your full payment-card
+          details or store-account password. The store processes payment method,
+          store account, transaction history, and tax/billing information under
+          its own policies.
+        </p>
+        <p>
+          To prevent purchase fraud, the purchase token or Apple-signed transaction
+          received from the store is sent to our server verification service on
+          Firebase. Android evidence is checked through the Google Play Developer
+          API; the Apple transaction's cryptographic signature, app/product
+          information, and revocation status are verified on the server. The
+          verification service does not store this evidence in a separate app-user
+          or purchase database; it processes the evidence during the request and
+          returns a result. Cloud infrastructure may keep limited technical logs
+          for security and operations. The verified remove-ads entitlement and
+          transaction ID are stored on the device and can be restored without
+          charge using the same store account.
+        </p>
+
+        <h2>6. Sharing and third parties</h2>
+        <p>
+          We do not sell personal data for money as the app developer. Data may be
+          shared with, or collected directly by, the following service categories
+          only for the purposes described above:
+        </p>
+        <ul>
+          <li>Google LLC: AdMob, UMP, Firebase, Google Cloud, and Google Play;</li>
+          <li>Apple Inc.: App Store, StoreKit, App Attest, and DeviceCheck;</li>
+          <li>
+            advertising technology providers used by Google within the scope of
+            the user's advertising privacy choices;
+          </li>
+          <li>
+            competent authorities when required by law or necessary to protect our
+            rights, users, and the service.
+          </li>
+        </ul>
+        <p>
+          In some jurisdictions, transfers for personalized advertising may be
+          considered “sharing” or targeted advertising. Where available, you can
+          manage these choices through UMP privacy options and your device's
+          advertising/privacy settings.
+        </p>
+
+        <h2>7. Legal bases and consent</h2>
+        <p>
+          Depending on applicable law, processing may rely on performance of a
+          contract or your request to provide the game, selected features, and a
+          purchase; our legitimate interests in security, fraud prevention,
+          debugging, and service improvement; legal obligations; or your consent
+          for matters such as personalized ads and cross-app tracking. Withdrawing
+          consent does not affect processing that was lawful before withdrawal.
+        </p>
+
+        <h2>8. Retention</h2>
+        <ul>
+          <li>
+            <strong>Local game data:</strong> remains on your device until you
+            clear app data or uninstall the app. A store purchase record may
+            remain in your Google or Apple account, allowing the remove-ads
+            entitlement to be restored later.
+          </li>
+          <li>
+            <strong>Firebase Analytics:</strong> user-level event data is generally
+            retained for 2 or 14 months according to the Firebase/Google Analytics
+            project setting; standard aggregated reports may remain longer.
+          </li>
+          <li>
+            <strong>Firebase Crashlytics:</strong> Google's current disclosure says
+            crash stack traces and associated identifiers are retained for 90 days
+            before removal from live and backup systems begins.
+          </li>
+          <li>
+            <strong>Firebase App Check:</strong> attestation material is not
+            retained by App Check. Tokens used with replay protection may be kept
+            for up to 30 days; other tokens are used for their short validity
+            period.
+          </li>
+          <li>
+            <strong>Purchase verification:</strong> verification evidence is not
+            written to a separate app database. Google Cloud technical logs and
+            Google Play/Apple transaction records are retained according to their
+            configuration, legal obligations, and policies.
+          </li>
+          <li>
+            <strong>Advertising data:</strong> Google and advertising technology
+            providers retain data under their own policies, consent choices, and
+            legal requirements.
+          </li>
+        </ul>
+        <p>
+          Provider retention periods and product behavior may change; review the
+          links below for current details.
+        </p>
+
+        <h2>9. Security</h2>
+        <p>
+          We use reasonable technical and organizational measures such as
+          encryption in transit (HTTPS/TLS), store-signed purchase evidence,
+          Firebase App Check, Play Integrity, App Attest, replay protection, and
+          server-side app/product validation. However, no electronic transmission
+          or storage method is completely secure.
+        </p>
+
+        <h2>10. Your choices, deletion, and rights</h2>
+        <ul>
+          <li>
+            Delete local game data by clearing the app's data in device settings
+            or uninstalling the app.
+          </li>
+          <li>
+            Where available, update advertising consent through the privacy
+            options in the app's Settings screen.
+          </li>
+          <li>
+            Change iOS ATT permission and Android advertising-ID choices in
+            operating-system settings.
+          </li>
+          <li>
+            Use Google Play or Apple account/privacy tools directly for store
+            purchase history and payment data.
+          </li>
+        </ul>
+        <p>
+          Depending on your location, you may have rights to access, correct,
+          delete, restrict or object to processing, obtain data portability,
+          withdraw consent, and complain to a competent data protection authority.
+          Because we do not create an app account, we may be unable to locate a
+          remote record using only your name. A request may need to include the
+          platform and a relevant app-instance or transaction detail, if available;
+          we will request only the information needed to verify and handle it.
+          Submit requests through the contact channel below.
+        </p>
+
+        <h2>11. Children's privacy</h2>
+        <p>
+          Batak Oyunu is not designed for children and does not knowingly ask
+          children for a name, email address, or phone number. If you believe a
+          child's personal data has been processed without appropriate permission,
+          contact us; we will take appropriate steps following a verifiable
+          request. Parents should also use the device's in-app purchase,
+          advertising, and privacy controls.
+        </p>
+
+        <h2>12. International transfers</h2>
+        <p>
+          Google, Apple, and infrastructure providers may process data on servers
+          outside Türkiye or your country of residence. Such transfers are subject
+          to the providers' contractual and legal safeguards and applicable data
+          protection requirements.
+        </p>
+
+        <h2>13. Third-party policies</h2>
+        <ul>
+          <li>
+            <a href="https://policies.google.com/privacy">Google Privacy Policy</a>
+          </li>
+          <li>
+            <a href="https://firebase.google.com/support/privacy">Privacy and Security in Firebase</a>
+          </li>
+          <li>
+            <a href="https://developers.google.com/admob/android/privacy/play-data-disclosure">Google Mobile Ads data disclosure</a>
+          </li>
+          <li>
+            <a href="https://developers.google.com/admob/flutter/privacy">Google UMP and advertising privacy</a>
+          </li>
+          <li>
+            <a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a>
+          </li>
+          <li>
+            <a href="https://www.apple.com/legal/privacy/data/en/app-store/">Apple App Store and privacy</a>
+          </li>
+        </ul>
+
+        <h2>14. Changes</h2>
+        <p>
+          We may update this policy when services in the app or legal requirements
+          change. The new version will be published on this page and the “last
+          updated” date above will change. For material changes, we may provide an
+          additional in-app notice or request consent again when appropriate.
+        </p>
+
+        <h2>15. Contact</h2>
+        <p>
+          For privacy questions or rights requests, email
+          <a href="mailto:umitcagdas@gmail.com">umitcagdas@gmail.com</a> or use
+          the <a href="support.html">Batak Oyunu Support page</a>.
+        </p>
+      </article>
     </main>
-
-    <footer class="site-footer">
-      <div class="footer-inner">
-        <span>Batak Oyunu 1.0.0</span>
-        <span><a href="./support.html">Destek</a></span>
-        <span><a href="./privacy.html">Gizlilik Politikası</a></span>
-      </div>
-    </footer>
   </body>
 </html>
